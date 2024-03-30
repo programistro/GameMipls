@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-block">
+                    <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                    <div class="logo-block__logo">Mipls.ru</div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label class="hamburger" for="checkbox_toggle">
+                            <div class="hamburger__block">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-menu">Меню</span>
+                            </div>
+                        </label>
+                        <div class="menu">
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Игры и мероприятия</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Безопасность</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Правила сервиса</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="head-user">
+                    <button onclick="menuPolsov()" class="user__btn user-client-btn">
+                        <div class="block-menu-bnt">
+                            <img class="menu-profile-btn-img" src="../images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="../images/comment-8.png" alt="">
+                        </div>
+                    </button>
+                    <div id="menuPolsov" class="dropdown-content">
+                        <ul class="menu-profile__list">
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link"
+                                    href="setting-profile.html">Профиль</a></li>
+
+                            <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a
+                                    class="menu-profile__link" href="setting-profile.html">Мои игры</a><span
+                                    class="menu-span-profile__link">5</span></li>
+
+
+                            <li class="menu-profile__item menu-profile__icon-chats menu-profile__item-number"><a
+                                    class="menu-profile__link" href="#">Чаты</a><span
+                                    class="menu-span-profile__link">5</span></li>
+
+
+                            <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link"
+                                    href="#">Поддержка</a></li>
+                            <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a
+                                    class="menu-profile__link" href="#">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="admin-content">
+            <div class="container">
+                <div class="breacrumbs">
+                    <a class="breacrumbs__link" href="#">Профиль</a>
+                    <span class="breacrumbs__separator"><img src="../images/breacrumbs-separator.svg" alt=""></span>
+                    <a class="breacrumbs__link" href="#">Мои игры</a>
+                    <span class="breacrumbs__separator"><img src="../images/breacrumbs-separator.svg" alt=""></span>
+                    <a class="breacrumbs__link" href="#">Зов Эльфийского Потока</a>
+                </div>
+
+                <h2 class="edit-event__title admin-content__title">Редактировать приглашение</h2>
+
+                <div class="profile__inner setting-profile__inner">
+                    <div class="create-events__left profile__left">
+                        <nav class="content__items">
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <a class="content__link content__link--active" href="#">Основная информация</a>
+                                </li>
+                                <li class="content__item">
+                                    <a class="content__link" href="#">Место и время</a>
+                                </li>
+                                <li class="content__item">
+                                    <a class="content__link" href="#">Описание и детали</a>
+                                </li>
+                                <li class="content__item">
+                                    <a class="content__link" href="#">Обложка</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="events__participants">
+                            <div class="events__title">Принятые игроки</div>
+                            <ul class="events__user-list">
+                                <li>
+                                    <div class="block-participants">
+                                        <div class="events__user">
+                                            <div class="user__icon">
+                                                <img class="user__icon-img" src="../images/comment-6.png" alt="">
+                                            </div>
+                                            <div class="user__info">
+                                                <div class="user-name-1">Михаил Клименов</div>
+                                                <div class="user-name-2">Мастер Манчкин</div>
+                                            </div>
+                                            <div class="user__prof-inner">
+                                            <button class="user__prof"></button>
+                                            <button class="user__prof-del"></button>
+                                            <span class="profile__dop-span-tool">Убрать участника</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="block-participants">
+                                        <div class="events__user">
+                                            <div class="user__icon">
+                                                <img class="user__icon-img" src="../images/comment-6.png" alt="">
+                                            </div>
+                                            <div class="user__info">
+                                                <div class="user-name-1">Михаил Клименов</div>
+                                                <div class="user-name-2">Мастер Манчкин</div>
+                                            </div>
+                                            <div class="user__prof-inner">
+                                            <button class="user__prof"></button>
+                                            <button class="user__prof-del"></button>
+                                            <span class="profile__dop-span-tool">Убрать участника</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="block-participants">
+                                        <div class="events__user">
+                                            <div class="user__icon">
+                                                <img class="user__icon-img" src="../images/comment-6.png" alt="">
+                                            </div>
+                                            <div class="user__info">
+                                                <div class="user-name-1">Михаил Клименов</div>
+                                                <div class="user-name-2">Мастер Манчкин</div>
+                                            </div>
+                                            <div class="user__prof-inner">
+                                            <button class="user__prof"></button>
+                                            <button class="user__prof-del"></button>
+                                            <span class="profile__dop-span-tool">Убрать участника</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="events__title events__title-edit-invit">Ожидают подтверждения</div>
+                            <ul class="events__user-list">
+                                <li>
+                                    <div class="block-participants">
+                                        <div class="events__user">
+                                            <div class="user__icon">
+                                                <img class="user__icon-img" src="../images/comment-6.png" alt="">
+                                            </div>
+                                            <div class="user__info">
+                                                <div class="user-name-1">Михаил Клименов</div>
+                                                <div class="user-name-2">Мастер Манчкин</div>
+                                            </div>
+                                            <div class="user__prof-inner">
+                                            <button class="user__prof"></button>
+                                            <button class="user__prof-create"></button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="block-participants">
+                                        <div class="events__user">
+                                            <div class="user__icon">
+                                                <img class="user__icon-img" src="../images/comment-6.png" alt="">
+                                            </div>
+                                            <div class="user__info">
+                                                <div class="user-name-1">Михаил Клименов</div>
+                                                <div class="user-name-2">Мастер Манчкин</div>
+                                            </div>
+                                            <div class="user__prof-inner">
+                                            <button class="user__prof"></button>
+                                            <button class="user__prof-create"></button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="block-participants">
+                                        <div class="events__user">
+                                            <div class="user__icon">
+                                                <img class="user__icon-img" src="../images/comment-6.png" alt="">
+                                            </div>
+                                            <div class="user__info">
+                                                <div class="user-name-1">Михаил Клименов</div>
+                                                <div class="user-name-2">Мастер Манчкин</div>
+                                            </div>
+                                            <div class="user__prof-inner">
+                                            <button class="user__prof"></button>
+                                            <button class="user__prof-create"></button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="block-participants">
+                                        <div class="events__user">
+                                            <div class="user__icon">
+                                                <img class="user__icon-img" src="../images/comment-6.png" alt="">
+                                            </div>
+                                            <div class="user__info">
+                                                <div class="user-name-1">Михаил Клименов</div>
+                                                <div class="user-name-2">Мастер Манчкин</div>
+                                            </div>
+                                            <div class="user__prof-inner">
+                                            <button class="user__prof"></button>
+                                            <button class="user__prof-create"></button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="profile__btn-block">
+                                <button class="profile__btn f-btn">Сохранить изменения</button>
+                                <button class="profile__btn w-btn">Отменить изменения</button>
+                                <button class="product__btn">Удалить игру</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-events__right profile__right">
+                        <div class="profile__block-info">
+                            <div class="editing-event__block">
+                                <h3 class="profile__info-text profile__heading">Категория</h3>
+                                <div class="editing-event__category-games">Настольные игры</div>
+                            </div>
+
+                            <h3 class="profile__info-text create-events__info">Основная информация</h3>
+                            <div class="profile__block-organization">
+                                <div class="profile__info">
+                                    <div class="profile__info-inner">
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Название игры</div>
+                                            <div class="profile__description">
+                                                <form>
+                                                    <select class="profile__organization" name="city"
+                                                        id="select-organization">
+                                                        <option value="">Dungeon & Dragons 5’e</option>
+                                                        <option value="1">Dungeon & Dragons 5’e 1</option>
+                                                        <option value="2">Dungeon & Dragons 5’e 2</option>
+                                                        <option value="3">Dungeon & Dragons 5’e 3</option>
+                                                        <option value="4">Dungeon & Dragons 5’e 4</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Заголовок</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input" type="text" name="one-line"
+                                                    placeholder="Зов Эльфийского Потока">
+                                                <div class="create-events__res-pas">Максимум 50 символов</div>
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Анонс</div>
+                                            <div class="profile__description">
+                                                <textarea class="profile__input" name="comment" cols="40" rows="3">Ищу компанию людей для прохождения ваншота Зов Эльфийского Потока. Cессий будет примерно 5-6. Как мастер, компании проводил не один раз. Люди, с которыми я играл, уверяют, что вожу я хорошо. Надеюсь, что и вам понравится. 
+                                                    Увидимся на игре.</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Максимум участников</div>
+                                            <div class="profile__description">
+                                                <div class="create-events__block">
+                                                    <button class="btn-minus"><img src="../images/minus.svg"
+                                                            alt=""></button>
+                                                    <div class="create-events__number">6</div>
+                                                    <button class="btn-plus"><img src="../images/pluse.svg"
+                                                            alt=""></button>
+                                                    <div class="create-events__text">Минимум 2 участника</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Цена</div>
+                                            <div class="profile__description-price">
+                                                <div class="">
+                                                    <div class="create-events__block">
+                                                        <input class="profile__input-price create-events__input-price"
+                                                            type="text" name="one-line" placeholder="250">
+                                                        <div class="block-switch">
+                                                            <div class="switch">
+                                                                <label class="switch">
+                                                                    <input type="checkbox">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="profile__input-price-text">Бесплатно</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="profile__info-text dop-info">Место и время</h3>
+                            <div class="profile__block-organization">
+                                <div class="profile__info">
+                                    <div class="profile__info-inner">
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading create-events__heading">Город</div>
+                                            <div class="profile__description">
+                                                <div class="create-events__block">
+                                                    <input class="profile__input create-events__input-l" type="text"
+                                                        name="one-line" placeholder="">
+                                                    <div class="block-switch">
+                                                        <div class="switch">
+                                                            <label class="switch">
+                                                                <input type="checkbox" checked>
+                                                                <span class="slider round"></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="profile__input-price-text">Онлайн</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading create-events__heading">Место проведения</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input create-events__input" type="text"
+                                                    name="one-line" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Дата</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input create-events__data" type="date">
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Время</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input create-events__data" type="time" id="appt"
+                                                    name="appt" min="09:00" max="18:00" required />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="profile__info-text dop-info">Описание и детали</h3>
+                            <textarea class="profile__input create-events__textarea" name="comment" cols="40" rows="8">Корманторский лес — это волшебное и загадочное место, полное легенд, способных заинтересовать любопытных и отпугнуть осторожных; и не без причины, ибо в его тайных рощах прячутся монстры, способные напугать даже самых храбрых сердцем.
+                            Один из таких зверей — горгона. Стада неукротимых быков, покрытых металлической чешуёй, свободно бродят по северо‐восточному краю леса. Они не очень умны, их легко перехитрить, и это хорошо, ибо те, кто подбирается к ним слишком близко, могут оказаться на пути их окаменяющего дыхания. Лесные боги Риллифэйн Раллатил, Сильванус и Майликки поняли, что из горгон получались прекрасные, хотя и опасные, защитники границ леса от растущих общин Хиллсфара и Мулмастера, и позволили им плодиться и размножаться. Боги заколдовали воды реки </textarea>
+
+
+
+
+                            <h3 class="profile__info-text dop-info">Обложка</h3>
+                            <div class="create-events__image">
+                                <img class="create-events__img" src="../images/img-single.jpg" alt="">
+                            </div>
+                            <div class="create-events__control">
+                                <button class="control-btn">Изменить</button>
+                                <button class="control-btn">Удалить</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner-client">
+                    <div class="footer__top-left-client">
+                        <div class="footer__top-title">Теперь есть с кем играть!</div>
+                        <div class="footer__top-btn">
+                            <a class="footer__top-link-btn" href="#">
+                                <div class="footer__btn">Искать игру</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__top-right-client">
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Профиль</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Редактировать</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Игры и мероприятия</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Новое приглашение</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Создал приглашения</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Принял участие</a>
+                                </li>
+
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">История</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Чаты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Помощь</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Контакты</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Служба поддержки</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copyright">
+            <div class="container">
+                <div class="copyright__text">
+                    Проект выполнен при поддержке гранта Фонда содействия инновациям, предоставленного в рамках
+                    программы «Студенческий стартап» федерального проекта «Платформа университетскоготехнологического
+                    предпринимательства»
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                    <a class="footer__bottom-link" href="#">Вконтакте</a>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function menuPolsov() {
+            document.getElementById("menuPolsov").classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>

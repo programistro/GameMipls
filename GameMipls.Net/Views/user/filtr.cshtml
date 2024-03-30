@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="../css/main-style.css">
+</head>
+
+<body>
+    <div class="container" id="main">
+        <h1>Модальное окно</h1>
+        <a style="cursor:pointer" onclick="openPopup()">открыть окно Фильтра</a>
+
+    </div>
+    <div class="sup-modal" id="sup-service-modal">
+
+        <div class="filtr-modal__box">
+            <button onclick="closePopup()" class="sup-modal__close-btn">
+                <img src="../images/close-modal.svg" alt="">
+            </button>
+            <h2 class="sup-service__title">Фильтр</h2>
+            <div class="profile__info-inner">
+                <div class="sup-service__block-filtr">
+                    <div class="sup-service__profile__heading">Город</div>
+
+                    <form>
+                        <select class="profile__organization" name="city" id="select-organization">
+                            <option value="">Москва</option>
+                            <option value="1">Москва 1</option>
+                            <option value="2">Москва 2</option>
+                            <option value="3">Москва 3</option>
+                            <option value="4">Москва 4</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="sup-service__block-filtr">
+                    <div class="sup-service__profile__heading">Игры</div>
+                    <ul class="sup-service__filtr-list">
+                        <li class="sup-service__filtr-item">Catan</li>
+                        <li class="sup-service__filtr-item">Иниш</li>
+                        <li class="sup-service__filtr-item">Манчкин</li>
+                        <li class="sup-service__filtr-item">Dungeon’s & Dragon’s 5’e</li>
+                    </ul>
+                    <button class="f-btn sup-service__filtr-btn">Добавить</button>
+
+                </div>
+
+                <div class="sup-service__block-filtr">
+                    <div class="sup-service__profile__heading">Свободно мест</div>
+
+                    <form>
+                        <select class="profile__organization sup-service__text-color" name="quantity"
+                            id="select-organization">
+                            <option value="">Количество</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="sup-service__block-filtr">
+                    <div class="sup-service__block-switch">
+                        <div class="sup-service__profile__heading">Место проведения</div>
+                        <div class="sup-service__block-switch-item">
+                            <div class="switch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="profile__input-price-text">Онлайн</div>
+                        </div>
+
+
+                    </div>
+                    <form>
+                        <select class="profile__organization" name="events" id="select-organization">
+                            <option value="">Любое</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </form>
+                </div>
+
+
+
+                <div class="profile__info-block">
+                    <div class="sup-service__block-data">
+                        <div>
+                        <div class="sup-service__profile__heading">Дата</div>
+                        <div class="profile__description">
+                            <input class="profile__input sup-service__text-color" type="date">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sup-service__profile__heading">Время</div>
+                        <div class="profile__description">
+                            <input class="profile__input sup-service__text-color" type="time" id="appt" name="appt"
+                                min="09:00" max="18:00" required="">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <button class="f-btn sup-service__btn">Применить фильтры</button>
+        </div>
+    </div>
+
+    <script>
+
+        function openPopup() {
+            document.getElementById("sup-service-modal").classList.add("open");
+        }
+
+        function closePopup() {
+            document.getElementById("sup-service-modal").classList.remove("open");
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") {
+                document.getElementById("sup-service-modal").classList.remove("open");
+            }
+        });
+
+        //Закрыть модальное окно при клике вне его
+        document.querySelector("#sup-service-modal .sup-modal__box").addEventListener('click', event => {
+            event._isClickWithInModal = true;
+        });
+
+        document.getElementById("sup-service-modal").addEventListener('click', event => {
+            if (event._isClickWithInModal) return;
+            event.currentTarget.classList.remove('open');
+        });
+
+    </script>
+
+
+</body>
+
+</html>

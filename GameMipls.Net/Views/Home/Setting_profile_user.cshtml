@@ -1,0 +1,350 @@
+@{
+   Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link asp-append-version="true" rel="stylesheet" href="~/css/general-styles.css">
+    <link rel="stylesheet" asp-append-version="true" href="~/css/admin-style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-block">
+                    <div class="logo-block__icon"><img class="logo-img" src="~/images/logo.png" alt=""></div>
+                    <div class="logo-block__logo">Mipls.ru</div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label class="hamburger" for="checkbox_toggle">
+                            <div class="hamburger__block">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-menu">Меню</span>
+                            </div>
+                        </label>
+                        <div class="menu">
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Игры и мероприятия</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Безопасность</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Правила сервиса</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="head-user">
+                    <button onclick="menuPolsov()" class="user__btn user-client-btn">
+                        <div class="block-menu-bnt">
+                            <img class="menu-profile-btn-img" src="~/images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="~/images/comment-8.png" alt="">
+                        </div>
+                    </button>
+                    <div id="menuPolsov" class="dropdown-content">
+                        <ul class="menu-profile__list">
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" href="setting-profile.html">Профиль</a></li>
+
+                            <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a class="menu-profile__link" href="setting-profile.html">Мои игры</a><span class="menu-span-profile__link">5</span></li>
+
+                           
+                            <li class="menu-profile__item menu-profile__icon-chats menu-profile__item-number"><a class="menu-profile__link" href="#">Чаты</a><span class="menu-span-profile__link">5</span></li>
+                            
+                            
+                            <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link" href="#">Поддержка</a></li>
+                            <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a class="menu-profile__link"
+                                    href="#">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="admin-content">
+            <div class="container">
+                <div class="breacrumbs">
+                    <a class="breacrumbs__link" href="#">Профиль</a>
+                </div>
+
+                <h2 class="admin-content__title">Настройки профиля</h2>
+
+                <div class="profile__inner setting-profile__inner">
+                    <div class="profile__left">
+                        <nav class="content__items">
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <a class="content__link content__link--active" href="#">Основная информация</a>
+                                </li>
+                                <li class="content__item">
+                                    <a class="content__link" href="#">Дополнительная
+                                        информация</a>
+                                </li>
+                                <li class="content__item">
+                                    <a class="content__link" href="#">Безопасность</a>
+                                </li>
+                                <li class="content__item">
+                                    <a class="content__link" href="#">Награды и рейтинг</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="profile__btn-block">
+                            <button class="profile__btn f-btn">Сохранить изменения</button>
+                            <button class="profile__btn w-btn">Отменить изменения</button>
+                        </div>
+                    </div>
+                    <div class="profile__right">
+                        <div class="profile__block-info">
+                            <h3 class="profile__info-text">Основная информация</h3>
+                            <div class="profile__block-title">
+                                <div class="profile__block-logo set__block-logo">
+                                    <div class="profile__img-logo">
+                                        <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt="">
+                                        <img class="profile__logo-pensel-img" src="~/images/profile-icon-pensel.png"
+                                            alt="">
+                                    </div>
+                                </div>
+
+                                <div class="profile__info-name">
+                                    <div class="profile__name">Кирилл Артемьев</div>
+                                    <div class="profile__desc">Критического успеха у меня ещё не было</div>
+                                </div>
+                            </div>
+                            <div class="profile__block-organization">
+                                <div class="profile__info">
+                                    <div class="profile__info-inner">
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Имя</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input" type="text" name="one-line"
+                                                    placeholder="Кирилл">
+                                            </div>
+                                        </div>
+
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Фамилия</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input" type="text" name="one-line"
+                                                    placeholder="Артемьев">
+                                            </div>
+                                        </div>
+
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Номер телефона</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input" type="phone" name="one-line"
+                                                    placeholder="89869778650">
+                                            </div>
+                                        </div>
+
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Email</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input" type="email" name="one-line"
+                                                    placeholder="artemkira98@gmail.com">
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Город</div>
+                                            <div class="profile__description">
+                                                <form>
+                                                    <select class="profile__organization" name="city"
+                                                        id="select-organization">
+                                                        <option value="">Москва</option>
+                                                        <option value="1">Москва 1</option>
+                                                        <option value="2">Москва 2</option>
+                                                        <option value="3">Москва 3</option>
+                                                        <option value="4">Москва 4</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="profile__info-text dop-info">Дополнительная информация</h3>
+                            <div class="profile__block-organization">
+                                <div class="profile__info">
+                                    <div class="profile__info-inner">
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Статус</div>
+                                            <div class="profile__description profile__dop-span-icon">
+                                                <textarea class="profile__input" name="comment" cols="40"
+                                                    rows="2">Критического успеха у меня ещё не было</textarea>
+
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">О себе</div>
+                                            <div class="profile__description">
+                                                <textarea class="profile__input" name="comment" cols="40"
+                                                    rows="3">Приветики! Вы</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Увлечения</div>
+                                            <div class="profile__description">
+                                                <div class="block-cards__enter">
+                                                    
+
+                                                    <ul class="block-cards__enter-list">
+                                                        <li style="display: flex;"><button class="f-btn block-cards__enter-btn"><img class="block-cards__enter-btn-img" src="~/images/pluse.svg" alt=""></button></li>
+                                                        <li class="profile__added-address">Настольные игры</li>
+                                                        <li class="profile__added-address">Спорт</li>
+                                                        <li class="profile__added-address">Туризм</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Любимые игры</div>
+                                            <div class="profile__description">
+                                                <div class="block-cards__enter">
+                                                    <ul class="block-cards__enter-list">
+                                                        <li style="display: flex;"><button class="f-btn block-cards__enter-btn"><img class="block-cards__enter-btn-img" src="~/images/pluse.svg" alt=""></button></li>
+                                                        <li class="profile__added-address">НРИ</li>
+                                                        <li class="profile__added-address">Иниш</li>
+                                                        <li class="profile__added-address">Манчкин</li>
+                                                        <li class="profile__added-address">Плотина</li>
+                                                        <li class="profile__added-address">Dungeon’s & Dragon’s 5’e</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="profile__info-text dop-info">Безопасность</h3>
+                            <div class="profile__block-organization">
+                                <div class="profile__info">
+                                    <div class="profile__info-inner">
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading">Текущий пароль</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input-pass" type="text" name="one-line"
+                                                    placeholder="">
+                                                <div class="profile__res-pas"><a class="profile__res-pas-link"
+                                                        href="">Восстановить пароль</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading profile__heading-p">Новый пароль</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input-pass" type="text" name="one-line"
+                                                    placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="profile__info-block">
+                                            <div class="profile__heading profile__heading-p">Повторите пароль</div>
+                                            <div class="profile__description">
+                                                <input class="profile__input-pass" type="text" name="one-line"
+                                                    placeholder="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner-client">
+                    <div class="footer__top-left-client">
+                        <div class="footer__top-title">Теперь есть с кем играть!</div>
+                        <div class="footer__top-btn">
+                            <a class="footer__top-link-btn" href="#">
+                                <div class="footer__btn">Искать игру</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__top-right-client">
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Профиль</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Редактировать</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Игры и мероприятия</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Новое приглашение</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Создал приглашения</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Принял участие</a>
+                                </li>
+
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">История</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Чаты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Помощь</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Контакты</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Служба поддержки</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copyright">
+            <div class="container">
+                <div class="copyright__text">
+                    Проект выполнен при поддержке гранта Фонда содействия инновациям, предоставленного в рамках
+                    программы «Студенческий стартап» федерального проекта «Платформа университетскоготехнологического
+                    предпринимательства»
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                    <a class="footer__bottom-link" href="#">Вконтакте</a>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </section>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </footer>
+    <script>
+        function menuPolsov() {
+            document.getElementById("menuPolsov").classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>

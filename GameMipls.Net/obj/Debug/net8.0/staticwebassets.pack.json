@@ -1,0 +1,637 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameMipls.Net.bundle.scp.css",
+      "PackagePath": "staticwebassets\\GameMipls.Net.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\css\\admin-style.css",
+      "PackagePath": "staticwebassets\\css\\admin-style.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\css\\general-styles.css",
+      "PackagePath": "staticwebassets\\css\\general-styles.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\css\\main-style.css",
+      "PackagePath": "staticwebassets\\css\\main-style.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\Itim-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Itim-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\LilitaOne-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\LilitaOne-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\LilitaOne-Russian.ttf",
+      "PackagePath": "staticwebassets\\fonts\\LilitaOne-Russian.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\OpenSans-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\OpenSans-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\OpenSans-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\OpenSans-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\OpenSans-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\Rubik-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Rubik-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\fonts\\Rubik-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Rubik-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\Mipls original.zip",
+      "PackagePath": "staticwebassets\\images\\Mipls original.zip"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\arrow-admin-bottom.svg",
+      "PackagePath": "staticwebassets\\images\\arrow-admin-bottom.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\arrow.svg",
+      "PackagePath": "staticwebassets\\images\\arrow.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\avatar.svg",
+      "PackagePath": "staticwebassets\\images\\avatar.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\basket.svg",
+      "PackagePath": "staticwebassets\\images\\basket.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\breacrumbs-separator.svg",
+      "PackagePath": "staticwebassets\\images\\breacrumbs-separator.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\close-modal.svg",
+      "PackagePath": "staticwebassets\\images\\close-modal.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-0.png",
+      "PackagePath": "staticwebassets\\images\\comment-0.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-1.png",
+      "PackagePath": "staticwebassets\\images\\comment-1.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-2.png",
+      "PackagePath": "staticwebassets\\images\\comment-2.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-3.png",
+      "PackagePath": "staticwebassets\\images\\comment-3.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-4.png",
+      "PackagePath": "staticwebassets\\images\\comment-4.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-5.png",
+      "PackagePath": "staticwebassets\\images\\comment-5.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-6.png",
+      "PackagePath": "staticwebassets\\images\\comment-6.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-7.png",
+      "PackagePath": "staticwebassets\\images\\comment-7.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-8-logo.png",
+      "PackagePath": "staticwebassets\\images\\comment-8-logo.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-8.png",
+      "PackagePath": "staticwebassets\\images\\comment-8.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\comment-9.png",
+      "PackagePath": "staticwebassets\\images\\comment-9.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\complaint-btn.svg",
+      "PackagePath": "staticwebassets\\images\\complaint-btn.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\create-edit-invat-active.svg",
+      "PackagePath": "staticwebassets\\images\\create-edit-invat-active.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\create-edit-invat.svg",
+      "PackagePath": "staticwebassets\\images\\create-edit-invat.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\del-edit-invat-active.svg",
+      "PackagePath": "staticwebassets\\images\\del-edit-invat-active.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\del-edit-invat.svg",
+      "PackagePath": "staticwebassets\\images\\del-edit-invat.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\figure-main.svg",
+      "PackagePath": "staticwebassets\\images\\figure-main.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\figure-pr.svg",
+      "PackagePath": "staticwebassets\\images\\figure-pr.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\filtr.svg",
+      "PackagePath": "staticwebassets\\images\\filtr.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\glas.svg",
+      "PackagePath": "staticwebassets\\images\\glas.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\heart.svg",
+      "PackagePath": "staticwebassets\\images\\heart.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon-advertisement.svg",
+      "PackagePath": "staticwebassets\\images\\icon-advertisement.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon-chats.svg",
+      "PackagePath": "staticwebassets\\images\\icon-chats.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon-event.svg",
+      "PackagePath": "staticwebassets\\images\\icon-event.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon-exit.svg",
+      "PackagePath": "staticwebassets\\images\\icon-exit.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon-manager.svg",
+      "PackagePath": "staticwebassets\\images\\icon-manager.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon-profile.svg",
+      "PackagePath": "staticwebassets\\images\\icon-profile.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon-support.svg",
+      "PackagePath": "staticwebassets\\images\\icon-support.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon1.svg",
+      "PackagePath": "staticwebassets\\images\\icon1.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon2.svg",
+      "PackagePath": "staticwebassets\\images\\icon2.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\icon3.svg",
+      "PackagePath": "staticwebassets\\images\\icon3.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img-single.jpg",
+      "PackagePath": "staticwebassets\\images\\img-single.jpg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img1.png",
+      "PackagePath": "staticwebassets\\images\\img1.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img10.png",
+      "PackagePath": "staticwebassets\\images\\img10.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img11.png",
+      "PackagePath": "staticwebassets\\images\\img11.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img2.png",
+      "PackagePath": "staticwebassets\\images\\img2.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img3.png",
+      "PackagePath": "staticwebassets\\images\\img3.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img4.png",
+      "PackagePath": "staticwebassets\\images\\img4.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img5.png",
+      "PackagePath": "staticwebassets\\images\\img5.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img6.png",
+      "PackagePath": "staticwebassets\\images\\img6.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img7.png",
+      "PackagePath": "staticwebassets\\images\\img7.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img8.png",
+      "PackagePath": "staticwebassets\\images\\img8.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\img9.png",
+      "PackagePath": "staticwebassets\\images\\img9.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\item-arrow.svg",
+      "PackagePath": "staticwebassets\\images\\item-arrow.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\location-f.svg",
+      "PackagePath": "staticwebassets\\images\\location-f.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\location.svg",
+      "PackagePath": "staticwebassets\\images\\location.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\menu-profile-btn.svg",
+      "PackagePath": "staticwebassets\\images\\menu-profile-btn.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\menu-support.svg",
+      "PackagePath": "staticwebassets\\images\\menu-support.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\miniature-reg.png",
+      "PackagePath": "staticwebassets\\images\\miniature-reg.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\minus.svg",
+      "PackagePath": "staticwebassets\\images\\minus.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\pal.svg",
+      "PackagePath": "staticwebassets\\images\\pal.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\pass-galka.svg",
+      "PackagePath": "staticwebassets\\images\\pass-galka.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\pass-krest.svg",
+      "PackagePath": "staticwebassets\\images\\pass-krest.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\pluse.svg",
+      "PackagePath": "staticwebassets\\images\\pluse.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\prof-info-hover.svg",
+      "PackagePath": "staticwebassets\\images\\prof-info-hover.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\prof-info.svg",
+      "PackagePath": "staticwebassets\\images\\prof-info.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\profile-icon-pensel.png",
+      "PackagePath": "staticwebassets\\images\\profile-icon-pensel.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\profile-icon.png",
+      "PackagePath": "staticwebassets\\images\\profile-icon.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\rate-star-active.svg",
+      "PackagePath": "staticwebassets\\images\\rate-star-active.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\rate-star.svg",
+      "PackagePath": "staticwebassets\\images\\rate-star.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\reg-checkmark.svg",
+      "PackagePath": "staticwebassets\\images\\reg-checkmark.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\reg-icon-glass.svg",
+      "PackagePath": "staticwebassets\\images\\reg-icon-glass.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\ruble.svg",
+      "PackagePath": "staticwebassets\\images\\ruble.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\search.svg",
+      "PackagePath": "staticwebassets\\images\\search.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\setting-profile-user-icon-span.svg",
+      "PackagePath": "staticwebassets\\images\\setting-profile-user-icon-span.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\slider-arrow-next.svg",
+      "PackagePath": "staticwebassets\\images\\slider-arrow-next.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\slider-arrow-prev.svg",
+      "PackagePath": "staticwebassets\\images\\slider-arrow-prev.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\sort.svg",
+      "PackagePath": "staticwebassets\\images\\sort.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\star-active.svg",
+      "PackagePath": "staticwebassets\\images\\star-active.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\star.svg",
+      "PackagePath": "staticwebassets\\images\\star.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\support.svg",
+      "PackagePath": "staticwebassets\\images\\support.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\user.svg",
+      "PackagePath": "staticwebassets\\images\\user.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\vk.svg",
+      "PackagePath": "staticwebassets\\images\\vk.svg"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GameMipls.Net.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.GameMipls.Net.props",
+      "PackagePath": "build\\GameMipls.Net.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.GameMipls.Net.props",
+      "PackagePath": "buildMultiTargeting\\GameMipls.Net.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.GameMipls.Net.props",
+      "PackagePath": "buildTransitive\\GameMipls.Net.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

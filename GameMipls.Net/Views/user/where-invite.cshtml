@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="../css/main-style.css">
+</head>
+
+<body>
+    <div class="container" id="main">
+        <h1>Модальное окно</h1>
+        <a style="cursor:pointer" onclick="openPopup()">открыть окно Службы поддержки</a>
+
+    </div>
+    <div class="sup-modal" id="sup-service-modal">
+
+        <div class="sup-modal__box user-personal-page__size">
+            <button onclick="closePopup()" class="sup-modal__close-btn">
+                <img src="../images/close-modal.svg" alt="">
+            </button>
+
+            <div class="user-personal-page__block-title">
+                <div class="user-personal-page__image">
+                    <div class="user-personal-page__image-sep">
+                        <img class="user-personal-page__img" src="../images/comment-6.png" alt="">
+                    </div>
+                </div>
+                <div class="user-personal-page__title">
+                    <div class="user-personal-page__name">Дмитрий Мельников</div>
+                    <div class="user-personal-page__desc">Моё главное качество - могу отличить кубики D6 от D20 ;)</div>
+                </div>
+            </div>
+
+            <div class="where-invite__main-title">Куда пригласить игрока?</div>
+            <div class="where-invite__title">Мои игры</div>
+
+            <div class="where-invite__inner">
+                <ul class="where-invite__list">
+                    <li class="where-invite__item">
+                        <div class="where-invite__card">
+                            <div class="events__cards-inner">
+                                <div class="events__cards-image">
+                                    <img class="events__cards-img" src="images/img5.png" alt="">
+                                </div>
+                                <div class="events__cards-info">
+                                    <div class="where-invite__cards-info">
+                                        <div class="info__data">25 октября / 18:00</div>
+                                        <div class="info__games">Настольные игры</div>
+                                    </div>
+                                    <div class="cards__title events__cards-title">Dungeons & Dragons</div>
+                                    <div class="cards__bottom">
+                                        <div class="cards__location events__cards-location item__location item__location--active">Анти-кафе «Новое место»</div>
+                                        <button class="where-invite__participants"><img src="../images/pluse.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="where-invite__item">
+                        <div class="where-invite__card">
+                            <div class="events__cards-inner">
+                                <div class="events__cards-image">
+                                    <img class="events__cards-img" src="images/img5.png" alt="">
+                                </div>
+                                <div class="events__cards-info">
+                                    <div class="where-invite__cards-info">
+                                        <div class="info__data">25 октября / 18:00</div>
+                                        <div class="info__games">Компьютерные игры</div>
+                                    </div>
+                                    <div class="cards__title events__cards-title">Escape from Tarkov</div>
+                                    <div class="cards__bottom">
+                                        <div class="cards__location events__cards-location item__location item__location--active">Онлайн</div>
+                                        <button class="where-invite__participants"><img src="../images/pluse.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="where-invite__title">Принимаю участие</div>
+
+            <div class="where-invite__inner">
+                <ul class="where-invite__list">
+                    <li class="where-invite__item">
+                        <div class="where-invite__card">
+                            <div class="events__cards-inner">
+                                <div class="events__cards-image">
+                                    <img class="events__cards-img" src="images/img5.png" alt="">
+                                </div>
+                                <div class="events__cards-info">
+                                    <div class="where-invite__cards-info">
+                                        <div class="info__data">25 октября / 18:00</div>
+                                        <div class="info__games">Настольные игры</div>
+                                    </div>
+                                    <div class="cards__title events__cards-title">Эверделл</div>
+                                    <div class="cards__bottom">
+                                        <div class="cards__location events__cards-location item__location item__location--active">Анти-кафе «Новое место»</div>
+                                        <button class="where-invite__participants"><img src="../images/pluse.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="where-invite__item">
+                        <div class="where-invite__card">
+                            <div class="events__cards-inner">
+                                <div class="events__cards-image">
+                                    <img class="events__cards-img" src="images/img5.png" alt="">
+                                </div>
+                                <div class="events__cards-info">
+                                    <div class="where-invite__cards-info">
+                                        <div class="info__data">25 октября / 18:00</div>
+                                        <div class="info__games">Компьютерные игры</div>
+                                    </div>
+                                    <div class="cards__title events__cards-title">Dota 2</div>
+                                    <div class="cards__bottom">
+                                        <div class="cards__location events__cards-location item__location item__location--active">Онлайн</div>
+                                        <button class="where-invite__participants"><img src="../images/pluse.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        function openPopup() {
+            document.getElementById("sup-service-modal").classList.add("open");
+        }
+
+        function closePopup() {
+            document.getElementById("sup-service-modal").classList.remove("open");
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") {
+                document.getElementById("sup-service-modal").classList.remove("open");
+            }
+        });
+
+        //Закрыть модальное окно при клике вне его
+        document.querySelector("#sup-service-modal .sup-modal__box").addEventListener('click', event => {
+            event._isClickWithInModal = true;
+        });
+
+        document.getElementById("sup-service-modal").addEventListener('click', event => {
+            if (event._isClickWithInModal) return;
+            event.currentTarget.classList.remove('open');
+        });
+
+
+        
+                // получаем все кнопки навигации
+    const tabsButtons = document.querySelectorAll('.tabs__button');
+
+// Проходимся по всем кнопкам
+tabsButtons.forEach(btn => {
+// вешаем на каждую кнопку обработчик события клик
+btn.addEventListener('click', () => {
+    // Получаем предыдущую активную кнопку
+    const prevActiveItem = document.querySelector('.tabs__item._active');
+    // Получаем предыдущую активную вкладку
+    const prevActiveButton = document.querySelector('.tabs__button.user-personal-page__btn--active');
+    
+    // Проверяем есть или нет предыдущая активная кнопка
+    if (prevActiveButton) {
+    //Удаляем класс _active у предыдущей кнопки если она есть
+    prevActiveButton.classList.remove('user-personal-page__btn--active');
+    }
+    
+    // Проверяем есть или нет предыдущая активная вкладка
+    if (prevActiveItem) {
+    // Удаляем класс _active у предыдущей вкладки если она есть
+    prevActiveItem.classList.remove('_active');
+    }
+    // получаем id новой активной вкладки, который мы перем из атрибута data-tab у кнопки
+    const nextActiveItemId = `#${btn.getAttribute('data-tab')}`;
+    // получаем новую активную вкладку по id
+    const nextActiveItem = document.querySelector(nextActiveItemId);
+    
+    // добавляем класс _active кнопке на которую нажали
+    btn.classList.add('user-personal-page__btn--active');
+    // добавляем класс _active новой выбранной вкладке
+    nextActiveItem.classList.add('_active');
+});
+})
+
+    </script>
+
+
+
+</body>
+
+</html>

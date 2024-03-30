@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-block">
+                    <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                    <div class="logo-block__logo">Mipls.ru</div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label class="hamburger" for="checkbox_toggle">
+                            <div class="hamburger__block">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-menu">Меню</span>
+                            </div>
+                        </label>
+                        <div class="menu">
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Игры и мероприятия</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Безопасность</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Правила сервиса</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="head-user">
+                    <button onclick="menuPolsov()" class="user__btn user-client-btn">
+                        <div class="block-menu-bnt">
+                            <img class="menu-profile-btn-img" src="../images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="../images/comment-8.png" alt="">
+                        </div>
+                    </button>
+                    <div id="menuPolsov" class="dropdown-content">
+                        <ul class="menu-profile__list">
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link"
+                                    href="setting-profile.html">Профиль</a></li>
+
+                            <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a
+                                    class="menu-profile__link" href="setting-profile.html">Мои игры</a><span
+                                    class="menu-span-profile__link">5</span></li>
+
+
+                            <li class="menu-profile__item menu-profile__icon-chats menu-profile__item-number"><a
+                                    class="menu-profile__link" href="#">Чаты</a><span
+                                    class="menu-span-profile__link">5</span></li>
+
+
+                            <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link"
+                                    href="#">Поддержка</a></li>
+                            <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a
+                                    class="menu-profile__link" href="#">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+
+        <div class="container">
+            <div class="upcoming-pop-events__block-top">
+
+
+                <div class="upcoming-pop-events__block-games">
+                    <a class="top__nav-link" href="#">
+                        <div class="games-btn y-btn upcoming-pop-events__table-games">Настольные игры</div>
+                    </a>
+                    <a class="top__nav-link" href="#">
+                        <div class="games-btn s-btn upcoming-pop-events__comp-games">Компьютерные игры</div>
+                    </a>
+                    <a class="top__nav-link" href="#">
+                        <div class="games-btn s-btn upcoming-pop-events__sport-games">Спорт</div>
+                    </a>
+
+                </div>
+                <form class="upcoming-pop-events__form-input">
+                    <select class="upcoming-pop-events__input" name="city" id="select-organization">
+                        <option value="">Москва</option>
+                        <option value="1">Москва 1</option>
+                        <option value="2">Москва 2</option>
+                        <option value="3">Москва 3</option>
+                        <option value="4">Москва 4</option>
+                    </select>
+                </form>
+
+            </div>
+            <section class="main-events">
+                <div class="upcoming-pop-events__main-title">Предстоящие популярные мероприятия</div>
+                <div class="events__inner">
+
+                    <ul class="upcoming-pop-events__list-top">
+                        <li class="upcoming-pop-events__item">
+                            <div class="item__block-img">
+                                <a class="block-img__image-link" href="#"><img class="block-img__image" src="../images/img2.png"></a>
+                                <a class="block-img__category-link" href="#"><div class="block-img__category">Компьютерные игры</div></a>
+                                <img class="block-img__icon" src="../images/icon1.svg">
+                                <img class="block-img__like" src="../images/heart.svg">
+                                <div class="block-img__data-creation">22 мая / 11:00 - 23:00</div>
+                            </div>
+    
+                            <div class="item__title"><a class="item__title-link" href="#">Праздничная игротека от Hobby Bobby! Нам 5 лет!</a>
+    
+                            </div>
+    
+                            <div class="item__text">Напоминаем, что 22 мая нашему магазину исполняется 5 лет и мы приглашаем вас на праздничную игротеку... <span class="item__more"><a class="item__text-more" href="#">Читать дальше</a></span>
+                            </div>
+    
+                            <div class="item__bottom">
+                                <div class="item__block-icon">
+                                    <img class="block-icon comment-user-1" src="../images/comment-1.png" alt="">
+                                    <img class="block-icon comment-user-2" src="../images/comment-2.png" alt="">
+                                    <img class="block-icon comment-user-3" src="../images/comment-3.png" alt="">
+                                    <img class="block-icon comment-user-4" src="../images/comment-4.png" alt="">
+                                    <div class="block-icon comment-all">
+                                        <span class="comment-number">20</span>
+                                    </div>
+    
+                                </div>
+                                <a class="item__bottom-link" href="#">
+                                    <div class="item__bottom-arrow">
+                                        <img class="item__bottom-img" src="../images/item-arrow.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+
+                        </li>
+                        <li class="upcoming-pop-events__item">
+                            <div class="item__block-img">
+                                <a class="block-img__image-link" href="#"><img class="block-img__image" src="../images/img8.png"></a>
+                                <a class="block-img__category-link" href="#"><div class="block-img__category">Настольные игры</div></a>
+                                <img class="block-img__icon" src="../images/icon2.svg">
+                                <img class="block-img__like" src="../images/heart.svg">
+                                <div class="block-img__data-creation">22 мая / 11:00 - 23:00</div>
+                            </div>
+    
+                            <div class="item__title"><a class="item__title-link" href="#">Игротека для самых маленьких</a>
+                            </div>
+    
+                            <div class="item__text">Напоминаем, что 25 мая мы проводим игротеку для детей в возрасте от 7 до 14 лет. На этой игротеке Ваш ребёнок... <span class="item__more"><a class="item__text-more" href="#">Читать дальше</a></span>
+                            </div>
+    
+                            <div class="item__bottom">
+                                <div class="item__block-icon">
+                                    <img class="block-icon comment-user-1" src="../images/comment-1.png" alt="">
+                                    <img class="block-icon comment-user-2" src="../images/comment-2.png" alt="">
+                                    <img class="block-icon comment-user-3" src="../images/comment-3.png" alt="">
+                                    <img class="block-icon comment-user-4" src="../images/comment-4.png" alt="">
+                                    <div class="block-icon comment-all">
+                                        <span class="comment-number">20</span>
+                                    </div>
+    
+                                </div>
+                                <a class="item__bottom-link" href="#">
+                                    <div class="item__bottom-arrow">
+                                        <img class="item__bottom-img" src="../images/item-arrow.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="upcoming-pop-events__item">
+                            <div class="item__block-img">
+                                <a class="block-img__image-link" href="#"><img class="block-img__image" src="../images/img9.png"></a>
+                                <a class="block-img__category-link" href="#"><div class="block-img__category">Настольные игры</div></a>
+                                <img class="block-img__icon" src="../images/icon3.svg">
+                                <img class="block-img__like" src="../images/heart.svg">
+                                <div class="block-img__data-creation">22 мая / 11:00 - 23:00</div>
+                            </div>
+    
+                            <div class="item__title"><a class="item__title-link" href="#">Межвузовский чемпионат по настольной игре Каркасон</a>
+                            </div>
+    
+                            <div class="item__text">Приглашаем студентов принять участие в межвузовских соревнованиях, которые пройдут в РАНХиГС. Участие могут ...<span class="item__more"><a class="item__text-more" href="#">Читать дальше</a></span>
+                            </div>
+    
+                            <div class="item__bottom">
+                                <div class="item__block-icon">
+                                    <img class="block-icon comment-user-1" src="../images/comment-1.png" alt="">
+                                    <img class="block-icon comment-user-2" src="../images/comment-2.png" alt="">
+                                    <img class="block-icon comment-user-3" src="../images/comment-3.png" alt="">
+                                    <img class="block-icon comment-user-4" src="../images/comment-4.png" alt="">
+                                    <div class="block-icon comment-all">
+                                        <span class="comment-number">20</span>
+                                    </div>
+    
+                                </div>
+                                <a class="item__bottom-link" href="#">
+                                    <div class="item__bottom-arrow">
+                                        <img class="item__bottom-img" src="../images/item-arrow.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="events__slider-btn slider-btn-prev"></button>
+                    <button class="events__slider-btn slider-btn-next"></button>
+                </div>
+
+            </section>
+            <section class="cards-events">
+                <div class="control-cards">
+                    <div class="control-cards__block-functions">
+                        <button class="control-cards__sort">Сортировка</button>
+                        <button class="control-cards__filtr">Фильтр</button>
+                        <button class="control-cards__clear">Очистить</button>
+                    </div>
+                    <button class="create-event advertisement__create-cards-btn f-btn create-event-mobile">Создать</button>
+                </div>
+                <ul class="user-personal-page__tabs-list">
+                    <li class="user-personal-page__tabs-item">Dungeon’s & Dragon’s 5’e</li>
+                    <li class="user-personal-page__tabs-item">Эверделл</li>
+                    <li class="user-personal-page__tabs-item">Game of Thrones</li>
+                    <li class="user-personal-page__tabs-item">Иниш</li>
+                    <li class="user-personal-page__tabs-item">Nemesis</li>
+                    <li class="user-personal-page__tabs-item">Дорога приключений</li>
+                </ul>
+
+
+                <ul class="upcoming-pop-events__list">
+                    <li class="upcoming-pop-events__item">
+                        <div class="cards__item">
+                            <div class="item__user">
+                                <div class="item__user-logo"><img class="item__user-logo-img"
+                                        src="../images/comment-3.png" alt=""></div>
+                                <div class="item__user-info">
+                                    <div class="item__user-name">Дмитрий Сандиев</div>
+                                    <div class="item__user-game"><a class="item__user-game-link" href="#">Дорога
+                                            приключений</a></div>
+                                </div>
+                            </div>
+                            <div class="item__img"><a class="user-game-link-img" href="#">
+                                    <img class="user-game-img" src="../images/img2.png" alt=""></a>
+                            </div>
+                            <div class="item__data">22 мая / 11:00 - 23:00</div>
+                            <div class="item__title">
+                                <a class="item__title-link" href="#">
+                                    Ищу компанию на открытую игротеку от Hobby Bobby
+                                </a>
+                            </div>
+                            <div class="item__text">В планах сыграть в «Дорогу приключений», но можно во что-то
+                                другое,
+                                решим все вместе. Hobby Bobby устраивает бесплатную игротеку, поэтому можем весь
+                                день во
+                                что-то играть ;)</div>
+                            <div class="item__block-gamer">
+                                <div class="gamer-info">
+                                    <div class="gamer-text">Игроки:</div>
+                                    <div class="gamer-number">2/4</div>
+                                </div>
+                                <div class="gamer__img-logo">
+                                    <img class="gamer__user-logo" src="../images/comment-4.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-2.png" alt="">
+
+                                </div>
+                            </div>
+                            <div class="item__location">Место проведения: магазин «Hobby Bobby»</div>
+                            <div class="item__price-inner">
+                                <div class="price-info">Цена посещения</div>
+                                <div class="price">Бесплатно</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="upcoming-pop-events__item">
+                        <div class="cards__item">
+                            <div class="item__user">
+                                <div class="item__user-logo"><img class="item__user-logo-img"
+                                        src="../images/comment-5.png" alt=""></div>
+                                <div class="item__user-info">
+                                    <div class="item__user-name">Ксения Белова</div>
+                                    <div class="item__user-game"><a class="item__user-game-link" href="#">Эверделл</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__img"><a class="user-game-link-img" href="#">
+                                    <img class="user-game-img" src="../images/img4.png" alt=""></a>
+                            </div>
+                            <div class="item__data">17 мая / 19:00</div>
+                            <div class="item__title">
+                                <a class="item__title-link" href="#">
+                                    Играем в красивый Эверделл и хорошо проводим время
+                                </a>
+                            </div>
+                            <div class="item__text">Ищу людей в компанию, чтобы сыграть в «Эверделл». Будет
+                                здорово если ты уже играл в эту игру и знаешь правила, но даже если нет, то ты
+                                быстро научишься по ходу игры)</div>
+                            <div class="item__block-gamer">
+                                <div class="gamer-info">
+                                    <div class="gamer-text">Игроки:</div>
+                                    <div class="gamer-number">4/6</div>
+                                </div>
+                                <div class="gamer__img-logo">
+                                    <img class="gamer__user-logo" src="../images/comment-4.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-3.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-2.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-1.png" alt="">
+
+                                </div>
+                            </div>
+                            <div class="item__location item__location--active">Место проведения: магазин «Hobby
+                                Bobby»</div>
+                            <div class="item__more">
+                                <a class="item__more-link" href="#">
+                                    <div class="y-btn">Подробнее</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="upcoming-pop-events__item">
+                        <div class="cards__item">
+                            <div class="item__user">
+                                <div class="item__user-logo"><img class="item__user-logo-img"
+                                        src="../images/comment-6.png" alt=""></div>
+                                <div class="item__user-info">
+                                    <div class="item__user-name">Рустам Мамедов</div>
+                                    <div class="item__user-game"><a class="item__user-game-link" href="#">D&D 5’e</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__img"><a class="user-game-link-img" href="#">
+                                    <img class="user-game-img" src="../images/img5.png" alt=""></a>
+                            </div>
+                            <div class="item__data">22 октября / 19:00</div>
+                            <div class="item__title">
+                                <a class="item__title-link" href="#">
+                                    Врата псионика Балдура
+                                </a>
+                            </div>
+                            <div class="item__text">Провожу ваншот расчитаный на 4-6 персонажей. По времени примерно часа 4 будет. Действия происходят в Затеряных Королевствах. Желательно </div>
+                            <div class="item__block-gamer">
+                                <div class="gamer-info">
+                                    <div class="gamer-text">Игроки:</div>
+                                    <div class="gamer-number">3/6</div>
+                                </div>
+                                <div class="gamer__img-logo">
+                                    
+                                    <img class="gamer__user-logo" src="../images/comment-3.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-2.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-1.png" alt="">
+
+                                </div>
+                            </div>
+                            <div class="item__location item__location--active">Место проведения: магазин «Hobby
+                                Bobby»</div>
+                                <div class="item__price-inner">
+                                    <div class="price-info">Цена посещения</div>
+                                    <div class="price">250р</div>
+                                </div>
+                        </div>
+                    </li>
+
+
+                    <li class="upcoming-pop-events__item">
+                        <div class="cards__item">
+                            <div class="item__user">
+                                <div class="item__user-logo"><img class="item__user-logo-img"
+                                        src="../images/comment-1.png" alt=""></div>
+                                <div class="item__user-info">
+                                    <div class="item__user-name">Алиса Виноградова</div>
+                                    <div class="item__user-game"><a class="item__user-game-link" href="#">Game of Thrones</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__img"><a class="user-game-link-img" href="#">
+                                    <img class="user-game-img" src="../images/img9.png" alt=""></a>
+                            </div>
+                            <div class="item__data">22 октября / 19:00</div>
+                            <div class="item__title">
+                                <a class="item__title-link" href="#">
+                                    Кто захватит Вестерос тот и победит?
+                                </a>
+                            </div>
+                            <div class="item__text">Ищем людей в компанию, чтобы сыграть в «Игру престолов». Знание сюжета не обязательно, но будет интереснее, если Вы будете его знать и сможете войти в роль одного из кланов. Возраст 17+ </div>
+                            <div class="item__block-gamer">
+                                <div class="gamer-info">
+                                    <div class="gamer-text">Игроки:</div>
+                                    <div class="gamer-number">4/6</div>
+                                </div>
+                                <div class="gamer__img-logo">
+                                    
+                                    <img class="gamer__user-logo" src="../images/comment-1.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-2.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-3.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-4.png" alt="">
+
+                                </div>
+                            </div>
+                            <div class="item__location item__location">Место проведения: магазин «Hobby
+                                Bobby»</div>
+                                <div class="item__price-inner">
+                                    <div class="price-info">Цена посещения</div>
+                                    <div class="price">220р</div>
+                                </div>
+                        </div>
+                    </li>
+
+                    
+                    <li class="upcoming-pop-events__item">
+                        <div class="cards__item">
+                            <div class="item__user">
+                                <div class="item__user-logo"><img class="item__user-logo-img"
+                                        src="../images/comment-2.png" alt=""></div>
+                                <div class="item__user-info">
+                                    <div class="item__user-name">Артур Бикбов</div>
+                                    <div class="item__user-game"><a class="item__user-game-link" href="#">Иниш</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__img"><a class="user-game-link-img" href="#">
+                                    <img class="user-game-img" src="../images/img10.png" alt=""></a>
+                            </div>
+                            <div class="item__data">22 октября / 19:00</div>
+                            <div class="item__title">
+                                <a class="item__title-link" href="#">
+                                    Боремся за титул Короля острова!
+                                </a>
+                            </div>
+                            <div class="item__text">Привет! Ищу опытных игроков по «Инишу». Возраст не важен, главное - знание правил, механики игры, хорошее настроение и умение проигрывать, ведь </div>
+                            <div class="item__block-gamer">
+                                <div class="gamer-info">
+                                    <div class="gamer-text">Игроки:</div>
+                                    <div class="gamer-number">4/6</div>
+                                </div>
+                                <div class="gamer__img-logo">
+                                    
+                                    <img class="gamer__user-logo" src="../images/comment-1.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-2.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-3.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-4.png" alt="">
+
+                                </div>
+                            </div>
+                            <div class="item__location item__location">Место проведения: магазин «Hobby
+                                Bobby»</div>
+                                <div class="item__price-inner">
+                                    <div class="price-info">Цена посещения</div>
+                                    <div class="price">220р</div>
+                                </div>
+                        </div>
+                    </li>
+
+                    <li class="upcoming-pop-events__item">
+                        <div class="cards__item">
+                            <div class="item__user">
+                                <div class="item__user-logo"><img class="item__user-logo-img"
+                                        src="../images/comment-2.png" alt=""></div>
+                                <div class="item__user-info">
+                                    <div class="item__user-name">Евгений Троцкий</div>
+                                    <div class="item__user-game"><a class="item__user-game-link" href="#">Nemesis</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__img"><a class="user-game-link-img" href="#">
+                                    <img class="user-game-img" src="../images/img11.png" alt=""></a>
+                            </div>
+                            <div class="item__data">22 октября / 19:00</div>
+                            <div class="item__title">
+                                <a class="item__title-link" href="#">
+                                    В космосе никто не услышит вашего крика
+                                </a>
+                            </div>
+                            <div class="item__text">Что может пойти не так на  космическом корабле под управлением искусственного интеллекта? Казалось бы, что всё просчитано, технологии совершенны, а серьёзные протоколы</div>
+                            <div class="item__block-gamer">
+                                <div class="gamer-info">
+                                    <div class="gamer-text">Игроки:</div>
+                                    <div class="gamer-number">2/6</div>
+                                </div>
+                                <div class="gamer__img-logo">
+                                    
+                                    <img class="gamer__user-logo" src="../images/comment-2.png" alt="">
+                                    <img class="gamer__user-logo" src="../images/comment-4.png" alt="">
+
+                                </div>
+                            </div>
+                            <div class="item__location item__location">Место проведения: магазин «Hobby
+                                Bobby»</div>
+                                <div class="item__price-inner">
+                                    <div class="price-info">Цена посещения</div>
+                                    <div class="price">350р</div>
+                                </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <button class="f-btn upcoming-pop-events__main-btn">Показать ещё</button>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner-client">
+                    <div class="footer__top-left-client">
+                        <div class="footer__top-title">Теперь есть с кем играть!</div>
+                        <div class="footer__top-btn">
+                            <a class="footer__top-link-btn" href="#">
+                                <div class="footer__btn">Искать игру</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__top-right-client">
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Профиль</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Редактировать</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Игры и мероприятия</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Новое приглашение</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Создал приглашения</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Принял участие</a>
+                                </li>
+
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">История</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Чаты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Помощь</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Контакты</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Служба поддержки</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copyright">
+            <div class="container">
+                <div class="copyright__text">
+                    Проект выполнен при поддержке гранта Фонда содействия инновациям, предоставленного в рамках
+                    программы «Студенческий стартап» федерального проекта «Платформа университетскоготехнологического
+                    предпринимательства»
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                    <a class="footer__bottom-link" href="#">Вконтакте</a>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function menuPolsov() {
+            document.getElementById("menuPolsov").classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>

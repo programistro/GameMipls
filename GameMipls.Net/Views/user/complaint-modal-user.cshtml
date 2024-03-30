@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/main-style.css">
+</head>
+
+<body>
+    <div class="container" id="main">
+        <h1>Модальное окно</h1>
+        <a style="cursor:pointer" onclick="openPopup()">открыть окно Жалоба</a>
+
+    </div>
+    <div class="sup-modal" id="sup-service-modal">
+
+        <div class="sup-modal__box">
+            <button onclick="closePopup()" class="sup-modal__close-btn">
+                <img src="../images/close-modal.svg" alt="">
+            </button>
+            <h2 class="sup-service__title">Жалоба</h2>
+            <div class="sup-service__description">Почему Вы хотите пожаловаться на пользователя <b>Артур?</b></div>
+            <fieldset class="sup-service__checkbox">
+                <legend class="sup-service__legend">Причина</legend>
+
+                <div class="sup-service__block-checkbox">
+                    <label class="sup-service__text" for="error">Оскорбительное поведение</label>
+                    <input type="checkbox" id="error" name="error" checked />
+
+                </div>
+
+                <div class="sup-service__block-checkbox">
+                    <label class="sup-service__text" for="problems">Запрещённые материалы</label>
+                    <input type="checkbox" id="problems" name="problems" />
+
+                </div>
+                <div class="sup-service__block-checkbox">
+                    <label class="sup-service__text" for="problems">Мошенничество</label>
+                    <input type="checkbox" id="problems" name="problems" />
+
+                </div>
+                <div class="sup-service__block-checkbox">
+                    <label class="sup-service__text" for="problems">Спам</label>
+                    <input type="checkbox" id="problems" name="problems" />
+
+                </div>
+
+            </fieldset>
+            <div class="sup-service__block-textarea">
+                <label class="sup-service__legend" for="story">Опишите проблему</label>
+
+                <textarea class="sup-service__textarea" id="story" name="story" rows="5" cols="20" placeholder="Опишите проблему"></textarea>
+            </div>
+            <button class="f-btn sup-service__btn">Отправить жалобу</button>
+        </div>
+    </div>
+
+    <script>
+
+        function openPopup() {
+            document.getElementById("sup-service-modal").classList.add("open");
+        }
+
+        function closePopup() {
+            document.getElementById("sup-service-modal").classList.remove("open");
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") {
+                document.getElementById("sup-service-modal").classList.remove("open");
+            }
+        });
+
+        //Закрыть модальное окно при клике вне его
+        document.querySelector("#sup-service-modal .sup-modal__box").addEventListener('click', event => {
+            event._isClickWithInModal = true;
+        });
+
+        document.getElementById("sup-service-modal").addEventListener('click', event => {
+            if (event._isClickWithInModal) return;
+            event.currentTarget.classList.remove('open');
+        });
+
+    </script>
+
+
+</body>
+
+</html>

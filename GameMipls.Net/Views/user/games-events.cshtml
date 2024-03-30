@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-block">
+                    <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                    <div class="logo-block__logo">Mipls.ru</div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label class="hamburger" for="checkbox_toggle">
+                            <div class="hamburger__block">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-menu">Меню</span>
+                            </div>
+                        </label>
+                        <div class="menu">
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Игры и мероприятия</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Безопасность</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Правила сервиса</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="head-user">
+                    <button onclick="menuPolsov()" class="user__btn user-client-btn">
+                        <div class="block-menu-bnt">
+                            <img class="menu-profile-btn-img" src="../images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="../images/comment-8.png" alt="">
+                        </div>
+                    </button>
+                    <div id="menuPolsov" class="dropdown-content">
+                        <ul class="menu-profile__list">
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" href="setting-profile.html">Профиль</a></li>
+
+                            <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a class="menu-profile__link" href="setting-profile.html">Мои игры</a><span class="menu-span-profile__link">5</span></li>
+
+                           
+                            <li class="menu-profile__item menu-profile__icon-chats menu-profile__item-number"><a class="menu-profile__link" href="#">Чаты</a><span class="menu-span-profile__link">5</span></li>
+                            
+                            
+                            <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link" href="#">Поддержка</a></li>
+                            <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a class="menu-profile__link"
+                                    href="#">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="admin-content">
+            <div class="container">
+                <div class="breacrumbs">
+                    <a class="breacrumbs__link" href="setting-profile.html">Аккаунт</a>
+                    <span class="breacrumbs__separator"><img src="../images/breacrumbs-separator.svg" alt=""></span>
+                    <a class="breacrumbs__link" href="#"> Игры мероприятия</a>
+                </div>
+
+                <div class="advertisement__inner-title">
+                    <h2 class="admin-content__title">Игры и мероприятия</h2>
+                    <button class="create-event advertisement__create-cards-btn f-btn">Создать</button>
+                </div>
+
+                <div class="profile__inner profile__events-inner">
+                    <div class="profile__events-left">
+
+                        <nav class="content__items">
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <button class="content__link tabs__button content__link--active"
+                                        data-tab="tab_1">Создал приглашение</button>
+                                </li>
+                                <li class="content__item">
+                                    <button class="content__link tabs__button" data-tab="tab_2">Принял участие</button>
+                                </li>
+                                <li class="content__item">
+                                    <button class="content__link tabs__button" data-tab="tab_3">История</button>
+                                </li>
+                            </ul>
+                        </nav>
+
+
+
+                    </div>
+                    <div class="profile__right tabs__item  _active" id="tab_1">
+                        <ul class="events__cards-list">
+                            <li class="events__cards-item">
+                                <div class="cards__item events__item">
+                                    <div class="cards__info">
+                                        <div class="info__data">22 октября
+                                            /
+                                            19:00</div>
+                                        <div class="info__games">Настольные игры</div>
+                                    </div>
+                                    <div class="cards__title">Dungeons & Dragons</div>
+                                    <div class="cards__location item__location item__location--active">Анти-кафе «Новое
+                                        место»</div>
+                                    <div class="cards__block-info">
+                                        <div class="block-info__text">Участники:</div>
+                                        <div class="block-info__number">4/6</div>
+                                    </div>
+                                    <div class="block-info__images">
+                                        <img class="block-info__img" src="../images/comment-1.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-2.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-3.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-4.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-0.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-0.png" alt="">
+                                    </div>
+                                    <button class="f-btn cards__btn">Редактировать</button>
+                                </div>
+                            </li>
+                            <li class="events__cards-item">
+                                <div class="cards__item events__item">
+                                    <div class="cards__info">
+                                        <div class="info__data">22 октября
+                                            /
+                                            19:00</div>
+                                        <div class="info__games">Компьютерные игры</div>
+                                    </div>
+                                    <div class="cards__title">Играем в Overwatch 2</div>
+                                    <div class="cards__location item__location item__location--active">Онлайн</div>
+                                    <div class="cards__block-info">
+                                        <div class="block-info__text">Участники:</div>
+                                        <div class="block-info__number">3/4</div>
+                                    </div>
+                                    <div class="block-info__images">
+                                        <img class="block-info__img" src="../images/comment-6.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-8.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-9.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-0.png" alt="">
+
+                                    </div>
+                                    <button disabled class="f-btn cards__btn btn">Редактировать</button>
+                                </div>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                    <div class="profile__right tabs__item " id="tab_2">
+                        <ul class="events__cards-list">
+                            <li class="events__cards-item">
+                                <div class="cards__item events__item">
+                                    <div class="cards__info">
+                                        <div class="info__data">22 октября
+                                            /
+                                            19:00</div>
+                                        <div class="info__games">Настольные игры</div>
+                                    </div>
+                                    <div class="cards__title">Создаём игру без кода!</div>
+                                    <div class="cards__location item__location item__location--active">Онлайн</div>
+                                    <div class="cards__block-info">
+                                        <div class="block-info__text">Участники:</div>
+                                        <div class="block-info__number">20</div>
+                                    </div>
+                                    <div class="block-info__images">
+                                        <img class="block-info__img" src="../images/comment-1.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-2.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-3.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-4.png" alt="">
+                                        <span class="block-info__img-span">20</span>
+                                    </div>
+                                    <button class="f-btn cards__btn">Подробнее</button>
+                                </div>
+                            </li>
+                            <li class="events__cards-item">
+                                <div class="cards__item events__item">
+                                    <div class="cards__info">
+                                        <div class="info__data">22 октября
+                                            /
+                                            19:00</div>
+                                        <div class="info__games">Спорт</div>
+                                    </div>
+                                    <div class="cards__title">Стритбол 3х3</div>
+                                    <div class="cards__location item__location item__location--active">ФОК «Бирский»
+                                    </div>
+                                    <div class="cards__block-info">
+                                        <div class="block-info__text">Участники:</div>
+                                        <div class="block-info__number">3/3</div>
+                                    </div>
+                                    <div class="block-info__images">
+                                        <img class="block-info__img" src="../images/comment-6.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-8.png" alt="">
+                                        <img class="block-info__img" src="../images/comment-9.png" alt="">
+
+                                    </div>
+                                    <button disabled class="f-btn cards__btn btn">Подробнее</button>
+                                </div>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                    <div class="profile__right tabs__item" id="tab_3">
+                        <div class="block-cards events__block-cards games-events-cards">
+                            <ul class="events__block-cards-list">
+                                <li class="events__block-cards-item">
+                                    <div class="events__card">
+                                        <div class="events__cards-inner">
+                                            <div class="events__cards-image">
+                                                <img class="events__cards-img" src="../images/img5.png" alt="">
+                                            </div>
+                                            <div class="events__cards-info">
+                                                <div class="events__cards-info-inner">
+                                                    <div class="events__cards-info-left">
+                                                        <div class="cards__info">
+                                                            <div class="info__data">22 октября / 19:00</div>
+                                                            <div class="info__games events__cards-games">Настольные игры
+                                                            </div>
+                                                            <div class="info__chat">
+                                                                <a class="info__chat-link" href="#">Чат</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cards__title events__cards-title">Dungeons & Dragons</div>
+                                                        <div class="cards__bottom">
+                                                            <div
+                                                                class="cards__location events__cards-location item__location item__location--active">
+                                                                Анти-кафе «Новое место»</div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="events__cards-info-right">
+                                                        <div class="cards__participants">
+                                                            <div class="cards__block-info">
+                                                                <div class="block-info__text">Участники:</div>
+                                                            </div>
+                                                            <div class="block-info__images">
+                                                                <img class="block-info__img" src="../images/comment-1.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-2.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-3.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-4.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-5.png"
+                                                                    alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="events__block-cards-item">
+                                    <div class="events__card">
+                                        <div class="events__cards-inner">
+                                            <div class="events__cards-image">
+                                                <img class="events__cards-img" src="../images/img5.png" alt="">
+                                            </div>
+                                            <div class="events__cards-info">
+                                                <div class="events__cards-info-inner">
+                                                    <div class="events__cards-info-left">
+                                                        <div class="cards__info">
+                                                            <div class="info__data">22 октября / 19:00</div>
+                                                            <div class="info__games events__cards-games">Настольные игры
+                                                            </div>
+                                                            <div class="info__chat">
+                                                                <a class="info__chat-link" href="#">Чат</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cards__title events__cards-title">Немезида</div>
+                                                        <div class="cards__bottom">
+                                                            <div
+                                                                class="cards__location events__cards-location item__location item__location--active">
+                                                                Анти-кафе «Новое место»</div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="events__cards-info-right">
+                                                        <div class="cards__participants">
+                                                            <div class="cards__block-info">
+                                                                <div class="block-info__text">Участники:</div>
+                                                            </div>
+                                                            <div class="block-info__images">
+                                                                <img class="block-info__img" src="../images/comment-1.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-2.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-3.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-4.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-5.png"
+                                                                    alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="events__block-cards-item">
+                                    <div class="events__card">
+                                        <div class="events__cards-inner">
+                                            <div class="events__cards-image">
+                                                <img class="events__cards-img" src="../images/img5.png" alt="">
+                                            </div>
+                                            <div class="events__cards-info">
+                                                <div class="events__cards-info-inner">
+                                                    <div class="events__cards-info-left">
+                                                        <div class="cards__info">
+                                                            <div class="info__data">22 октября / 19:00</div>
+                                                            <div class="info__games events__cards-games">Настольные игры
+                                                            </div>
+                                                            <div class="info__chat">
+                                                                <a class="info__chat-link" href="#">Чат</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cards__title events__cards-title">Gloomhawen. Мрачная гавань</div>
+                                                        <div class="cards__bottom">
+                                                            <div
+                                                                class="cards__location events__cards-location item__location item__location--active">
+                                                                Анти-кафе «Новое место»</div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="events__cards-info-right">
+                                                        <div class="cards__participants">
+                                                            <div class="cards__block-info">
+                                                                <div class="block-info__text">Участники:</div>
+                                                            </div>
+                                                            <div class="block-info__images">
+                                                                <img class="block-info__img" src="../images/comment-1.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-2.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-3.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-4.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-5.png"
+                                                                    alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="events__block-cards-item">
+                                    <div class="events__card">
+                                        <div class="events__cards-inner">
+                                            <div class="events__cards-image">
+                                                <img class="events__cards-img" src="../images/img5.png" alt="">
+                                            </div>
+                                            <div class="events__cards-info">
+                                                <div class="events__cards-info-inner">
+                                                    <div class="events__cards-info-left">
+                                                        <div class="cards__info">
+                                                            <div class="info__data">22 октября / 19:00</div>
+                                                            <div class="info__games events__cards-games">Настольные игры
+                                                            </div>
+                                                            <div class="info__chat">
+                                                                <a class="info__chat-link" href="#">Чат</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cards__title events__cards-title">Руины острова Арнак</div>
+                                                        <div class="cards__bottom">
+                                                            <div
+                                                                class="cards__location events__cards-location item__location item__location--active">
+                                                                Анти-кафе «Новое место»</div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="events__cards-info-right">
+                                                        <div class="cards__participants">
+                                                            <div class="cards__block-info">
+                                                                <div class="block-info__text">Участники:</div>
+                                                            </div>
+                                                            <div class="block-info__images">
+                                                                <img class="block-info__img" src="../images/comment-1.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-2.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-3.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-4.png"
+                                                                    alt="">
+                                                                <img class="block-info__img" src="../images/comment-5.png"
+                                                                    alt="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+
+
+
+                            <button class="f-btn cards__participants-btn">Показать ещё</button>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner-client">
+                    <div class="footer__top-left-client">
+                        <div class="footer__top-title">Теперь есть с кем играть!</div>
+                        <div class="footer__top-btn">
+                            <a class="footer__top-link-btn" href="#">
+                                <div class="footer__btn">Искать игру</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__top-right-client">
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Профиль</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Редактировать</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Игры и мероприятия</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Новое приглашение</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Создал приглашения</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Принял участие</a>
+                                </li>
+
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">История</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Чаты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Помощь</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Контакты</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Служба поддержки</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copyright">
+            <div class="container">
+                <div class="copyright__text">
+                    Проект выполнен при поддержке гранта Фонда содействия инновациям, предоставленного в рамках
+                    программы «Студенческий стартап» федерального проекта «Платформа университетскоготехнологического
+                    предпринимательства»
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                    <a class="footer__bottom-link" href="#">Вконтакте</a>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function menuPolsov() {
+            document.getElementById("menuPolsov").classList.toggle("show");
+        }
+
+
+        // получаем все кнопки навигации
+        const tabsButtons = document.querySelectorAll('.tabs__button');
+
+        // Проходимся по всем кнопкам
+        tabsButtons.forEach(btn => {
+            // вешаем на каждую кнопку обработчик события клик
+            btn.addEventListener('click', () => {
+                // Получаем предыдущую активную кнопку
+                const prevActiveItem = document.querySelector('.tabs__item._active');
+                // Получаем предыдущую активную вкладку
+                const prevActiveButton = document.querySelector('.tabs__button.content__link--active');
+
+                // Проверяем есть или нет предыдущая активная кнопка
+                if (prevActiveButton) {
+                    //Удаляем класс _active у предыдущей кнопки если она есть
+                    prevActiveButton.classList.remove('content__link--active');
+                }
+
+                // Проверяем есть или нет предыдущая активная вкладка
+                if (prevActiveItem) {
+                    // Удаляем класс _active у предыдущей вкладки если она есть
+                    prevActiveItem.classList.remove('_active');
+                }
+                // получаем id новой активной вкладки, который мы перем из атрибута data-tab у кнопки
+                const nextActiveItemId = `#${btn.getAttribute('data-tab')}`;
+                // получаем новую активную вкладку по id
+                const nextActiveItem = document.querySelector(nextActiveItemId);
+
+                // добавляем класс _active кнопке на которую нажали
+                btn.classList.add('content__link--active');
+                // добавляем класс _active новой выбранной вкладке
+                nextActiveItem.classList.add('_active');
+            });
+        })
+    </script>
+</body>
+
+</html>

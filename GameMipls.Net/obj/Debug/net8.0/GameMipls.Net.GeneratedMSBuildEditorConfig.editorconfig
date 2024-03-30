@@ -1,0 +1,151 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GameMipls.Net
+build_property.RootNamespace = GameMipls.Net
+build_property.ProjectDir = C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Projects\dotnet\GameMipls.Net\GameMipls.Net
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/NoLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Setting_profile_user.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXR0aW5nX3Byb2ZpbGVfdXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/complaint-modal-user.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjb21wbGFpbnQtbW9kYWwtdXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/complaint-modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjb21wbGFpbnQtbW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/creating-invitation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxjcmVhdGluZy1pbnZpdGF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/description-event-message.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxkZXNjcmlwdGlvbi1ldmVudC1tZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/description-event.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxkZXNjcmlwdGlvbi1ldmVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/edit-invitation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxlZGl0LWludml0YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/filtr.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxmaWx0ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/forgot-your-password-2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxmb3Jnb3QteW91ci1wYXNzd29yZC0yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/forgot-your-password-3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxmb3Jnb3QteW91ci1wYXNzd29yZC0zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/forgot-your-password-4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxmb3Jnb3QteW91ci1wYXNzd29yZC00LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/forgot-your-password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxmb3Jnb3QteW91ci1wYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/games-events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxnYW1lcy1ldmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/notification-complaint-user.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxub3RpZmljYXRpb24tY29tcGxhaW50LXVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/notification-complaint.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxub3RpZmljYXRpb24tY29tcGxhaW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/notification-edition-invitation-del.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxub3RpZmljYXRpb24tZWRpdGlvbi1pbnZpdGF0aW9uLWRlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/notification-edition-invitation-save.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxub3RpZmljYXRpb24tZWRpdGlvbi1pbnZpdGF0aW9uLXNhdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxub3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/rate-game.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxyYXRlLWdhbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/reg.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxyZWcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/support-service.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxzdXBwb3J0LXNlcnZpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/upcoming-popular-events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclx1cGNvbWluZy1wb3B1bGFyLWV2ZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/user-personal-page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclx1c2VyLXBlcnNvbmFsLXBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/user-personal-page2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclx1c2VyLXBlcnNvbmFsLXBhZ2UyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/where-invite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclx3aGVyZS1pbnZpdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-i89vsfwvwu
