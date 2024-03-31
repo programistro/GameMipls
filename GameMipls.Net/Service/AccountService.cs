@@ -14,7 +14,7 @@ public class AccountService
         return randomHash;
     }
 
-    public string CreatePasswordHash(string password)
+    public async Task<string> CreatePasswordHash(string password)
     {
         using (SHA256 sha = SHA256.Create())
         {

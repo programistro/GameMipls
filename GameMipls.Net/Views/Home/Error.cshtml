@@ -13,50 +13,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/general-styles.css">
-    <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
 </head>
-    
-    <body>
-        <header class="header">
-            <div class="container">
-                <div class="header-top">
-                    <div class="logo-block">
-                        <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
-                        <div class="logo-block__logo">Mipls.ru</div>
-                    </div>
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <input type="checkbox" id="checkbox_toggle" />
-                            <label class="hamburger" for="checkbox_toggle">
-                                <div class="hamburger__block">
-                                    <span class="hamburger-line"></span>
-                                    <span class="hamburger-menu">Меню</span>
-                                </div>
-                            </label>
-                            <div class="menu">
-                                <li class="menu__list">
-                                    <a class="menu__link" href="#">Главная</a>
-                                </li>
-                                <li class="menu__list">
-                                    <a class="menu__link" href="#">Найти компанию</a>
-                                </li>
-                                <li class="menu__list">
-                                    <a class="menu__link" href="#">Организациям</a>
-                                </li>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-block">
+                    <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                    <div class="logo-block__logo">Mipls.ru</div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label class="hamburger" for="checkbox_toggle">
+                            <div class="hamburger__block">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-menu">Меню</span>
                             </div>
+                        </label>
+                        <div class="menu">
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Игры и мероприятия</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Безопасность</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Правила сервиса</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="head-user">
+                    <button onclick="menuPolsov()" class="user__btn user-client-btn">
+                        <div class="block-menu-bnt">
+                            <img class="menu-profile-btn-img" src="../images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="../images/comment-8.png" alt="">
+                        </div>
+                    </button>
+                    <div id="menuPolsov" class="dropdown-content">
+                        <ul class="menu-profile__list">
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" href="setting-profile.html">Профиль</a></li>
+
+                            <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a class="menu-profile__link" href="setting-profile.html">Мои игры</a><span class="menu-span-profile__link">5</span></li>
+
+                           
+                            <li class="menu-profile__item menu-profile__icon-chats menu-profile__item-number"><a class="menu-profile__link" href="#">Чаты</a><span class="menu-span-profile__link">5</span></li>
+                            
+                            
+                            <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link" href="#">Поддержка</a></li>
+                            <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a class="menu-profile__link"
+                                    href="#">Выход</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </div>
-        </header>
-        <main class="main">
+        </div>
+    </header>
+    <main class="main">
+        <section class="admin-content">
+            <h1 class="logo-block__logo" style="margin: auto;width: 50%;padding: 10px;">Ошибка</h1>
+        </section>
+    </main>
+    <footer class="footer" style="margin-top: 242px;">
+        <section class="footer__top">
             <div class="container">
-                 <div class="top__text">Ошибка</div>
-            </div>
-        </main>
-        <footer class="footer">
-            <section class="footer__top">
-                <div class="container">
+                <div class="footer__top-inner-client">
+                    <div class="footer__top-left-client">
+                        <div class="footer__top-title">Теперь есть с кем играть!</div>
+                        <div class="footer__top-btn">
+                            <a class="footer__top-link-btn" href="#">
+                                <div class="footer__btn">Искать игру</div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="footer__top-right-client">
                         <div class="footer__top-items">
                             <div class="footer__top-item-title">Профиль</div>
@@ -74,7 +106,7 @@
                                 </li>
                                 <li class="footer__top-item"><a class="footer__top-link" href="#">Принял участие</a>
                                 </li>
-    
+
                                 <li class="footer__top-item"><a class="footer__top-link" href="#">История</a>
                                 </li>
                                 <li class="footer__top-item"><a class="footer__top-link" href="#">Чаты</a>
@@ -95,46 +127,31 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="copyright">
-                <div class="container">
-                    <div class="copyright__text">
-                        Проект выполнен при поддержке гранта Фонда содействия инновациям, предоставленного в рамках
-                        программы «Студенческий стартап» федерального проекта «Платформа университетскоготехнологического
-                        предпринимательства»
-                    </div>
+            </div>
+        </section>
+        <section class="copyright">
+            <div class="container">
+                <div class="copyright__text">
+                    Проект выполнен при поддержке гранта Фонда содействия инновациям, предоставленного в рамках
+                    программы «Студенческий стартап» федерального проекта «Платформа университетскоготехнологического
+                    предпринимательства»
                 </div>
-            </section>
-            <section class="footer__bottom">
-                <div class="container">
-                    <div class="footer__bottom-inner">
-                        <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
-                        <a class="footer__bottom-link" href="#">Вконтакте</a>
-                        <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
-                    </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                    <a class="footer__bottom-link" href="#">Вконтакте</a>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
                 </div>
-            </section>
-        </footer>
-        <script>
-
-
-        // для формы пароля
-        function show_hide_password(target) {
-            var input = document.getElementById('password-input');
-            if (input.getAttribute('type') == 'password') {
-                target.classList.add('view');
-                input.setAttribute('type', 'text');
-            } else {
-                target.classList.remove('view');
-                input.setAttribute('type', 'password');
-            }
-            return false;
+            </div>
+        </section>
+    </footer>
+    <script>
+        function menuPolsov() {
+            document.getElementById("menuPolsov").classList.toggle("show");
         }
-        // для формы пароля
-
-
-
-
 
 
         // получаем все кнопки навигации
@@ -147,12 +164,12 @@
                 // Получаем предыдущую активную кнопку
                 const prevActiveItem = document.querySelector('.tabs__item._active');
                 // Получаем предыдущую активную вкладку
-                const prevActiveButton = document.querySelector('.tabs__button.reg__link--active');
+                const prevActiveButton = document.querySelector('.tabs__button.content__link--active');
 
                 // Проверяем есть или нет предыдущая активная кнопка
                 if (prevActiveButton) {
                     //Удаляем класс _active у предыдущей кнопки если она есть
-                    prevActiveButton.classList.remove('reg__link--active');
+                    prevActiveButton.classList.remove('content__link--active');
                 }
 
                 // Проверяем есть или нет предыдущая активная вкладка
@@ -166,12 +183,12 @@
                 const nextActiveItem = document.querySelector(nextActiveItemId);
 
                 // добавляем класс _active кнопке на которую нажали
-                btn.classList.add('reg__link--active');
+                btn.classList.add('content__link--active');
                 // добавляем класс _active новой выбранной вкладке
                 nextActiveItem.classList.add('_active');
             });
         })
-        </script>
-    </body>
-    
-    </html>
+    </script>
+</body>
+
+</html>

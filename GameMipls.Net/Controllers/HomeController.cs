@@ -1,5 +1,7 @@
 using System.Diagnostics;
 using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 using GameMipls.Net.Data;
 using Microsoft.AspNetCore.Mvc;
 using GameMipls.Net.Models;
@@ -19,7 +21,7 @@ public class HomeController : Controller
     private readonly AppDbContext _context;
     
     private readonly SignInManager<User> _signInManager;
-    
+
     private readonly AccountService _accountService;
 
     public HomeController(ILogger<HomeController> logger, AppDbContext context,
@@ -41,9 +43,11 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult Setting_profile_user()
+    [Authorize]
+    [Route("Home/profile")]
+    public IActionResult Setting_profile_user(LoginViewModel model)
     {
-        return View();
+        return View(model);
     }
 
     [HttpGet]
@@ -53,24 +57,44 @@ public class HomeController : Controller
         return View();
     }
 
+    [AllowAnonymous]
+    public async Task<IActionResult> Login(LoginViewModel model)
+    {
+        if (_context.Users.Any(x => x.Phone == model.Phone))
+        {
+            string hash = await _accountService.CreatePasswordHash(model.Password);
+            
+            var result = await _signInManager.PasswordSignInAsync(model.Phone, hash, true, lockoutOnFailure: false);
+            
+            if (result.Succeeded)
+            {
+                // Вход выполнен успешно
+                return View("Setting_profile_user", model);
+            }
+            else
+            {
+                return View("Error");
+            }
+        }
+        else
+        {
+            return View("Error");
+        }
+    }
+
     [HttpPost]
     [AllowAnonymous]
     public async Task<IActionResult> Reg(LoginViewModel model)
     {
         User user = new()
         {
-            // Password = model.Password,
-            // Phone = model.Phone,
-            // Email = null,
-            // Name = model.Name,
-            // LastName = model.LastName,
             Id = _accountService.CreateHash(),
             PhoneNumber = model.Phone,
             EmailConfirmed = false,
             UserName = model.Name,
             Name = model.Name,
             LastName = model.LastName,
-            Password = _accountService.CreatePasswordHash(model.Password),
+            Password = await _accountService.CreatePasswordHash(model.Password),
             Phone = model.Phone
         };
         var item = _context.Users.Any(x => x.Phone == user.Phone);
@@ -96,7 +120,7 @@ public class HomeController : Controller
         await HttpContext.SignInAsync("Cookie", principal, new AuthenticationProperties
         {
             ExpiresUtc = DateTime.UtcNow.AddMinutes(120), // Установка времени истечения куки
-            IsPersistent = false, // Установка постоянности куки
+            IsPersistent = true, // Установка постоянности куки
         });
             
         return View("Setting_profile_user", model);

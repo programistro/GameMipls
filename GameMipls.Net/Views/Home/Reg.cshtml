@@ -69,34 +69,35 @@
         
         
                     <div class="reg__block-entrance tabs__item" id="tab_1">
-        
-                        <div class="block-entrance__inner">
-                            <div class="block-registration__name-input">
-                                <label for="email" name="email" class="registration__title-name">Email или номер
-                                    телефона</label>
-                                <input class="registration__input registration__email registration__input-valid" type="email" placeholder="igromanos@mail.ru"
-                                    id="email">
-                            </div>
-                            <div class="block-registration__name-input">
-                                <label for="pass" name="pass" class="registration__title-name">Пароль</label>
-                                <div class="reg__password-full">
-                                    <input class="registration__input registration__input-invalid" type="password" id="password-input"
-                                        placeholder="Введите пароль" name="password">
-                                    <a href="#" class="reg__password-control" onclick="return show_hide_password(this);"></a>
-                                    <div class="registration__block-input-pass">
-                                        <div class="res-pass"><a class="res-pas__link" href="#">Забыли пароль?</a></div>
-                                        <div class="invalid-pass-text">Неверный пароль</div>
+                        <form method="post" asp-action="Login">
+                            <div class="block-entrance__inner">
+                                <div class="block-registration__name-input">
+                                    <label for="phone" name="phone" class="registration__title-name">Номер
+                                        телефона</label>
+                                    <input class="registration__input registration__email registration__input-valid" type="phone" asp-for="Phone" placeholder="88003535555"
+                                           id="phone">
+                                </div>
+                                <div class="block-registration__name-input">
+                                    <label for="pass" name="pass" class="registration__title-name">Пароль</label>
+                                    <div class="reg__password-full">
+                                        <input class="registration__input registration__input-invalid" type="password" id="password-input"
+                                               placeholder="Введите пароль" asp-for="Password">
+                                        <a href="#" class="reg__password-control" onclick="return show_hide_password(this);"></a>
+                                        <div class="registration__block-input-pass">
+                                            <div class="res-pass"><a class="res-pas__link" href="#">Забыли пароль?</a></div>
+                                            <div class="invalid-pass-text">Неверный пароль</div>
+                                        </div>
+                                    </div>
+                                    <div class="registration__dop-entrance">
+                                        <div class="res-pass">Войти с помощью:</div>
+                                        <div class="registration__vk-img"><a href="#"><img src="~/images/vk.svg" alt=""></a></div>
                                     </div>
                                 </div>
-                                <div class="registration__dop-entrance">
-                                    <div class="res-pass">Войти с помощью:</div>
-                                    <div class="registration__vk-img"><a href="#"><img src="~/images/vk.svg" alt=""></a></div>
-                                </div>
+                                <button class="f-btn registration__btn-input">Войти</button>
+                                                        
+                                <div class="reg__support">Служба поддержки</div>
                             </div>
-                            <button class="f-btn registration__btn-input" disabled>Войти</button>
-                            
-                            <div class="reg__support">Служба поддержки</div>
-                        </div>
+                        </form>
                     </div>
                     <div class="reg__block-registration tabs__item _active" id="tab_2">
                         <form method="post" asp-action="Reg">
