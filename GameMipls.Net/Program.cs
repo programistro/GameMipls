@@ -1,8 +1,11 @@
 using GameMipls.Net.Data;
+using GameMipls.Net.Interface;
 using GameMipls.Net.Models;
+using GameMipls.Net.Provider;
 using GameMipls.Net.Service;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,29 +21,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(connectionString));
 
-// builder.Services.AddAuthentication(options =>
-// {
-//     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-//     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-// }).AddCookie("LoginScheme", options =>
-// {
-//     // ��������� ��� ����� ����� ��������������
-//     options.Cookie.Name = "LoginScheme";
-//     options.Cookie.HttpOnly = true; // Только HTTP
-//     options.ExpireTimeSpan = TimeSpan.FromMinutes(120); // Время жизни cookie
-//     options.LoginPath = "/Home/Reg"; // Путь к странице входа
-//     // ...
-// });
-// builder.Services.AddAuthentication()
-//     .AddCookie("Coockie", options =>
-//     {
-//         options.LoginPath = "/Home/Reg";
-//         // options.LogoutPath = "/Account/Logout";
-//         // options.AccessDeniedPath = "/Account/AccessDenied";
-//         options.ExpireTimeSpan = TimeSpan.FromDays(60);
-//         options.SlidingExpiration = true;
-//         // Другие настройки куки
-//     });
+builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
 
 builder.Services.AddAuthentication(options =>
     {

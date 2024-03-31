@@ -1,4 +1,5 @@
 @using GameMipls.Net.Models
+@using Microsoft.AspNetCore.Authorization
 @model LoginViewModel
 @{
    Layout = "";
@@ -63,8 +64,7 @@
 
                         <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link" href="#">Поддержка</a></li>
                         <li class="menu-profile__item menu-profile__last menu-profile__icon-exit">
-                            <a class="menu-profile__link"
-                               href="#">Выход</a></li>
+                            <a class="menu-profile__link" asp-controller="Home" asp-action="Index" asp-route-value="logout">Выход</a></li>
                     </ul>
                 </div>
             </div>

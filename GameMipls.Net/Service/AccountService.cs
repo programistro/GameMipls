@@ -1,11 +1,20 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
+using GameMipls.Net.Interface;
 using GameMipls.Net.Models;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace GameMipls.Net.Service;
 
 public class AccountService
 {
+    private readonly AuthenticationStateProvider _authenticationStateProvider;
+
+    public AccountService(AuthenticationStateProvider authenticationStateProvider)
+    {
+        _authenticationStateProvider = authenticationStateProvider;
+    }
+    
     public string CreateHash()
     {
         Guid randomGuid = Guid.NewGuid();
@@ -27,6 +36,36 @@ public class AccountService
             }
 
             return builder.ToString();
+        }
+    }
+
+    public async Task<string> GetName()
+    {
+        var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        
+        if (user.Identity.IsAuthenticated)
+        {
+            return user.Identity.Name;
+        }
+        else
+        {
+            return "";
+        }
+    }
+    
+    public async Task<bool> IsAuth()
+    {
+        var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        
+        if (user.Identity.IsAuthenticated)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

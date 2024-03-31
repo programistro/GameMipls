@@ -9,6 +9,7 @@ using GameMipls.Net.Service;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 
 namespace GameMipls.Net.Controllers;
@@ -32,9 +33,14 @@ public class HomeController : Controller
         _signInManager = signInManager;
         _accountService = accountService;
     }
+    
     [AllowAnonymous]
-    public IActionResult Index()
+    public async Task<IActionResult> Index(string? value)
     {
+        if (value == "logout")
+        {
+            _signInManager.SignOutAsync();
+        }
         return View();
     }
 
@@ -45,8 +51,18 @@ public class HomeController : Controller
     
     [Authorize]
     [Route("Home/profile")]
-    public IActionResult Setting_profile_user(LoginViewModel model)
+    public async Task<IActionResult> Setting_profile_user(LoginViewModel model)
     {
+        var name = _signInManager.Context.User.Identity.Name;
+
+        var user = _context.Users.FirstOrDefault(x => x.Name == name);
+
+        model.Name = user.Name;
+        model.LastName = user.LastName;
+        model.Password = user.Password;
+        model.Phone = user.Phone;
+        model.Email = user.Email;
+        
         return View(model);
     }
 
@@ -64,9 +80,16 @@ public class HomeController : Controller
         {
             string hash = await _accountService.CreatePasswordHash(model.Password);
             
-            var result = await _signInManager.PasswordSignInAsync(model.Phone, hash, true, lockoutOnFailure: false);
+            // var result = await _signInManager.PasswordSignInAsync(model.Name, hash, true, lockoutOnFailure: false);
+
+            var item = _context.Users.FirstOrDefault(x => x.Phone == x.Phone);
+
+            var result = _signInManager.SignInAsync(item, true);
+
+            model.Name = item.Name;
+            model.LastName = item.LastName;
             
-            if (result.Succeeded)
+            if (result.IsCompleted)
             {
                 // Вход выполнен успешно
                 return View("Setting_profile_user", model);

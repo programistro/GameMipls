@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using GameMipls.Net.Service
+@using Microsoft.AspNetCore.Authorization
+@using GameMipls.Net.Data
+@inject AppDbContext AppDbContext
+@inject IAuthorizationService AuthorizationService
+@model LoginViewModel
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,8 +47,19 @@
                 </ul>
             </nav>
             <div class="head-user">
-                <div class="head-user__icon"><img src="images/avatar.svg" alt=""></div>
-                <a class="user__btn" asp-area="" asp-controller="Home" asp-action="Reg">Аккаунт</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    var name = User.Identity.Name;
+                    var user = AppDbContext.Users.FirstOrDefault(x => x.Name == name);
+                    
+                    <div class="head-user__icon"><img src="images/avatar.svg" alt=""></div>
+                    <a class="user__btn" asp-area="" asp-controller="Home" asp-action="Setting_profile_user">@user.Name</a>
+                }
+                else
+                {
+                    <div class="head-user__icon"><img src="images/avatar.svg" alt=""></div>
+                    <a class="user__btn" asp-area="" asp-controller="Home" asp-action="Reg">Аккаунт</a>
+                }
             </div>
         </div>
     </div>
@@ -257,7 +275,18 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    
+    @{
+        try
+        {
+            @await RenderSectionAsync("Scripts", required: false)
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }    
+    }
     
     @RenderBody()
 </footer>
