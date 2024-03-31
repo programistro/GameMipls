@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GameMipls.Net
 build_property.RootNamespace = GameMipls.Net
@@ -18,6 +26,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Projects\dotnet\GameMipls.Net\GameMipls.Net
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/admin/complaints-about-user.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cY29tcGxhaW50cy1hYm91dC11c2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/admin/new-games2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cbmV3LWdhbWVzMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Reg.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Setting_profile_user.cshtml]
@@ -112,10 +136,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/rate-game.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxyYXRlLWdhbWUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/reg.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxyZWcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/support-service.cshtml]

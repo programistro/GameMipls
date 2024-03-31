@@ -1,0 +1,177 @@
+﻿@page
+@model GameMipls.Net.Views.Home.Error
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/main-style.css">
+</head>
+    
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-block">
+                        <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                        <div class="logo-block__logo">Mipls.ru</div>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <input type="checkbox" id="checkbox_toggle" />
+                            <label class="hamburger" for="checkbox_toggle">
+                                <div class="hamburger__block">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-menu">Меню</span>
+                                </div>
+                            </label>
+                            <div class="menu">
+                                <li class="menu__list">
+                                    <a class="menu__link" href="#">Главная</a>
+                                </li>
+                                <li class="menu__list">
+                                    <a class="menu__link" href="#">Найти компанию</a>
+                                </li>
+                                <li class="menu__list">
+                                    <a class="menu__link" href="#">Организациям</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                 <div class="top__text">Ошибка</div>
+            </div>
+        </main>
+        <footer class="footer">
+            <section class="footer__top">
+                <div class="container">
+                    <div class="footer__top-right-client">
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Профиль</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Редактировать</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Игры и мероприятия</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Новое приглашение</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Создал приглашения</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Принял участие</a>
+                                </li>
+    
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">История</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Чаты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Помощь</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Контакты</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Служба поддержки</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="copyright">
+                <div class="container">
+                    <div class="copyright__text">
+                        Проект выполнен при поддержке гранта Фонда содействия инновациям, предоставленного в рамках
+                        программы «Студенческий стартап» федерального проекта «Платформа университетскоготехнологического
+                        предпринимательства»
+                    </div>
+                </div>
+            </section>
+            <section class="footer__bottom">
+                <div class="container">
+                    <div class="footer__bottom-inner">
+                        <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                        <a class="footer__bottom-link" href="#">Вконтакте</a>
+                        <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <script>
+
+
+        // для формы пароля
+        function show_hide_password(target) {
+            var input = document.getElementById('password-input');
+            if (input.getAttribute('type') == 'password') {
+                target.classList.add('view');
+                input.setAttribute('type', 'text');
+            } else {
+                target.classList.remove('view');
+                input.setAttribute('type', 'password');
+            }
+            return false;
+        }
+        // для формы пароля
+
+
+
+
+
+
+        // получаем все кнопки навигации
+        const tabsButtons = document.querySelectorAll('.tabs__button');
+
+        // Проходимся по всем кнопкам
+        tabsButtons.forEach(btn => {
+            // вешаем на каждую кнопку обработчик события клик
+            btn.addEventListener('click', () => {
+                // Получаем предыдущую активную кнопку
+                const prevActiveItem = document.querySelector('.tabs__item._active');
+                // Получаем предыдущую активную вкладку
+                const prevActiveButton = document.querySelector('.tabs__button.reg__link--active');
+
+                // Проверяем есть или нет предыдущая активная кнопка
+                if (prevActiveButton) {
+                    //Удаляем класс _active у предыдущей кнопки если она есть
+                    prevActiveButton.classList.remove('reg__link--active');
+                }
+
+                // Проверяем есть или нет предыдущая активная вкладка
+                if (prevActiveItem) {
+                    // Удаляем класс _active у предыдущей вкладки если она есть
+                    prevActiveItem.classList.remove('_active');
+                }
+                // получаем id новой активной вкладки, который мы перем из атрибута data-tab у кнопки
+                const nextActiveItemId = `#${btn.getAttribute('data-tab')}`;
+                // получаем новую активную вкладку по id
+                const nextActiveItem = document.querySelector(nextActiveItemId);
+
+                // добавляем класс _active кнопке на которую нажали
+                btn.classList.add('reg__link--active');
+                // добавляем класс _active новой выбранной вкладке
+                nextActiveItem.classList.add('_active');
+            });
+        })
+        </script>
+    </body>
+    
+    </html>

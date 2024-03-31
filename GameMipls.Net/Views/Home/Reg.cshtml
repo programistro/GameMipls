@@ -1,3 +1,8 @@
+@{
+    Layout = null;
+}
+@model LoginViewModel
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/general-styles.css">
-    <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="~/css/general-styles.css">
+    <link rel="stylesheet" href="~/css/main-style.css">
 </head>
     
     <body>
@@ -14,7 +19,7 @@
             <div class="container">
                 <div class="header-top">
                     <div class="logo-block">
-                        <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                        <div class="logo-block__icon"><img class="logo-img" src="~/images/logo.png" alt=""></div>
                         <div class="logo-block__logo">Mipls.ru</div>
                     </div>
                     <nav class="nav">
@@ -40,7 +45,7 @@
                         </ul>
                     </nav>
                     <div class="head-user">
-                        <div class="head-user__icon"><img src="../images/avatar.svg" alt=""></div>
+                        <div class="head-user__icon"><img src="~/images/avatar.svg" alt=""></div>
                         <button class="user__btn" href="#">Аккаунт</button>
                     </div>
                 </div>
@@ -49,7 +54,7 @@
         <main class="main">
             <div class="container">
                 <div class="reg__modal__box-full">
-                    <button onclick="closePopup()" class="modal__close-btn"><img src="../images/close-modal.svg" alt=""></button>
+                    <button onclick="closePopup()" class="modal__close-btn"><img src="~/images/close-modal.svg" alt=""></button>
                     <h2 class="reg__title">Добро пожаловать!</h2>
                     <p class="reg__description">Зарегистрируйтесь, чтобы искать компании для игр и мероприятий</p>
         
@@ -85,7 +90,7 @@
                                 </div>
                                 <div class="registration__dop-entrance">
                                     <div class="res-pass">Войти с помощью:</div>
-                                    <div class="registration__vk-img"><a href="#"><img src="../images/vk.svg" alt=""></a></div>
+                                    <div class="registration__vk-img"><a href="#"><img src="~/images/vk.svg" alt=""></a></div>
                                 </div>
                             </div>
                             <button class="f-btn registration__btn-input" disabled>Войти</button>
@@ -94,35 +99,37 @@
                         </div>
                     </div>
                     <div class="reg__block-registration tabs__item _active" id="tab_2">
-                        <div class="block-registration__inner">
-                            <div class="block-registration__user">
-                                <div class="block-registration__name-input">
-                                    <label for="username" name="username" class="registration__title-name">Имя</label>
-                                    <input class="registration__input registration__username" type="text" placeholder="Артём"
-                                        id="username">
+                        <form method="post" asp-action="Reg">
+                            <div class="block-registration__inner">
+                                <div class="block-registration__user">
+                                    <div class="block-registration__name-input">
+                                        <label for="username" name="username" class="registration__title-name">Имя</label>
+                                        <input class="registration__input registration__username" type="text" placeholder="Артём"
+                                               id="username" asp-for="Name">
+                                    </div>
+                                    <div class="block-registration__name-input">
+                                        <label for="lastname" name="lastname" class="registration__title-name">Фамилия</label>
+                                        <input class="registration__input registration__lastname" type="text"
+                                               placeholder="Виноградов" asp-for="LastName" id="lastname">
+                                    </div>
                                 </div>
                                 <div class="block-registration__name-input">
-                                    <label for="lastname" name="lastname" class="registration__title-name">Фамилия</label>
-                                    <input class="registration__input registration__lastname" type="text"
-                                        placeholder="Виноградов" id="lastname">
+                                    <label for="phone" name="phone" class="registration__title-name">Номер телефона</label>
+                                    <input class="registration__input registration__phone" type="tel" asp-for="Phone" placeholder="89869778650"
+                                           id="phone">
                                 </div>
-                            </div>
-                            <div class="block-registration__name-input">
-                                <label for="phone" name="phone" class="registration__title-name">Номер телефона</label>
-                                <input class="registration__input registration__phone" type="tel" placeholder="89869778650"
-                                    id="phone">
-                            </div>
-                            <div class="block-registration__name-input">
-                                <label for="pass" name="pass" class="registration__title-name">Пароль</label>
-                                <div class="reg__password">
-                                    <input class="registration__input registration__pass" type="password" id="password-input"
-                                        placeholder="Введите пароль" name="password">
-                                    <a href="#" class="reg__password-control" onclick="return show_hide_password(this);"></a>
+                                <div class="block-registration__name-input">
+                                    <label for="pass" name="pass" class="registration__title-name">Пароль</label>
+                                    <div class="reg__password">
+                                        <input class="registration__input registration__pass" type="password" id="password-input"
+                                               placeholder="Введите пароль" asp-for="Password">
+                                        <a href="#" class="reg__password-control" onclick="return show_hide_password(this);"></a>
+                                    </div>
+                                    
                                 </div>
-        
+                                <button type="submit" class="f-btn">Зарегистрироваться</button>
                             </div>
-                            <button class="f-btn">Зарегистрироваться</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
