@@ -39,7 +39,8 @@ public class HomeController : Controller
     {
         if (value == "logout")
         {
-            _signInManager.SignOutAsync();
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
         return View();
     }
@@ -68,7 +69,7 @@ public class HomeController : Controller
 
     [HttpGet]
     [AllowAnonymous]
-    public IActionResult Reg()
+    public IActionResult Auth()
     {
         return View();
     }
@@ -85,6 +86,23 @@ public class HomeController : Controller
             var item = _context.Users.FirstOrDefault(x => x.Phone == x.Phone);
 
             var result = _signInManager.SignInAsync(item, true);
+            
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, item.Name),
+                new Claim(ClaimTypes.MobilePhone, item.Phone),
+                new Claim(ClaimTypes.Role, "user")
+                // Добавьте другие необходимые клеймы
+            };
+            
+            var identity = new ClaimsIdentity(claims, "Cookie");
+            var principal = new ClaimsPrincipal(identity);
+
+            await HttpContext.SignInAsync("Cookie", principal, new AuthenticationProperties
+            {
+                ExpiresUtc = DateTime.UtcNow.AddMinutes(120), // Установка времени истечения куки
+                IsPersistent = true, // Установка постоянности куки
+            });
 
             model.Name = item.Name;
             model.LastName = item.LastName;
@@ -107,7 +125,7 @@ public class HomeController : Controller
 
     [HttpPost]
     [AllowAnonymous]
-    public async Task<IActionResult> Reg(LoginViewModel model)
+    public async Task<IActionResult> Auth(LoginViewModel model)
     {
         User user = new()
         {
@@ -148,6 +166,13 @@ public class HomeController : Controller
             
         return View("Setting_profile_user", model);
     }
+
+    [Authorize]
+    public IActionResult Create_events(GameViewModel model)
+    {
+        return View(model);
+    }
+    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     [AllowAnonymous]

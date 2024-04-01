@@ -26,7 +26,7 @@
             </div>
             <nav class="nav">
                 <ul class="nav__list">
-                    <input type="checkbox" id="checkbox_toggle" />
+                    <input type="checkbox" id="checkbox_toggle"/>
                     <label class="hamburger" for="checkbox_toggle">
                         <div class="hamburger__block">
                             <span class="hamburger-line"></span>
@@ -51,15 +51,15 @@
                 {
                     var name = User.Identity.Name;
                     var user = AppDbContext.Users.FirstOrDefault(x => x.Name == name);
-                    
+
                     <div class="head-user__icon"><img src="images/avatar.svg" alt=""></div>
                     <a class="user__btn" asp-area="" asp-controller="Home" asp-action="Setting_profile_user">@user.Name</a>
                 }
                 else
                 {
                     <div class="head-user__icon"><img src="images/avatar.svg" alt=""></div>
-                    <a class="user__btn" asp-area="" asp-controller="Home" asp-action="Reg">Аккаунт</a>
-                }
+                    <a class="user__btn" asp-area="" asp-controller="Home" asp-action="Auth">Аккаунт</a>
+                }   
             </div>
         </div>
     </div>
