@@ -225,7 +225,8 @@ public class HomeController : Controller
             City = model.TableGame.City,
             IsOnline = model.TableGame.IsOnline,
             // IsFree = model.TableGame.IsFree,
-            IsFree = "true"
+            IsFree = "true",
+            IsEdit = "true"
         };
 
         _gameDbContext.Tables.Add(tableGame);
@@ -240,10 +241,48 @@ public class HomeController : Controller
     }
 
     [Authorize]
-    public IActionResult Events()
+    [HttpGet]
+    public IActionResult Events(GamesViewModel model)
     {
-        return View();
+        model.Tables = _gameDbContext.Tables.ToList();
+        return View(model);
     }
+
+    [HttpPost]
+    [Authorize]
+    public IActionResult Events(GameViewModel model)
+    {
+        TableGame game = new()
+        {
+            Id = _accountService.CreateHash(),
+            Title = model.TableGame.Title,
+            Announcement = model.TableGame.Announcement,
+            Date = model.TableGame.Date,
+            Time = model.TableGame.Time,
+            City = model.TableGame.City,
+            IsOnline = model.TableGame.IsOnline,
+            IsFree = model.TableGame.IsFree,
+            Description = model.TableGame.Description,
+            MaxPeople = model.TableGame.MaxPeople,
+            Price = model.TableGame.Price,
+            Type = model.TableGame.Type,
+            IsEdit = "true",
+            Venue = model.TableGame.Venue,
+            View = 0,
+            Registrations = 0,
+            PaymentDeadline = 0
+        };
+        _gameDbContext.Tables.Add(game);
+
+        _gameDbContext.SaveChanges();
+
+        GamesViewModel games = new GamesViewModel();
+        games.Tables = _gameDbContext.Tables.ToList();
+        
+        return RedirectToAction("Events", "Home", games);
+
+        return View("Events", games);
+    } 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     [AllowAnonymous]

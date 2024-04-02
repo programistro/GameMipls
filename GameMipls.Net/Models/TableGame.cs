@@ -58,5 +58,13 @@ public class TableGame
     
     public DateTime Time { get; set; }
     
+    public int View { get; set; }
+    
+    public int Registrations { get; set; }
+    
+    public int PaymentDeadline { get; set; }
+    
+    public string IsEdit { get; set; }
+    
     public string Description { get; set; }
 }
