@@ -1,18 +1,22 @@
-﻿using System.Diagnostics.Contracts;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Contracts;
 
 namespace GameMipls.Net.Models;
 
 public class TableGame
 {
-    public string Type { get; set; }
+    [Key]
+    public string Id { get; set; }
+    
+    public string? Type { get; set; }
     
     public string Title { get; set; }
     
     public string Announcement { get; set; }
 
-    private int maxpeople;
+    private int? maxpeople;
     
-    public int MaxPeople
+    public int? MaxPeople
     {
         get
         {
@@ -26,9 +30,9 @@ public class TableGame
     
     public int Price { get; set; }
 
-    private bool isfree;
+    private string? isfree;
 
-    public bool IsFree
+    public string? IsFree
     {
         get
         {
@@ -36,7 +40,7 @@ public class TableGame
         }
         set
         {
-            if (value == true)
+            if (value == "true")
             {
                 Price = 0;
                 isfree = value;
@@ -46,7 +50,7 @@ public class TableGame
     
     public string City { get; set; }
     
-    public bool IsOnline { get; set; }
+    public string? IsOnline { get; set; }
 
     public string Venue { get; set; }
     

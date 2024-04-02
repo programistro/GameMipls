@@ -21,4 +21,10 @@ public class LoginViewModel
     [Required(ErrorMessage = "Ошибка")]
     [DataType(DataType.PhoneNumber)]
     public string Phone { get; set; }
+    
+    public string? About { get; set; }
+    
+    public string? Status { get; set; }
+    
+    public string? City { get; set; }
 }

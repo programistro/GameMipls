@@ -7,9 +7,9 @@ public class GameDbContext : DbContext
 {
     public DbSet<TableGame> Tables => Set<TableGame>();
     
-    public DbSet<ComputerGame> ComputerGames => Set<ComputerGame>();
-    
-    public DbSet<Sport> Sports => Set<Sport>();
+    // public DbSet<ComputerGame> ComputerGames => Set<ComputerGame>();
+    //
+    // public DbSet<Sport> Sports => Set<Sport>();
     
     public GameDbContext() => Database.EnsureCreated();
  

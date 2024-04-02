@@ -2,7 +2,7 @@
 @using Microsoft.AspNetCore.Authorization
 @model LoginViewModel
 @{
-   Layout = "";
+   Layout = null;
 }
 
 <!DOCTYPE html>
@@ -54,9 +54,9 @@
                 </button>
                 <div id="menuPolsov" class="dropdown-content">
                     <ul class="menu-profile__list">
-                        <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" href="setting-profile.html">Профиль</a></li>
+                        <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" asp-action="Setting_profile_user">Профиль</a></li>
 
-                        <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a class="menu-profile__link" href="setting-profile.html">Мои игры</a><span class="menu-span-profile__link">5</span></li>
+                        <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a class="menu-profile__link" asp-action="Events" asp-controller="Home">Мои игры</a><span class="menu-span-profile__link">5</span></li>
 
 
                         <li class="menu-profile__item menu-profile__icon-chats menu-profile__item-number"><a class="menu-profile__link" href="#">Чаты</a><span class="menu-span-profile__link">5</span></li>
@@ -80,7 +80,8 @@
 
             <h2 class="admin-content__title">Настройки профиля</h2>
 
-            <div class="profile__inner setting-profile__inner">
+            <form method="post" asp-action="Index" asp-controller="Home">
+                <div class="profile__inner setting-profile__inner">
                 <div class="profile__left">
                     <nav class="content__items">
                         <ul class="content__list">
@@ -100,136 +101,139 @@
                         </ul>
                     </nav>
                     <div class="profile__btn-block">
-                        <button class="profile__btn f-btn">Сохранить изменения</button>
+                        <button class="profile__btn f-btn" type="submit">Сохранить изменения</button>
                         <button class="profile__btn w-btn">Отменить изменения</button>
                     </div>
                 </div>
+                                
                 <div class="profile__right">
-                    <div class="profile__block-info">
-                        <h3 class="profile__info-text">Основная информация</h3>
-                        <div class="profile__block-title">
-                            <div class="profile__block-logo set__block-logo">
-                                <div class="profile__img-logo">
-                                    <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt="">
-                                    <img class="profile__logo-pensel-img" src="~/images/profile-icon-pensel.png"
-                                         alt="">
+                <div class="profile__block-info">
+                <h3 class="profile__info-text">Основная информация</h3>
+                <div class="profile__block-title">
+                    <div class="profile__block-logo set__block-logo">
+                        <div class="profile__img-logo">
+                            <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt="">
+                            <img class="profile__logo-pensel-img" src="~/images/profile-icon-pensel.png"
+                                 alt="">
+                        </div>
+                    </div>
+                
+                    <div class="profile__info-name">
+                        <div class="profile__name">@Model.Name @Model.LastName</div>
+                        <div class="profile__desc">Критического успеха у меня ещё не было</div>
+                    </div>
+                </div>
+                                        
+                <div class="profile__block-organization">
+                    <div class="profile__info">
+                        <div class="profile__info-inner">
+                            <div class="profile__info-block">
+                                <div class="profile__heading">Имя</div>
+                                <div class="profile__description">
+                                    <input class="profile__input" asp-for="Name" type="text"
+                                           placeholder="@Model.Name">
                                 </div>
                             </div>
-
-                            <div class="profile__info-name">
-                                <div class="profile__name">@Model.Name @Model.LastName</div>
-                                <div class="profile__desc">Критического успеха у меня ещё не было</div>
-                            </div>
-                        </div>
-                        <div class="profile__block-organization">
-                            <div class="profile__info">
-                                <div class="profile__info-inner">
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">Имя</div>
-                                        <div class="profile__description">
-                                            <input class="profile__input" type="text" name="one-line"
-                                                   placeholder="@Model.Name">
-                                        </div>
-                                    </div>
-
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">Фамилия</div>
-                                        <div class="profile__description">
-                                            <input class="profile__input" type="text" name="one-line"
-                                                   placeholder="@Model.LastName">
-                                        </div>
-                                    </div>
-
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">Номер телефона</div>
-                                        <div class="profile__description">
-                                            <input class="profile__input" type="phone" name="one-line"
-                                                   placeholder="@Model.Phone">
-                                        </div>
-                                    </div>
-
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">Email</div>
-                                        <div class="profile__description">
-                                            <input class="profile__input" type="email" name="one-line"
-                                                   placeholder="@Model.Email">
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">Город</div>
-                                        <div class="profile__description">
-                                            <form>
-                                                <select class="profile__organization" name="city"
-                                                        id="select-organization">
-                                                    <option value="">Москва</option>
-                                                    <option value="1">Москва 1</option>
-                                                    <option value="2">Москва 2</option>
-                                                    <option value="3">Москва 3</option>
-                                                    <option value="4">Москва 4</option>
-                                                </select>
-                                            </form>
-                                        </div>
-                                    </div>
-
+                
+                            <div class="profile__info-block">
+                                <div class="profile__heading">Фамилия</div>
+                                <div class="profile__description">
+                                    <input class="profile__input" asp-for="LastName" type="text"
+                                           placeholder="@Model.LastName">
                                 </div>
                             </div>
+                
+                            <div class="profile__info-block">
+                                <div class="profile__heading">Номер телефона</div>
+                                <div class="profile__description">
+                                    <input class="profile__input" type="phone"
+                                           placeholder="@Model.Phone" asp-for="Phone">
+                                </div>
+                            </div>
+                
+                            <div class="profile__info-block">
+                                <div class="profile__heading">Email</div>
+                                <div class="profile__description">
+                                    <input class="profile__input" type="email"
+                                           placeholder="@Model.Email" asp-for="Email">
+                                </div>
+                            </div>
+                
+                
+                
+                            <div class="profile__info-block">
+                                <div class="profile__heading">Город</div>
+                                <div class="profile__description">
+                                    <form asp-controller="Home" asp-action="Setting_profile_user">
+                                        <select class="profile__organization"
+                                                id="select-organization" asp-for="City">
+                                            <option value="">Москва</option>
+                                            <option value="1">Москва 1</option>
+                                            <option value="2">Москва 2</option>
+                                            <option value="3">Москва 3</option>
+                                            <option value="4">Москва 4</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                
                         </div>
-                        <h3 class="profile__info-text dop-info">Дополнительная информация</h3>
-                        <div class="profile__block-organization">
-                            <div class="profile__info">
-                                <div class="profile__info-inner">
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">Статус</div>
-                                        <div class="profile__description profile__dop-span-icon">
-                                            <textarea class="profile__input" name="comment" cols="40"
-                                                    rows="2">Критического успеха у меня ещё не было</textarea>
-
-                                        </div>
-                                    </div>
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">О себе</div>
-                                        <div class="profile__description">
-                                            <textarea class="profile__input" name="comment" cols="40"
-                                                    rows="3">Приветики! Вы</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">Увлечения</div>
-                                        <div class="profile__description">
-                                            <div class="block-cards__enter">
-
-
-                                                <ul class="block-cards__enter-list">
-                                                    <li style="display: flex;"><button class="f-btn block-cards__enter-btn"><img class="block-cards__enter-btn-img" src="~/images/pluse.svg" alt=""></button></li>
-                                                    <li class="profile__added-address">Настольные игры</li>
-                                                    <li class="profile__added-address">Спорт</li>
-                                                    <li class="profile__added-address">Туризм</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="profile__info-block">
-                                        <div class="profile__heading">Любимые игры</div>
-                                        <div class="profile__description">
-                                            <div class="block-cards__enter">
-                                                <ul class="block-cards__enter-list">
-                                                    <li style="display: flex;"><button class="f-btn block-cards__enter-btn"><img class="block-cards__enter-btn-img" src="~/images/pluse.svg" alt=""></button></li>
-                                                    <li class="profile__added-address">НРИ</li>
-                                                    <li class="profile__added-address">Иниш</li>
-                                                    <li class="profile__added-address">Манчкин</li>
-                                                    <li class="profile__added-address">Плотина</li>
-                                                    <li class="profile__added-address">Dungeon’s & Dragon’s 5’e</li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                    </div>
+                </div>
+                <h3 class="profile__info-text dop-info">Дополнительная информация</h3>
+                <div class="profile__block-organization">
+                    <div class="profile__info">
+                        <div class="profile__info-inner">
+                            <div class="profile__info-block">
+                                <div class="profile__heading">Статус</div>
+                                <div class="profile__description profile__dop-span-icon">
+                                    <textarea class="profile__input" cols="40" asp-for="Status"
+                                                                                                rows="2">Критического успеха у меня ещё не было</textarea>
+                                            
+                                </div>
+                            </div>
+                            <div class="profile__info-block">
+                                <div class="profile__heading">О себе</div>
+                                <div class="profile__description">
+                                    <textarea class="profile__input" cols="40" asp-for="About"
+                                                                                                rows="3">Приветики! Вы</textarea>
+                                </div>
+                            </div>
+                            <div class="profile__info-block">
+                                <div class="profile__heading">Увлечения</div>
+                                <div class="profile__description">
+                                    <div class="block-cards__enter">
+                                            
+                                            
+                                        <ul class="block-cards__enter-list">
+                                            <li style="display: flex;"><button class="f-btn block-cards__enter-btn"><img class="block-cards__enter-btn-img" src="~/images/pluse.svg" alt=""></button></li>
+                                            <li class="profile__added-address">Настольные игры</li>
+                                            <li class="profile__added-address">Спорт</li>
+                                            <li class="profile__added-address">Туризм</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
+                                            
+                            <div class="profile__info-block">
+                                <div class="profile__heading">Любимые игры</div>
+                                <div class="profile__description">
+                                    <div class="block-cards__enter">
+                                        <ul class="block-cards__enter-list">
+                                            <li style="display: flex;"><button class="f-btn block-cards__enter-btn"><img class="block-cards__enter-btn-img" src="~/images/pluse.svg" alt=""></button></li>
+                                            <li class="profile__added-address">НРИ</li>
+                                            <li class="profile__added-address">Иниш</li>
+                                            <li class="profile__added-address">Манчкин</li>
+                                            <li class="profile__added-address">Плотина</li>
+                                            <li class="profile__added-address">Dungeon’s & Dragon’s 5’e</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </form>
 
                         <h3 class="profile__info-text dop-info">Безопасность</h3>
                         <div class="profile__block-organization">
@@ -238,7 +242,7 @@
                                     <div class="profile__info-block">
                                         <div class="profile__heading">Текущий пароль</div>
                                         <div class="profile__description">
-                                            <input class="profile__input-pass" type="text" name="one-line"
+                                            <input class="profile__input-pass" type="text"
                                                    placeholder="">
                                             <div class="profile__res-pas">
                                                 <a class="profile__res-pas-link"
@@ -248,14 +252,14 @@
                                     <div class="profile__info-block">
                                         <div class="profile__heading profile__heading-p">Новый пароль</div>
                                         <div class="profile__description">
-                                            <input class="profile__input-pass" type="text" name="one-line"
+                                            <input class="profile__input-pass" type="text"
                                                    placeholder="">
                                         </div>
                                     </div>
                                     <div class="profile__info-block">
                                         <div class="profile__heading profile__heading-p">Повторите пароль</div>
                                         <div class="profile__description">
-                                            <input class="profile__input-pass" type="text" name="one-line"
+                                            <input class="profile__input-pass" type="text"
                                                    placeholder="">
                                         </div>
                                     </div>

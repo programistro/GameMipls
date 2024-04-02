@@ -34,12 +34,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cbmV3LWdhbWVzMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/client/advertisement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50XGFkdmVydGlzZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/client/editing-event.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50XGVkaXRpbmctZXZlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/client/launch-ad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50XGxhdW5jaC1hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/client/product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50XHByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Auth.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdXRoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Create_events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVfZXZlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFdmVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Index.cshtml]

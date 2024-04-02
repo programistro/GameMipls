@@ -25,13 +25,16 @@ public class HomeController : Controller
 
     private readonly AccountService _accountService;
 
+    private readonly GameDbContext _gameDbContext;
+
     public HomeController(ILogger<HomeController> logger, AppDbContext context,
-        SignInManager<User> signInManager, AccountService accountService)
+        SignInManager<User> signInManager, AccountService accountService, GameDbContext gameDbContext)
     {
         _logger = logger;
         _context = context;
         _signInManager = signInManager;
         _accountService = accountService;
+        _gameDbContext = gameDbContext;
     }
     
     [AllowAnonymous]
@@ -51,6 +54,26 @@ public class HomeController : Controller
     }
     
     [Authorize]
+    [HttpPost]
+    public async Task<IActionResult> Index(LoginViewModel model)
+    {
+        var user = _context.Users.FirstOrDefault(x => x.Phone == model.Phone);
+
+        user.Name = model.Name;
+        user.LastName = model.LastName;
+        user.Status = model.Status;
+        user.About = model.About;
+        user.City = model.City;
+        user.Email = model.Email;
+
+        _context.Users.Update(user);
+        _context.SaveChanges();
+        
+        return View(model);
+    }
+    
+    [HttpGet]
+    [Authorize]
     [Route("Home/profile")]
     public async Task<IActionResult> Setting_profile_user(LoginViewModel model)
     {
@@ -63,6 +86,8 @@ public class HomeController : Controller
         model.Password = user.Password;
         model.Phone = user.Phone;
         model.Email = user.Email;
+        model.About = user.About;
+        model.Status = user.Status;
         
         return View(model);
     }
@@ -110,10 +135,12 @@ public class HomeController : Controller
             if (result.IsCompleted)
             {
                 // Вход выполнен успешно
-                return View("Setting_profile_user", model);
+                return RedirectToAction("Index", "Home", model);
+                return View("Index", model);
             }
             else
             {
+                return RedirectToAction("Error", "Home");
                 return View("Error");
             }
         }
@@ -136,7 +163,11 @@ public class HomeController : Controller
             Name = model.Name,
             LastName = model.LastName,
             Password = await _accountService.CreatePasswordHash(model.Password),
-            Phone = model.Phone
+            Phone = model.Phone,
+            City = "",
+            About = "",
+            Status = "",
+            Email = ""
         };
         var item = _context.Users.Any(x => x.Phone == user.Phone);
 
@@ -168,11 +199,51 @@ public class HomeController : Controller
     }
 
     [Authorize]
-    public IActionResult Create_events(GameViewModel model)
+    [HttpGet]
+    public IActionResult Create_events()
     {
-        return View(model);
+        return View();
     }
     
+    [Authorize]
+    [HttpPost]
+    public IActionResult Create_events(GameViewModel model)
+    {
+        TableGame tableGame = new()
+        {
+            Id = _accountService.CreateHash(),
+            Title = "model.TableGame.Title",
+            Type = "model.TableGame.Type",
+            Description = model.TableGame.Description,
+            // MaxPeople = model.TableGame.MaxPeople,
+            MaxPeople = 52,
+            Announcement = model.TableGame.Announcement,
+            Date = model.TableGame.Date,
+            Time = model.TableGame.Time,
+            Venue = model.TableGame.Venue,
+            Price = model.TableGame.Price,
+            City = model.TableGame.City,
+            IsOnline = model.TableGame.IsOnline,
+            // IsFree = model.TableGame.IsFree,
+            IsFree = "true"
+        };
+
+        _gameDbContext.Tables.Add(tableGame);
+        _gameDbContext.SaveChanges();
+
+        GamesViewModel newModel = new()
+        {
+            Tables = _gameDbContext.Tables.ToList()
+        };
+        
+        return View("Events", newModel);
+    }
+
+    [Authorize]
+    public IActionResult Events()
+    {
+        return View();
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     [AllowAnonymous]
