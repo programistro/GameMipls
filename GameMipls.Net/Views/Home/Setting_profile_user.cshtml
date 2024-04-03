@@ -82,7 +82,7 @@
 
             <h2 class="admin-content__title">Настройки профиля</h2>
 
-            <form method="post" asp-action="Index" asp-controller="Home">
+            <form method="post" asp-action="Index" asp-controller="Home" enctype="multipart/form-data">>
                 <div class="profile__inner setting-profile__inner">
                 <div class="profile__left">
                     <nav class="content__items">
@@ -115,8 +115,13 @@
                     <div class="profile__block-logo set__block-logo">
                         <div class="profile__img-logo">
                             <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt="">
-                            <img class="profile__logo-pensel-img" src="~/images/profile-icon-pensel.png"
-                                 alt="">
+                            @* <img class="profile__logo-pensel-img" src="~/images/profile-icon-pensel.png" *@
+                            @*      alt=""> *@
+                            
+                            <label for="imageFile">
+                                <input type="file" asp-for="Image" />
+                            </label>
+                            
                         </div>
                     </div>
                 

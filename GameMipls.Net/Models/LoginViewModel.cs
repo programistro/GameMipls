@@ -27,4 +27,6 @@ public class LoginViewModel
     public string? Status { get; set; }
     
     public string? City { get; set; }
+    
+    public IFormFile? Image { get; set; }
 }

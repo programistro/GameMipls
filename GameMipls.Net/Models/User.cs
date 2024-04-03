@@ -26,4 +26,6 @@ public class User : IdentityUser
     public string? Status { get; set; }
     
     public string? City { get; set; }
+    
+    public string? Image { get; set; }
 }

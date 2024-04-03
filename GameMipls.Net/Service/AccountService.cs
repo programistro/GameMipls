@@ -1,4 +1,7 @@
-﻿using System.Security.Cryptography;
+﻿using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Security.Cryptography;
 using System.Text;
 using GameMipls.Net.Interface;
 using GameMipls.Net.Models;
@@ -66,6 +69,39 @@ public class AccountService
         else
         {
             return false;
+        }
+    }
+    
+    public void CropToCircle(string imagePath, int x, int y, string name)
+    {
+        using (var srcImage = Image.FromFile(imagePath))
+        {
+            var minEdge = Math.Min(srcImage.Width, srcImage.Height);
+            var newSize = new Size(x, y);
+            var newImage = new Bitmap(newSize.Width, newSize.Height);
+
+            using (var graphics = Graphics.FromImage(newImage))
+            {
+                graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var path = new GraphicsPath())
+                {
+                    path.AddEllipse(0, 0, newSize.Width, newSize.Height);
+                    graphics.SetClip(path);
+                    graphics.DrawImage(srcImage, 0, 0, newSize.Width, newSize.Height);
+                }
+            }
+
+            using (var memoryStream = new MemoryStream())
+            {
+                newImage.Save(memoryStream, ImageFormat.Png);
+                newImage.Save($"Images/{name}.png", ImageFormat.Png);
+                // var bytes = memoryStream.ToArray(); 
+                // return memoryStream.ToArray();
+                // return Convert.ToBase64String(bytes);
+            }
         }
     }
 }

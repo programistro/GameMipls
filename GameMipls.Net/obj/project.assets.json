@@ -701,6 +701,28 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/9.0.0-preview.2.24128.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Mono.TextTemplating/3.0.0-preview-0045-g9b6fc72764": {
         "type": "package",
         "dependencies": {
@@ -991,6 +1013,31 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Drawing.Common/9.0.0-preview.2.24128.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.0-preview.2.24128.5"
+        },
+        "compile": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "System.IO.Pipelines/7.0.0": {
@@ -2601,6 +2648,38 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Win32.SystemEvents/9.0.0-preview.2.24128.5": {
+      "sha512": "2RmmP7k4el5xZ1ISBAJTG9oX7njfza/nSUuICeFxatArtZv+zVjdDi39gSv9GMHioyRaZQgaKAq1IESAjDz8Ig==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/9.0.0-preview.2.24128.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.9.0.0-preview.2.24128.5.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Mono.TextTemplating/3.0.0-preview-0045-g9b6fc72764": {
       "sha512": "g2HV/qFp/0zQwPKG7fJvDZcG8F7iOYOjbiAyU75cx4uRMYKdJ3WBmEzuhWBpX1dgfBD6CXm0KKglxBukAImN/A==",
       "type": "package",
@@ -2916,6 +2995,48 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Drawing.Common/9.0.0-preview.2.24128.3": {
+      "sha512": "Kx/K7a8fjb2NtcAZFvPOHAWASut04PtgkGdfOrs5Fd4fMQ5YAUuWA803JWzz4G7BR1e6HEslf4p2tKB2+LewHA==",
+      "type": "package",
+      "path": "system.drawing.common/9.0.0-preview.2.24128.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.pdb",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net8.0/System.Drawing.Common.dll",
+        "lib/net8.0/System.Drawing.Common.pdb",
+        "lib/net8.0/System.Drawing.Common.xml",
+        "lib/net8.0/System.Private.Windows.Core.dll",
+        "lib/net8.0/System.Private.Windows.Core.xml",
+        "lib/net9.0/System.Drawing.Common.dll",
+        "lib/net9.0/System.Drawing.Common.pdb",
+        "lib/net9.0/System.Drawing.Common.xml",
+        "lib/net9.0/System.Private.Windows.Core.dll",
+        "lib/net9.0/System.Private.Windows.Core.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.pdb",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.drawing.common.9.0.0-preview.2.24128.3.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.IO.Pipelines/7.0.0": {
       "sha512": "jRn6JYnNPW6xgQazROBLSfpdoczRw694vO5kKvMcNnpXuolEixUyw6IBuBs2Y2mlSX/LdLvyyWmfXhaI3ND1Yg==",
       "type": "package",
@@ -3156,7 +3277,8 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.3",
       "Microsoft.EntityFrameworkCore >= 9.0.0-preview.2.24128.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.0-preview.2.24128.4",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-preview.2.24128.4"
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-preview.2.24128.4",
+      "System.Drawing.Common >= 9.0.0-preview.2.24128.3"
     ]
   },
   "packageFolders": {
@@ -3225,6 +3347,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.0-preview.2.24128.4, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[9.0.0-preview.2.24128.3, )"
           }
         },
         "imports": [

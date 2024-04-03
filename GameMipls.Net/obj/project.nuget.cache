@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MAOTnC2qBPy2Y3HsEqz3ng3NzHI9wI0CGmfuRZ8g/MC8p/tWMT/7Cs6oGsF+CxAxhBMYAEerTfRI9qply5ucSQ==",
+  "dgSpecHash": "nLkfqs2DspA1op5ik4myvtwi16RWs9eCiOYwwRYLpeADlN1weiHPpFUucPkRC43VConzDpuKOSL+1UzGNL9PSw==",
   "success": true,
   "projectFilePath": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\GameMipls.Net.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\rgrig\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.0-preview.2.24128.5\\microsoft.extensions.logging.abstractions.9.0.0-preview.2.24128.5.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\microsoft.extensions.options\\9.0.0-preview.2.24128.5\\microsoft.extensions.options.9.0.0-preview.2.24128.5.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.0-preview.2.24128.5\\microsoft.extensions.primitives.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "C:\\Users\\rgrig\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0-preview.2.24128.5\\microsoft.win32.systemevents.9.0.0-preview.2.24128.5.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\mono.texttemplating\\3.0.0-preview-0045-g9b6fc72764\\mono.texttemplating.3.0.0-preview-0045-g9b6fc72764.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.7\\sqlitepclraw.bundle_e_sqlite3.2.1.7.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\sqlitepclraw.core\\2.1.7\\sqlitepclraw.core.2.1.7.nupkg.sha512",
@@ -49,6 +50,7 @@
     "C:\\Users\\rgrig\\.nuget\\packages\\system.composition.hosting\\7.0.0\\system.composition.hosting.7.0.0.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\system.composition.runtime\\7.0.0\\system.composition.runtime.7.0.0.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\system.composition.typedparts\\7.0.0\\system.composition.typedparts.7.0.0.nupkg.sha512",
+    "C:\\Users\\rgrig\\.nuget\\packages\\system.drawing.common\\9.0.0-preview.2.24128.3\\system.drawing.common.9.0.0-preview.2.24128.3.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\rgrig\\.nuget\\packages\\system.reflection.metadata\\7.0.0\\system.reflection.metadata.7.0.0.nupkg.sha512",

@@ -58,14 +58,22 @@ public class HomeController : Controller
     public async Task<IActionResult> Index(LoginViewModel model)
     {
         var user = _context.Users.FirstOrDefault(x => x.Phone == model.Phone);
-
+        
         user.Name = model.Name;
         user.LastName = model.LastName;
         user.Status = model.Status;
         user.About = model.About;
         user.City = model.City;
         user.Email = model.Email;
-
+        
+        var filename = Path.GetFileName(model.Image.FileName);
+        var path = Path.Combine($"{Directory.GetCurrentDirectory()}/Images", "", filename);
+        
+        using (var stream = new FileStream(path, FileMode.Create))
+        {
+            await model.Image.CopyToAsync(stream);
+        }
+        _accountService.CropToCircle(path, 149,148, $"{_accountService.CreateHash()}.png");
         _context.Users.Update(user);
         _context.SaveChanges();
         
@@ -88,6 +96,7 @@ public class HomeController : Controller
         model.Email = user.Email;
         model.About = user.About;
         model.Status = user.Status;
+        // model.Image = user.Image;
         
         return View(model);
     }
@@ -136,12 +145,10 @@ public class HomeController : Controller
             {
                 // Вход выполнен успешно
                 return RedirectToAction("Index", "Home", model);
-                return View("Index", model);
             }
             else
             {
                 return RedirectToAction("Error", "Home");
-                return View("Error");
             }
         }
         else
@@ -167,7 +174,8 @@ public class HomeController : Controller
             City = "",
             About = "",
             Status = "",
-            Email = ""
+            Email = "",
+            Image = ""
         };
         var item = _context.Users.Any(x => x.Phone == user.Phone);
 
@@ -185,17 +193,18 @@ public class HomeController : Controller
             new Claim(ClaimTypes.Role, "user")
             // Добавьте другие необходимые клеймы
         };
-
+        
         var identity = new ClaimsIdentity(claims, "Cookie");
         var principal = new ClaimsPrincipal(identity);
-
+        
         await HttpContext.SignInAsync("Cookie", principal, new AuthenticationProperties
         {
             ExpiresUtc = DateTime.UtcNow.AddMinutes(120), // Установка времени истечения куки
             IsPersistent = true, // Установка постоянности куки
         });
-            
-        return View("Setting_profile_user", model);
+     
+        return RedirectToAction("Index", "Home");
+        //return View("Setting_profile_user", model);
     }
 
     [Authorize]

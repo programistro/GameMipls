@@ -66,6 +66,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0-preview.2.24128.4, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.0-preview.2.24128.3, )"
             }
           },
           "imports": [

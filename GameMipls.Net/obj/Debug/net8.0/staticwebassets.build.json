@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q2uq/t815X26B2pywWIHqr+6Ww6BI9MQ3xKYkmsQ0k8=",
+  "Hash": "yMb60XXxljh4hlZICgGU2xzJkIvicqAWy5EFA/TikkQ=",
   "Source": "GameMipls.Net",
   "BasePath": "_content/GameMipls.Net",
   "Mode": "Default",
@@ -1497,6 +1497,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\pluse.svg"
+    },
+    {
+      "Identity": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\pngtree-an-avatar-in-a-dark-background-with-red-eyes-image_2914141.jpg",
+      "SourceId": "GameMipls.Net",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\",
+      "BasePath": "_content/GameMipls.Net",
+      "RelativePath": "images/pngtree-an-avatar-in-a-dark-background-with-red-eyes-image_2914141.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pngtree-an-avatar-in-a-dark-background-with-red-eyes-image_2914141.jpg"
     },
     {
       "Identity": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\images\\prof-info-hover.svg",

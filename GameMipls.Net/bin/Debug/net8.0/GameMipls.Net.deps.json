@@ -12,7 +12,8 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.3",
           "Microsoft.EntityFrameworkCore": "9.0.0-preview.2.24128.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0-preview.2.24128.4",
-          "Microsoft.EntityFrameworkCore.Tools": "9.0.0-preview.2.24128.4"
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.0-preview.2.24128.4",
+          "System.Drawing.Common": "9.0.0-preview.2.24128.3"
         },
         "runtime": {
           "GameMipls.Net.dll": {}
@@ -516,6 +517,22 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/9.0.0-preview.2.24128.5": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.12805"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.12805"
+          }
+        }
+      },
       "Mono.TextTemplating/3.0.0-preview-0045-g9b6fc72764": {
         "dependencies": {
           "System.CodeDom": "6.0.0"
@@ -736,6 +753,21 @@
           "lib/net7.0/System.Composition.TypedParts.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "System.Drawing.Common/9.0.0-preview.2.24128.3": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.0-preview.2.24128.5"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.12803"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.12803"
           }
         }
       },
@@ -1007,6 +1039,13 @@
       "path": "microsoft.extensions.primitives/9.0.0-preview.2.24128.5",
       "hashPath": "microsoft.extensions.primitives.9.0.0-preview.2.24128.5.nupkg.sha512"
     },
+    "Microsoft.Win32.SystemEvents/9.0.0-preview.2.24128.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2RmmP7k4el5xZ1ISBAJTG9oX7njfza/nSUuICeFxatArtZv+zVjdDi39gSv9GMHioyRaZQgaKAq1IESAjDz8Ig==",
+      "path": "microsoft.win32.systemevents/9.0.0-preview.2.24128.5",
+      "hashPath": "microsoft.win32.systemevents.9.0.0-preview.2.24128.5.nupkg.sha512"
+    },
     "Mono.TextTemplating/3.0.0-preview-0045-g9b6fc72764": {
       "type": "package",
       "serviceable": true,
@@ -1097,6 +1136,13 @@
       "sha512": "sha512-ZK0KNPfbtxVceTwh+oHNGUOYV2WNOHReX2AXipuvkURC7s/jPwoWfsu3SnDBDgofqbiWr96geofdQ2erm/KTHg==",
       "path": "system.composition.typedparts/7.0.0",
       "hashPath": "system.composition.typedparts.7.0.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/9.0.0-preview.2.24128.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Kx/K7a8fjb2NtcAZFvPOHAWASut04PtgkGdfOrs5Fd4fMQ5YAUuWA803JWzz4G7BR1e6HEslf4p2tKB2+LewHA==",
+      "path": "system.drawing.common/9.0.0-preview.2.24128.3",
+      "hashPath": "system.drawing.common.9.0.0-preview.2.24128.3.nupkg.sha512"
     },
     "System.IO.Pipelines/7.0.0": {
       "type": "package",
