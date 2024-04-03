@@ -114,12 +114,22 @@
                 <div class="profile__block-title">
                     <div class="profile__block-logo set__block-logo">
                         <div class="profile__img-logo">
-                            <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt="">
+                            @* <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt=""> *@
+                            <img class="profile__logo-img" src="@Url.Content($"/images/{Model.PathToImage}")" alt="">
                             @* <img class="profile__logo-pensel-img" src="~/images/profile-icon-pensel.png" *@
                             @*      alt=""> *@
                             
                             <label for="imageFile">
-                                <input type="file" asp-for="Image" />
+                                @* <input type="file" asp-for="Image" /> *@
+                                <img src="~/images/profile-icon-pensel.png" class="profile__logo-pensel-img" alt="Мое изображение" onclick="chooseFile()" />
+                                
+                                <input type="file" id="fileInput" asp-for="Image" style="display:none" accept="image/*"/>
+                                
+                                <script>
+                                    function chooseFile() {
+                                        document.getElementById('fileInput').click();
+                                    }
+                                </script>
                             </label>
                             
                         </div>

@@ -29,4 +29,6 @@ public class LoginViewModel
     public string? City { get; set; }
     
     public IFormFile? Image { get; set; }
+    
+    public string PathToImage { get; set; }
 }

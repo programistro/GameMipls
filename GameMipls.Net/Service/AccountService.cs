@@ -97,7 +97,7 @@ public class AccountService
             using (var memoryStream = new MemoryStream())
             {
                 newImage.Save(memoryStream, ImageFormat.Png);
-                newImage.Save($"Images/{name}.png", ImageFormat.Png);
+                newImage.Save($"wwwroot/images/{name}", ImageFormat.Png);
                 // var bytes = memoryStream.ToArray(); 
                 // return memoryStream.ToArray();
                 // return Convert.ToBase64String(bytes);

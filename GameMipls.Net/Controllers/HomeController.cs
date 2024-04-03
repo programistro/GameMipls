@@ -67,13 +67,18 @@ public class HomeController : Controller
         user.Email = model.Email;
         
         var filename = Path.GetFileName(model.Image.FileName);
-        var path = Path.Combine($"{Directory.GetCurrentDirectory()}/Images", "", filename);
+        var path = Path.Combine($"{Directory.GetCurrentDirectory()}/wwwroot/images", "", filename);
         
         using (var stream = new FileStream(path, FileMode.Create))
         {
             await model.Image.CopyToAsync(stream);
         }
-        _accountService.CropToCircle(path, 149,148, $"{_accountService.CreateHash()}.png");
+
+        string pathImage = $"{_accountService.CreateHash()}.png";
+        _accountService.CropToCircle(path, 149,148, pathImage);
+
+        user.Image = $"{pathImage}";
+        
         _context.Users.Update(user);
         _context.SaveChanges();
         
@@ -96,7 +101,7 @@ public class HomeController : Controller
         model.Email = user.Email;
         model.About = user.About;
         model.Status = user.Status;
-        // model.Image = user.Image;
+        model.PathToImage = user.Image;
         
         return View(model);
     }
