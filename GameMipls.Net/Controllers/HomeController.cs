@@ -67,7 +67,7 @@ public class HomeController : Controller
         user.Email = model.Email;
         
         var filename = Path.GetFileName(model.Image.FileName);
-        var path = Path.Combine($"{Directory.GetCurrentDirectory()}/wwwroot/images", "", filename);
+        var path = Path.Combine($"{Directory.GetCurrentDirectory()}/wwwroot/avatar", "", filename);
         
         using (var stream = new FileStream(path, FileMode.Create))
         {
@@ -240,7 +240,8 @@ public class HomeController : Controller
             IsOnline = model.TableGame.IsOnline,
             // IsFree = model.TableGame.IsFree,
             IsFree = "true",
-            IsEdit = "true"
+            IsEdit = "true",
+            Owner = model.TableGame.Owner
         };
 
         _gameDbContext.Tables.Add(tableGame);
@@ -258,12 +259,12 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Events(GamesViewModel model)
     {
-        model.Tables = _gameDbContext.Tables.ToList();
+        model.Tables = _gameDbContext.Tables.Where(x => x.Owner == _signInManager.Context.User.Identity.Name).ToList();
         return View(model);
     }
 
-    [HttpPost]
     [Authorize]
+    [HttpPost]
     public IActionResult Events(GameViewModel model)
     {
         TableGame game = new()
@@ -284,7 +285,8 @@ public class HomeController : Controller
             Venue = model.TableGame.Venue,
             View = 0,
             Registrations = 0,
-            PaymentDeadline = 0
+            PaymentDeadline = 0,
+            Owner = _signInManager.Context.User.Identity.Name
         };
         _gameDbContext.Tables.Add(game);
 
@@ -296,7 +298,16 @@ public class HomeController : Controller
         return RedirectToAction("Events", "Home", games);
 
         return View("Events", games);
-    } 
+    }
+    
+    [Authorize]
+    [HttpGet]
+    public IActionResult Games_events(GamesViewModel model)
+    {
+        model.Tables = _gameDbContext.Tables.ToList();
+        model.Users = _gameDbContext.Users.ToList();
+        return View(model);
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     [AllowAnonymous]

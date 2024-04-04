@@ -66,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFdmVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Games_events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW1lc19ldmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -80,6 +84,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Setting_profile_user.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXR0aW5nX3Byb2ZpbGVfdXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Upcoming-popular-events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGNvbWluZy1wb3B1bGFyLWV2ZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Shared/Error.cshtml]
@@ -134,10 +142,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxmb3Jnb3QteW91ci1wYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/games-events.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxnYW1lcy1ldmVudHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/notification-complaint-user.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxub3RpZmljYXRpb24tY29tcGxhaW50LXVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -164,10 +168,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/support-service.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxzdXBwb3J0LXNlcnZpY2UuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/upcoming-popular-events.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclx1cGNvbWluZy1wb3B1bGFyLWV2ZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/user-personal-page.cshtml]

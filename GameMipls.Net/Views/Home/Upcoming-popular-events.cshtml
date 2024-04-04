@@ -1,3 +1,7 @@
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +9,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/general-styles.css">
-    <link rel="stylesheet" href="../css/main-style.css">
-    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="~/css/general-styles.css">
+    <link rel="stylesheet" href="~/css/main-style.css">
+    <link rel="stylesheet" href="~/css/admin-style.css">
 </head>
 
 <body>
@@ -15,8 +19,8 @@
         <div class="container">
             <div class="header-top">
                 <div class="logo-block">
-                    <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
-                    <div class="logo-block__logo">Mipls.ru</div>
+                    <div class="logo-block__icon"><img class="logo-img" src="~/images/logo.png" alt=""></div>
+                    <div class="logo-block__logo"><a asp-action="Index">Mipls.ru</a></div>
                 </div>
                 <nav class="nav">
                     <ul class="nav__list">
@@ -43,17 +47,17 @@
                 <div class="head-user">
                     <button onclick="menuPolsov()" class="user__btn user-client-btn">
                         <div class="block-menu-bnt">
-                            <img class="menu-profile-btn-img" src="../images/menu-profile-btn.svg" alt="">
-                            <img class="menu-profile-icon" src="../images/comment-8.png" alt="">
+                            <img class="menu-profile-btn-img" src="~/images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="~/images/comment-8.png" alt="">
                         </div>
                     </button>
                     <div id="menuPolsov" class="dropdown-content">
                         <ul class="menu-profile__list">
                             <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link"
-                                    href="setting-profile.html">Профиль</a></li>
+                                    asp-action="Setting_profile_user">Профиль</a></li>
 
                             <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a
-                                    class="menu-profile__link" href="setting-profile.html">Мои игры</a><span
+                                    class="menu-profile__link" asp-action="Events">Мои игры</a><span
                                     class="menu-span-profile__link">5</span></li>
 
 
@@ -65,7 +69,7 @@
                             <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link"
                                     href="#">Поддержка</a></li>
                             <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a
-                                    class="menu-profile__link" href="#">Выход</a></li>
+                                    class="menu-profile__link" asp-action="Index" asp-route-value="logout">Выход</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,10 +112,10 @@
                     <ul class="upcoming-pop-events__list-top">
                         <li class="upcoming-pop-events__item">
                             <div class="item__block-img">
-                                <a class="block-img__image-link" href="#"><img class="block-img__image" src="../images/img2.png"></a>
+                                <a class="block-img__image-link" href="#"><img class="block-img__image" src="~/images/img2.png"></a>
                                 <a class="block-img__category-link" href="#"><div class="block-img__category">Компьютерные игры</div></a>
-                                <img class="block-img__icon" src="../images/icon1.svg">
-                                <img class="block-img__like" src="../images/heart.svg">
+                                <img class="block-img__icon" src="~/images/icon1.svg">
+                                <img class="block-img__like" src="~/images/heart.svg">
                                 <div class="block-img__data-creation">22 мая / 11:00 - 23:00</div>
                             </div>
     
@@ -124,10 +128,10 @@
     
                             <div class="item__bottom">
                                 <div class="item__block-icon">
-                                    <img class="block-icon comment-user-1" src="../images/comment-1.png" alt="">
-                                    <img class="block-icon comment-user-2" src="../images/comment-2.png" alt="">
-                                    <img class="block-icon comment-user-3" src="../images/comment-3.png" alt="">
-                                    <img class="block-icon comment-user-4" src="../images/comment-4.png" alt="">
+                                    <img class="block-icon comment-user-1" src="~/images/comment-1.png" alt="">
+                                    <img class="block-icon comment-user-2" src="~/images/comment-2.png" alt="">
+                                    <img class="block-icon comment-user-3" src="~/images/comment-3.png" alt="">
+                                    <img class="block-icon comment-user-4" src="~/images/comment-4.png" alt="">
                                     <div class="block-icon comment-all">
                                         <span class="comment-number">20</span>
                                     </div>
@@ -135,7 +139,7 @@
                                 </div>
                                 <a class="item__bottom-link" href="#">
                                     <div class="item__bottom-arrow">
-                                        <img class="item__bottom-img" src="../images/item-arrow.svg" alt="">
+                                        <img class="item__bottom-img" src="~/images/item-arrow.svg" alt="">
                                     </div>
                                 </a>
                             </div>
@@ -143,10 +147,10 @@
                         </li>
                         <li class="upcoming-pop-events__item">
                             <div class="item__block-img">
-                                <a class="block-img__image-link" href="#"><img class="block-img__image" src="../images/img8.png"></a>
+                                <a class="block-img__image-link" href="#"><img class="block-img__image" src="~/images/img8.png"></a>
                                 <a class="block-img__category-link" href="#"><div class="block-img__category">Настольные игры</div></a>
-                                <img class="block-img__icon" src="../images/icon2.svg">
-                                <img class="block-img__like" src="../images/heart.svg">
+                                <img class="block-img__icon" src="~images/icon2.svg">
+                                <img class="block-img__like" src="~/images/heart.svg">
                                 <div class="block-img__data-creation">22 мая / 11:00 - 23:00</div>
                             </div>
     
@@ -158,10 +162,10 @@
     
                             <div class="item__bottom">
                                 <div class="item__block-icon">
-                                    <img class="block-icon comment-user-1" src="../images/comment-1.png" alt="">
-                                    <img class="block-icon comment-user-2" src="../images/comment-2.png" alt="">
-                                    <img class="block-icon comment-user-3" src="../images/comment-3.png" alt="">
-                                    <img class="block-icon comment-user-4" src="../images/comment-4.png" alt="">
+                                    <img class="block-icon comment-user-1" src="~/images/comment-1.png" alt="">
+                                    <img class="block-icon comment-user-2" src="~/images/comment-2.png" alt="">
+                                    <img class="block-icon comment-user-3" src="~/images/comment-3.png" alt="">
+                                    <img class="block-icon comment-user-4" src="~/images/comment-4.png" alt="">
                                     <div class="block-icon comment-all">
                                         <span class="comment-number">20</span>
                                     </div>

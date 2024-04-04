@@ -28,4 +28,6 @@ public class User : IdentityUser
     public string? City { get; set; }
     
     public string? Image { get; set; }
+    
+    public string? Event { get; set; }
 }

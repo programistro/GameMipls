@@ -82,7 +82,7 @@
 
             <h2 class="admin-content__title">Настройки профиля</h2>
 
-            <form method="post" asp-action="Index" asp-controller="Home" enctype="multipart/form-data">>
+            <form method="post" asp-action="Index" asp-controller="Home" enctype="multipart/form-data">
                 <div class="profile__inner setting-profile__inner">
                 <div class="profile__left">
                     <nav class="content__items">
@@ -92,7 +92,7 @@
                             </li>
                             <li class="content__item">
                                 <a class="content__link" href="#">Дополнительная
-                                    информация</a>
+                                    информация </a>
                             </li>
                             <li class="content__item">
                                 <a class="content__link" href="#">Безопасность</a>
@@ -115,7 +115,7 @@
                     <div class="profile__block-logo set__block-logo">
                         <div class="profile__img-logo">
                             @* <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt=""> *@
-                            <img class="profile__logo-img" src="@Url.Content($"/images/{Model.PathToImage}")" alt="">
+                            <img class="profile__logo-img" src="@Url.Content($"/avatar/{Model.PathToImage}")" alt="">
                             @* <img class="profile__logo-pensel-img" src="~/images/profile-icon-pensel.png" *@
                             @*      alt=""> *@
                             
@@ -204,7 +204,7 @@
                             <div class="profile__info-block">
                                 <div class="profile__heading">Статус</div>
                                 <div class="profile__description profile__dop-span-icon">
-                                    <textarea class="profile__input" cols="40" asp-for="Status"
+                                    <textarea class="profile__input" cols="40" asp-for="Status" placeholder="Критического успеха у меня ещё не было"
                                                                                                 rows="2">Критического успеха у меня ещё не было</textarea>
                                             
                                 </div>
@@ -212,7 +212,7 @@
                             <div class="profile__info-block">
                                 <div class="profile__heading">О себе</div>
                                 <div class="profile__description">
-                                    <textarea class="profile__input" cols="40" asp-for="About"
+                                    <textarea class="profile__input" cols="40" asp-for="About" placeholder="Приветики! Вы"
                                                                                                 rows="3">Приветики! Вы</textarea>
                                 </div>
                             </div>

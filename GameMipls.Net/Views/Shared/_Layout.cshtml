@@ -35,13 +35,13 @@
                     </label>
                     <div class="menu">
                         <li class="menu__list">
-                            <a class="menu__link" href="#">Главная</a>
+                            <a class="menu__link" asp-controller="Home" asp-action="Index">Главная</a>
                         </li>
                         <li class="menu__list">
-                            <a class="menu__link" href="#">Найти компанию</a>
+                            <a class="menu__link" asp-controller="Home" asp-action="Games_events">Найти компанию</a>
                         </li>
                         <li class="menu__list">
-                            <a class="menu__link" href="#">Организациям</a>
+                            <a class="menu__link">Организациям</a>
                         </li>
                     </div>
                 </ul>
@@ -78,7 +78,7 @@
                     <img class="top__images" src="images/figure-main.svg" alt="">
                 </div>
                 <div class="top__nav">
-                    <a class="top__nav-link" href="#">
+                    <a class="top__nav-link" asp-area="" asp-controller="Home" asp-action="Games_events">
                         <div class="y-btn table-games">Настольные игры</div>
                     </a>
                     <a class="top__nav-link" href="#">

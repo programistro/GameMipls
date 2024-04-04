@@ -6,6 +6,8 @@ namespace GameMipls.Net.Data;
 public class GameDbContext : DbContext
 {
     public DbSet<TableGame> Tables => Set<TableGame>();
+
+    public DbSet<User> Users => Set<User>();
     
     // public DbSet<ComputerGame> ComputerGames => Set<ComputerGame>();
     //

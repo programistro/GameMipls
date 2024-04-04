@@ -10,7 +10,7 @@ public class TableGame
     
     public string? Type { get; set; }
     
-    public string Title { get; set; }
+    public string? Title { get; set; }
     
     public string Announcement { get; set; }
 
@@ -67,4 +67,6 @@ public class TableGame
     public string IsEdit { get; set; }
     
     public string Description { get; set; }
+    
+    public string Owner { get; set; }
 }

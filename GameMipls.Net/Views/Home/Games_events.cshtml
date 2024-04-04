@@ -1,3 +1,10 @@
+@model GamesViewModel
+@{
+    Layout = null;
+}
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SingingManager
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/general-styles.css">
-    <link rel="stylesheet" href="../css/admin-style.css">
+    <link rel="stylesheet" href="~/css/general-styles.css">
+    <link rel="stylesheet" href="~/css/admin-style.css">
 </head>
 
 <body>
@@ -14,7 +21,7 @@
         <div class="container">
             <div class="header-top">
                 <div class="logo-block">
-                    <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                    <div class="logo-block__icon"><img class="logo-img" src="~/images/logo.png" alt=""></div>
                     <div class="logo-block__logo">Mipls.ru</div>
                 </div>
                 <nav class="nav">
@@ -42,8 +49,8 @@
                 <div class="head-user">
                     <button onclick="menuPolsov()" class="user__btn user-client-btn">
                         <div class="block-menu-bnt">
-                            <img class="menu-profile-btn-img" src="../images/menu-profile-btn.svg" alt="">
-                            <img class="menu-profile-icon" src="../images/comment-8.png" alt="">
+                            <img class="menu-profile-btn-img" src="~/images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="~/images/comment-8.png" alt="">
                         </div>
                     </button>
                     <div id="menuPolsov" class="dropdown-content">
@@ -70,7 +77,7 @@
             <div class="container">
                 <div class="breacrumbs">
                     <a class="breacrumbs__link" href="setting-profile.html">Аккаунт</a>
-                    <span class="breacrumbs__separator"><img src="../images/breacrumbs-separator.svg" alt=""></span>
+                    <span class="breacrumbs__separator"><img src="~/images/breacrumbs-separator.svg" alt=""></span>
                     <a class="breacrumbs__link" href="#"> Игры мероприятия</a>
                 </div>
 
@@ -102,32 +109,67 @@
                     </div>
                     <div class="profile__right tabs__item  _active" id="tab_1">
                         <ul class="events__cards-list">
-                            <li class="events__cards-item">
-                                <div class="cards__item events__item">
-                                    <div class="cards__info">
-                                        <div class="info__data">22 октября
-                                            /
-                                            19:00</div>
-                                        <div class="info__games">Настольные игры</div>
-                                    </div>
-                                    <div class="cards__title">Dungeons & Dragons</div>
-                                    <div class="cards__location item__location item__location--active">Анти-кафе «Новое
-                                        место»</div>
-                                    <div class="cards__block-info">
-                                        <div class="block-info__text">Участники:</div>
-                                        <div class="block-info__number">4/6</div>
-                                    </div>
-                                    <div class="block-info__images">
-                                        <img class="block-info__img" src="../images/comment-1.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-2.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-3.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-4.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-0.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-0.png" alt="">
-                                    </div>
-                                    <button class="f-btn cards__btn">Редактировать</button>
-                                </div>
-                            </li>
+                            @* <li class="events__cards-item"> *@
+                            @*     <div class="cards__item events__item"> *@
+                            @*         <div class="cards__info"> *@
+                            @*             <div class="info__data">22 октября *@
+                            @*                 / *@
+                            @*                 19:00</div> *@
+                            @*             <div class="info__games">Настольные игры</div> *@
+                            @*         </div> *@
+                            @*         <div class="cards__title">Dungeons & Dragons</div> *@
+                            @*         <div class="cards__location item__location item__location--active">Анти-кафе «Новое *@
+                            @*             место»</div> *@
+                            @*         <div class="cards__block-info"> *@
+                            @*             <div class="block-info__text">Участники:</div> *@
+                            @*             <div class="block-info__number">4/6</div> *@
+                            @*         </div> *@
+                            @*         <div class="block-info__images"> *@
+                            @*             <img class="block-info__img" src="~/images/comment-1.png" alt=""> *@
+                            @*             <img class="block-info__img" src="~/images/comment-2.png" alt=""> *@
+                            @*             <img class="block-info__img" src="~/images/comment-3.png" alt=""> *@
+                            @*             <img class="block-info__img" src="~/images/comment-4.png" alt=""> *@
+                            @*             <img class="block-info__img" src="~/images/comment-0.png" alt=""> *@
+                            @*             <img class="block-info__img" src="~/images/comment-0.png" alt=""> *@
+                            @*         </div> *@
+                            @*         <button class="f-btn cards__btn">Редактировать</button> *@
+                            @*     </div> *@
+                            @* </li> *@
+                              @if (Model.Tables != null && Model.Tables.Any())
+                              {
+                                  @foreach (var card in Model.Tables)
+                                  {
+                                      <li class="events__cards-item">
+                                          <div class="cards__item events__item">
+                                              <div class="cards__info">
+                                                  <div class="info__data">@card.Date.ToString("yyyy-MM-dd") / @card.Time.ToString("HH:mm")</div>
+                                                  <div class="info__games">@card.Type</div>
+                                              </div>
+                                              <div class="cards__title">@card.Title</div>
+                                              <div class="cards__location item__location>@card.City</div>
+                                              <div class="cards__block-info">
+                                                  <div class="block-info__text">Просмотрело:</div>
+                                                  <div class="block-info__number">@card.View</div>
+                                                  <div class="block-info__text">Зарегистрировалось:</div>
+                                                  <div class="block-info__number">@card.Registrations</div>
+                                                  <div class="block-info__text">Срок оплаты истекает:</div>
+                                                  <div class="block-info__number">@card.PaymentDeadline</div>
+                                              </div>
+                                              <div class="block-info__images">
+                                                  @for (int i = 0; i < card.MaxPeople; i++)
+                                                  {
+                                                      IEnumerable<User>? user = Model.Users.Where(x => x.Event == card.Title);
+                                                      foreach (var item in user)
+                                                      {
+                                                          <img class="block-info__img" src="@Url.Content($"/images/{item.Image}")"/>
+                                                      }
+                                                  }
+                                              </div>
+                                              <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn">Редактировать</button>
+                                          </div>
+                                      </li>
+                                  }
+                              }
                             <li class="events__cards-item">
                                 <div class="cards__item events__item">
                                     <div class="cards__info">
@@ -143,10 +185,10 @@
                                         <div class="block-info__number">3/4</div>
                                     </div>
                                     <div class="block-info__images">
-                                        <img class="block-info__img" src="../images/comment-6.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-8.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-9.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-0.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-8.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-9.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-0.png" alt="">
 
                                     </div>
                                     <button disabled class="f-btn cards__btn btn">Редактировать</button>
@@ -175,10 +217,10 @@
                                         <div class="block-info__number">20</div>
                                     </div>
                                     <div class="block-info__images">
-                                        <img class="block-info__img" src="../images/comment-1.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-2.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-3.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-4.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-1.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-2.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-3.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-4.png" alt="">
                                         <span class="block-info__img-span">20</span>
                                     </div>
                                     <button class="f-btn cards__btn">Подробнее</button>
@@ -200,9 +242,9 @@
                                         <div class="block-info__number">3/3</div>
                                     </div>
                                     <div class="block-info__images">
-                                        <img class="block-info__img" src="../images/comment-6.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-8.png" alt="">
-                                        <img class="block-info__img" src="../images/comment-9.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-8.png" alt="">
+                                        <img class="block-info__img" src="~/images/comment-9.png" alt="">
 
                                     </div>
                                     <button disabled class="f-btn cards__btn btn">Подробнее</button>
@@ -221,7 +263,7 @@
                                     <div class="events__card">
                                         <div class="events__cards-inner">
                                             <div class="events__cards-image">
-                                                <img class="events__cards-img" src="../images/img5.png" alt="">
+                                                <img class="events__cards-img" src="~/images/img5.png" alt="">
                                             </div>
                                             <div class="events__cards-info">
                                                 <div class="events__cards-info-inner">
@@ -248,15 +290,15 @@
                                                                 <div class="block-info__text">Участники:</div>
                                                             </div>
                                                             <div class="block-info__images">
-                                                                <img class="block-info__img" src="../images/comment-1.png"
+                                                                <img class="block-info__img" src="~/images/comment-1.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-2.png"
+                                                                <img class="block-info__img" src="~/images/comment-2.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-3.png"
+                                                                <img class="block-info__img" src="~/images/comment-3.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-4.png"
+                                                                <img class="block-info__img" src="~/images/comment-4.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-5.png"
+                                                                <img class="block-info__img" src="~/images/comment-5.png"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -272,7 +314,7 @@
                                     <div class="events__card">
                                         <div class="events__cards-inner">
                                             <div class="events__cards-image">
-                                                <img class="events__cards-img" src="../images/img5.png" alt="">
+                                                <img class="events__cards-img" src="~/images/img5.png" alt="">
                                             </div>
                                             <div class="events__cards-info">
                                                 <div class="events__cards-info-inner">
@@ -299,15 +341,15 @@
                                                                 <div class="block-info__text">Участники:</div>
                                                             </div>
                                                             <div class="block-info__images">
-                                                                <img class="block-info__img" src="../images/comment-1.png"
+                                                                <img class="block-info__img" src="~/images/comment-1.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-2.png"
+                                                                <img class="block-info__img" src="~/images/comment-2.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-3.png"
+                                                                <img class="block-info__img" src="~/images/comment-3.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-4.png"
+                                                                <img class="block-info__img" src="~/images/comment-4.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-5.png"
+                                                                <img class="block-info__img" src="~/images/comment-5.png"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -322,7 +364,7 @@
                                     <div class="events__card">
                                         <div class="events__cards-inner">
                                             <div class="events__cards-image">
-                                                <img class="events__cards-img" src="../images/img5.png" alt="">
+                                                <img class="events__cards-img" src="~/images/img5.png" alt="">
                                             </div>
                                             <div class="events__cards-info">
                                                 <div class="events__cards-info-inner">
@@ -349,15 +391,15 @@
                                                                 <div class="block-info__text">Участники:</div>
                                                             </div>
                                                             <div class="block-info__images">
-                                                                <img class="block-info__img" src="../images/comment-1.png"
+                                                                <img class="block-info__img" src="~/images/comment-1.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-2.png"
+                                                                <img class="block-info__img" src="~/images/comment-2.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-3.png"
+                                                                <img class="block-info__img" src="~/images/comment-3.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-4.png"
+                                                                <img class="block-info__img" src="~/images/comment-4.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-5.png"
+                                                                <img class="block-info__img" src="~/images/comment-5.png"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -372,7 +414,7 @@
                                     <div class="events__card">
                                         <div class="events__cards-inner">
                                             <div class="events__cards-image">
-                                                <img class="events__cards-img" src="../images/img5.png" alt="">
+                                                <img class="events__cards-img" src="~/images/img5.png" alt="">
                                             </div>
                                             <div class="events__cards-info">
                                                 <div class="events__cards-info-inner">
@@ -399,15 +441,15 @@
                                                                 <div class="block-info__text">Участники:</div>
                                                             </div>
                                                             <div class="block-info__images">
-                                                                <img class="block-info__img" src="../images/comment-1.png"
+                                                                <img class="block-info__img" src="~/images/comment-1.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-2.png"
+                                                                <img class="block-info__img" src="~/images/comment-2.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-3.png"
+                                                                <img class="block-info__img" src="~/images/comment-3.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-4.png"
+                                                                <img class="block-info__img" src="~/images/comment-4.png"
                                                                     alt="">
-                                                                <img class="block-info__img" src="../images/comment-5.png"
+                                                                <img class="block-info__img" src="~/images/comment-5.png"
                                                                     alt="">
                                                             </div>
                                                         </div>
