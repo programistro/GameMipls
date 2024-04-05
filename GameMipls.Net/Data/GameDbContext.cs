@@ -6,12 +6,12 @@ namespace GameMipls.Net.Data;
 public class GameDbContext : DbContext
 {
     public DbSet<TableGame> Tables => Set<TableGame>();
+    
+    public DbSet<Sport> Sports => Set<Sport>();
+    
+    public DbSet<CompGame> ComputerGame => Set<CompGame>();
 
     public DbSet<User> Users => Set<User>();
-    
-    // public DbSet<ComputerGame> ComputerGames => Set<ComputerGame>();
-    //
-    // public DbSet<Sport> Sports => Set<Sport>();
     
     public GameDbContext() => Database.EnsureCreated();
  

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\GameMipls.Net.bundle.scp.css"
     },
     {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\1429dc653cd24d88bb97b7e2b2066961.png",
+      "PackagePath": "staticwebassets\\avatar\\1429dc653cd24d88bb97b7e2b2066961.png"
+    },
+    {
       "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\630df52163e6458089e998f46100f1e3.png",
       "PackagePath": "staticwebassets\\avatar\\630df52163e6458089e998f46100f1e3.png"
     },

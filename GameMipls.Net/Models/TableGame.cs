@@ -3,7 +3,7 @@ using System.Diagnostics.Contracts;
 
 namespace GameMipls.Net.Models;
 
-public class TableGame
+public class TableGame : IGame
 {
     [Key]
     public string Id { get; set; }
@@ -31,6 +31,8 @@ public class TableGame
     public int Price { get; set; }
 
     private string? isfree;
+    
+    public string? PathToImage { get; set; }
 
     public string? IsFree
     {

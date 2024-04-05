@@ -1,6 +1,6 @@
 ﻿namespace GameMipls.Net.Models;
 
-public class Sport : IGame
+public class CompGame : IGame
 {
     public string Id { get; set; }
     
@@ -37,7 +37,7 @@ public class Sport : IGame
     public string Description { get; set; }
     
     public string Owner { get; set; }
-
+    
     private string? isfree;
     
     public string? IsFree

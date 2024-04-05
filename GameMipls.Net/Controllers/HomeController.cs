@@ -265,32 +265,152 @@ public class HomeController : Controller
 
     [Authorize]
     [HttpPost]
-    public IActionResult Events(GameViewModel model)
+    public async Task<IActionResult> Events(GameViewModel model)
     {
-        TableGame game = new()
+        if (model.TypeGame == "Настольные игры")
         {
-            Id = _accountService.CreateHash(),
-            Title = model.TableGame.Title,
-            Announcement = model.TableGame.Announcement,
-            Date = model.TableGame.Date,
-            Time = model.TableGame.Time,
-            City = model.TableGame.City,
-            IsOnline = model.TableGame.IsOnline,
-            IsFree = model.TableGame.IsFree,
-            Description = model.TableGame.Description,
-            MaxPeople = model.TableGame.MaxPeople,
-            Price = model.TableGame.Price,
-            Type = model.TableGame.Type,
-            IsEdit = "true",
-            Venue = model.TableGame.Venue,
-            View = 0,
-            Registrations = 0,
-            PaymentDeadline = 0,
-            Owner = _signInManager.Context.User.Identity.Name
-        };
-        _gameDbContext.Tables.Add(game);
+            TableGame game = new()
+            {
+                Id = _accountService.CreateHash(),
+                Title = model.TableGame.Title,
+                Announcement = model.TableGame.Announcement,
+                Date = model.TableGame.Date,
+                Time = model.TableGame.Time,
+                City = model.TableGame.City,
+                IsOnline = model.TableGame.IsOnline,
+                IsFree = model.TableGame.IsFree,
+                Description = model.TableGame.Description,
+                MaxPeople = model.TableGame.MaxPeople,
+                Price = model.TableGame.Price,
+                Type = model.TableGame.Type,
+                IsEdit = "true",
+                Venue = model.TableGame.Venue,
+                View = 0,
+                Registrations = 0,
+                PaymentDeadline = 0,
+                Owner = _signInManager.Context.User.Identity.Name,
+            };
 
-        _gameDbContext.SaveChanges();
+            if (model.Image != null)
+            {
+                var filename = Path.GetFileName(model.Image.FileName);
+                var path = Path.Combine($"{Directory.GetCurrentDirectory()}/wwwroot/avatar", "", filename);
+        
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await model.Image.CopyToAsync(stream);
+                }
+
+                string pathImage = $"{_accountService.CreateHash()}.png";
+                _accountService.CropToCircle(path, 710,400, pathImage);
+
+                game.PathToImage = $"{pathImage}";
+            }
+            else
+            {
+                game.PathToImage = "";
+            }
+        
+            _gameDbContext.Tables.Add(game);
+
+            _gameDbContext.SaveChanges();
+        }
+        else if (model.TypeGame == "Компьютерные игры")
+        {
+            CompGame game = new()
+            {
+                Id = _accountService.CreateHash(),
+                Title = model.TableGame.Title,
+                Announcement = model.TableGame.Announcement,
+                Date = model.TableGame.Date,
+                Time = model.TableGame.Time,
+                City = model.TableGame.City,
+                IsOnline = model.TableGame.IsOnline,
+                IsFree = model.TableGame.IsFree,
+                Description = model.TableGame.Description,
+                MaxPeople = model.TableGame.MaxPeople,
+                Price = model.TableGame.Price,
+                Type = model.TableGame.Type,
+                IsEdit = "true",
+                Venue = model.TableGame.Venue,
+                View = 0,
+                Registrations = 0,
+                PaymentDeadline = 0,
+                Owner = _signInManager.Context.User.Identity.Name,
+            };
+
+            if (model.Image != null)
+            {
+                var filename = Path.GetFileName(model.Image.FileName);
+                var path = Path.Combine($"{Directory.GetCurrentDirectory()}/wwwroot/avatar", "", filename);
+        
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await model.Image.CopyToAsync(stream);
+                }
+
+                string pathImage = $"{_accountService.CreateHash()}.png";
+                _accountService.CropToCircle(path, 710,400, pathImage);
+
+                game.PathToImage = $"{pathImage}";
+            }
+            else
+            {
+                game.PathToImage = "";
+            }
+        
+            _gameDbContext.ComputerGame.Add(game);
+
+            _gameDbContext.SaveChanges();
+        }
+        else if (model.TypeGame == "Спорт")
+        {
+            Sport game = new()
+            {
+                Id = _accountService.CreateHash(),
+                Title = model.TableGame.Title,
+                Announcement = model.TableGame.Announcement,
+                Date = model.TableGame.Date,
+                Time = model.TableGame.Time,
+                City = model.TableGame.City,
+                IsOnline = model.TableGame.IsOnline,
+                IsFree = model.TableGame.IsFree,
+                Description = model.TableGame.Description,
+                MaxPeople = model.TableGame.MaxPeople,
+                Price = model.TableGame.Price,
+                Type = model.TableGame.Type,
+                IsEdit = "true",
+                Venue = model.TableGame.Venue,
+                View = 0,
+                Registrations = 0,
+                PaymentDeadline = 0,
+                Owner = _signInManager.Context.User.Identity.Name,
+            };
+
+            if (model.Image != null)
+            {
+                var filename = Path.GetFileName(model.Image.FileName);
+                var path = Path.Combine($"{Directory.GetCurrentDirectory()}/wwwroot/avatar", "", filename);
+        
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await model.Image.CopyToAsync(stream);
+                }
+
+                string pathImage = $"{_accountService.CreateHash()}.png";
+                _accountService.CropToCircle(path, 710,400, pathImage);
+
+                game.PathToImage = $"{pathImage}";
+            }
+            else
+            {
+                game.PathToImage = "";
+            }
+        
+            _gameDbContext.Sports.Add(game);
+
+            _gameDbContext.SaveChanges();
+        }
 
         GamesViewModel games = new GamesViewModel();
         games.Tables = _gameDbContext.Tables.ToList();
