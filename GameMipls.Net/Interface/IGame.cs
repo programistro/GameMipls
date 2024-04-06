@@ -7,7 +7,7 @@ public interface IGame
     [Key]
     public string Id { get; set; }
     
-    public string? Type { get; set; }
+    public string? Sort { get; set; }
     
     public string? Title { get; set; }
     
@@ -16,6 +16,8 @@ public interface IGame
     public int? MaxPeople { get; set; }
     
     public int Price { get; set; }
+    
+    public string? Type { get; set; }
 
     // public string? isfree;
     

@@ -58,7 +58,7 @@
                     <ul class="menu-profile__list">
                         <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" asp-action="Setting_profile_user">Профиль</a></li>
 
-                        <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a class="menu-profile__link" asp-action="Events" asp-controller="Home">Мои игры</a><span class="menu-span-profile__link">@GameDbContext.Tables.Count()</span></li>
+                        <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a class="menu-profile__link" asp-action="Events" asp-controller="Home">Мои игры</a><span class="menu-span-profile__link">@(GameDbContext.Tables.Count() + GameDbContext.Sports.Count() + GameDbContext.ComputerGame.Count())</span></li>
 
 
                         <li class="menu-profile__item menu-profile__icon-chats menu-profile__item-number"><a class="menu-profile__link" href="#">Чаты</a><span class="menu-span-profile__link">5</span></li>

@@ -9,17 +9,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d04414a7-7a60-4342-adbd-4d064e3c42ee" name="Changes" comment="выбор игры">
+    <list default="true" id="d04414a7-7a60-4342-adbd-4d064e3c42ee" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameMipls.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameMipls.Net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Interface/IGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Interface/IGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Migrations/20240404201418_games.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Migrations/20240404201418_games.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Migrations/GameDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Migrations/GameDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Models/CompGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Models/CompGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Models/GamesViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Models/GamesViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Models/Sport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Models/Sport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Models/TableGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Models/TableGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Create_events.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Create_events.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Games_events.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Games_events.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Setting_profile_user.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Setting_profile_user.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/games.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/games.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/games.db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/games.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/games.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/ref/GameMipls.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/ref/GameMipls.Net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/refint/GameMipls.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/refint/GameMipls.Net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets/msbuild.GameMipls.Net.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets/msbuild.GameMipls.Net.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/rider.project.restore.info" afterDir="false" />
     </list>
@@ -31,10 +57,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameMipls.Net/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Service/AccountService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Setting_profile_user.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Setting_profile_user.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Events.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameMipls.Net/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameMipls.Net/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameMipls.Net/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" root0="FORCE_HIGHLIGHTING" />
@@ -153,7 +176,8 @@
       <workItem from="1712243620964" duration="14356000" />
       <workItem from="1712326598508" duration="7411000" />
       <workItem from="1712390811759" duration="1453000" />
-      <workItem from="1712392335105" duration="1042000" />
+      <workItem from="1712392335105" duration="1448000" />
+      <workItem from="1712426255099" duration="5358000" />
     </task>
     <task id="LOCAL-00001" summary="auth almost done">
       <option name="closed" value="true" />
@@ -274,7 +298,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml</url>
-          <line>418</line>
+          <line>492</line>
           <properties documentPath="C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\Views\Home\Events.cshtml" initialLine="371" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
@@ -288,7 +312,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml</url>
-          <line>368</line>
+          <line>442</line>
           <properties documentPath="C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\Views\Home\Events.cshtml" initialLine="321" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
@@ -302,7 +326,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml</url>
-          <line>85</line>
+          <line>86</line>
           <properties documentPath="C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\Views\Home\Events.cshtml" initialLine="83" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>

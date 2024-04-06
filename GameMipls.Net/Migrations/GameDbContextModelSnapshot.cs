@@ -17,6 +17,152 @@ namespace GameMipls.Net.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0-preview.2.24128.4");
 
+            modelBuilder.Entity("GameMipls.Net.Models.CompGame", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Announcement")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IsEdit")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IsFree")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IsOnline")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("MaxPeople")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Owner")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PathToImage")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PaymentDeadline")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Registrations")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Sort")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Venue")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("View")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ComputerGame");
+                });
+
+            modelBuilder.Entity("GameMipls.Net.Models.Sport", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Announcement")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IsEdit")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IsFree")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IsOnline")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("MaxPeople")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Owner")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PathToImage")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PaymentDeadline")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Registrations")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Sort")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Venue")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("View")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sports");
+                });
+
             modelBuilder.Entity("GameMipls.Net.Models.TableGame", b =>
                 {
                     b.Property<string>("Id")
@@ -55,7 +201,6 @@ namespace GameMipls.Net.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PathToImage")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("PaymentDeadline")
@@ -66,6 +211,9 @@ namespace GameMipls.Net.Migrations
 
                     b.Property<int>("Registrations")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Sort")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Time")
                         .HasColumnType("TEXT");

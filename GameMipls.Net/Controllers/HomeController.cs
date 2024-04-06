@@ -260,6 +260,9 @@ public class HomeController : Controller
     public IActionResult Events(GamesViewModel model)
     {
         model.Tables = _gameDbContext.Tables.Where(x => x.Owner == _signInManager.Context.User.Identity.Name).ToList();
+        model.Sports = _gameDbContext.Sports.Where(x => x.Owner == _signInManager.Context.User.Identity.Name).ToList();
+        model.CompGames = _gameDbContext.ComputerGame.Where(x => x.Owner == _signInManager.Context.User.Identity.Name).ToList();
+        model.Users = _gameDbContext.Users.ToList();
         return View(model);
     }
 
@@ -282,7 +285,8 @@ public class HomeController : Controller
                 Description = model.TableGame.Description,
                 MaxPeople = model.TableGame.MaxPeople,
                 Price = model.TableGame.Price,
-                Type = model.TableGame.Type,
+                Type = model.TypeGame,
+                Sort = model.TableGame.Sort,
                 IsEdit = "true",
                 Venue = model.TableGame.Venue,
                 View = 0,
@@ -330,7 +334,8 @@ public class HomeController : Controller
                 Description = model.TableGame.Description,
                 MaxPeople = model.TableGame.MaxPeople,
                 Price = model.TableGame.Price,
-                Type = model.TableGame.Type,
+                Type = model.TypeGame,
+                Sort = model.TableGame.Sort,
                 IsEdit = "true",
                 Venue = model.TableGame.Venue,
                 View = 0,
@@ -378,7 +383,8 @@ public class HomeController : Controller
                 Description = model.TableGame.Description,
                 MaxPeople = model.TableGame.MaxPeople,
                 Price = model.TableGame.Price,
-                Type = model.TableGame.Type,
+                Type = model.TypeGame,
+                Sort = model.TableGame.Sort,
                 IsEdit = "true",
                 Venue = model.TableGame.Venue,
                 View = 0,
@@ -412,12 +418,15 @@ public class HomeController : Controller
             _gameDbContext.SaveChanges();
         }
 
+        
         GamesViewModel games = new GamesViewModel();
         games.Tables = _gameDbContext.Tables.ToList();
+        games.Sports = _gameDbContext.Sports.ToList();
+        games.CompGames = _gameDbContext.ComputerGame.ToList();
         
         return RedirectToAction("Events", "Home", games);
-
-        return View("Events", games);
+        
+        // return View("Events", games);
     }
     
     [Authorize]
@@ -426,6 +435,8 @@ public class HomeController : Controller
     {
         model.Tables = _gameDbContext.Tables.ToList();
         model.Users = _gameDbContext.Users.ToList();
+        model.Sports = _gameDbContext.Sports.ToList();
+        model.CompGames = _gameDbContext.ComputerGame.ToList();
         return View(model);
     }
 
