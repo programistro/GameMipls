@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\dotnet\\GameMipls.Net\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{521284A1-8CE0-46C9-98D0-5788A8F35F42}|GameMipls.Net\\GameMipls.Net.csproj|c:\\projects\\dotnet\\gamemipls.net\\gamemipls.net\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{521284A1-8CE0-46C9-98D0-5788A8F35F42}|GameMipls.Net\\GameMipls.Net.csproj|solutionrelative:gamemipls.net\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\Service\\AccountService.cs",
+              "RelativeDocumentMoniker": "GameMipls.Net\\Service\\AccountService.cs",
+              "ToolTip": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\Service\\AccountService.cs",
+              "RelativeToolTip": "GameMipls.Net\\Service\\AccountService.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T17:07:46.844Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

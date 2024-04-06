@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-block">
+                    <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                    <div class="logo-block__logo">Mipls.ru</div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label class="hamburger" for="checkbox_toggle">
+                            <div class="hamburger__block">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-menu">Меню</span>
+                            </div>
+                        </label>
+                        <div class="menu">
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Главная</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Мероприятия</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Реклама</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="head-user">
+                    <button onclick="menuClient()" class="user__btn user-client-btn">
+                        <div class="block-menu-bnt">
+                            <img class="menu-profile-btn-img" src="../images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="../images/comment-7.png" alt="">
+                        </div>
+                    </button>
+                    <div id="menuClient" class="dropdown-content">
+                        <ul class="menu-profile__list">
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" href="#">Профиль</a></li>
+                            <li class="menu-profile__item menu-profile__icon-event"><a class="menu-profile__link"
+                                    href="events.html">Мероприятия</a></li>
+                            <li class="menu-profile__item menu-profile__icon-chats"><a class="menu-profile__link" href="#">Чаты</a></li>
+                            <li class="menu-profile__item menu-profile__icon-advertisement"><a class="menu-profile__link"
+                                    href="launch-ad.html">Реклама</a></li>
+                            <li class="menu-profile__item menu-profile__icon-manager"><a class="menu-profile__link" href="#">Менеджер</a></li>
+                            <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link" href="#">Поддержка</a></li>
+                            <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a class="menu-profile__link"
+                                    href="#">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="admin-content">
+            <div class="container">
+                <div class="breacrumbs">
+                    <a class="breacrumbs__link" href="#">Профиль</a>
+                    <span class="breacrumbs__separator"><img src="../images/breacrumbs-separator.svg" alt=""></span>
+                    <a class="breacrumbs__link" href="#">Реклама</a>
+                </div>
+
+                <div class="advertisement__inner-title">
+                    <h2 class="admin-content__title advertisement__cards-title">Реклама</h2>
+                    <button class="create-event advertisement__create-cards-btn f-btn">Создать</button>
+                </div>
+
+                <div class="advertisement__inner">
+                    <div class="advertisement__items">
+                        <div class="advertisement__item">
+                            <div class="cards__info cards__advertis-block">
+                                <div class="info__data">22.08.2023 - 05.09.2023</div>
+                                <div class="advertisement__cards-views">
+                                <div class="advertisement__cards-view">3125</div>
+                                <div class="advertisement__cards-click">518</div>
+                            </div>
+                            </div>
+                            <div class="cards__title"><a class="cards__title-link" href="">Воздушные змеи</a></div>
+                            <div class="advertisement__cards-text cards__text">А сможешь ли ты удержать воздушного змея? Встречайте новую настольную игру!</div>
+                            <div class="advertisement__cards-image">
+                                <img class="advertisement__cards-img" src="../images/img6.png" alt="">
+                            </div>
+                            <button class="advertisement__cards-btn w-btn">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner-client">
+                    <div class="footer__top-left-client">
+                        <div class="footer__top-title">Начните продвигать свое мероприятие!</div>
+                        <div class="footer__top-btn">
+                            <a class="footer__top-link-btn" href="#">
+                                <div class="footer__btn">Искать игру</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__top-right-client">
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Личный кабинет</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Редактировать</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Мероприятия</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Создать мероприятие</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">История</a></li>
+                            </ul>
+                            <div class="footer__top-item-title footer__top-item-title-client">Реклама</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Активная реклама</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Запустить рекламу</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Помощь</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Связь с менеджером</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Правила сервиса</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Контакты</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Служба поддержки</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                    <a class="footer__bottom-link" href="#">Вконтакте</a>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function menuClient() {
+          document.getElementById("menuClient").classList.toggle("show");
+        }
+    </script>
+</body>
+
+</html>

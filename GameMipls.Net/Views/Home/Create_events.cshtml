@@ -1,0 +1,480 @@
+@model GameViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/general-styles.css">
+    <link rel="stylesheet" href="~/css/admin-style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-block">
+                    <div class="logo-block__icon"><img class="logo-img" src="~/images/logo.png" alt=""></div>
+                    <div class="logo-block__logo"><a asp-action="Index" asp-controller="Home">Mipls.ru</a></div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label class="hamburger" for="checkbox_toggle">
+                            <div class="hamburger__block">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-menu">Меню</span>
+                            </div>
+                        </label>
+                        <div class="menu">
+                            <li class="menu__list">
+                                <a class="menu__link" asp-action="Index" asp-controller="Home">Главная</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" asp-controller="Home" asp-action="Events">Мероприятия</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="launch-ad.html">Реклама</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="head-user">
+                    <button onclick="menuProfile()" class="user__btn user-client-btn">
+                        <div class="block-menu-bnt">
+                            <img class="menu-profile-btn-img" src="~/images/menu-profile-btn.svg" alt="">
+                            <img class="menu-profile-icon" src="~/images/comment-7.png" alt="">
+                        </div>
+                    </button>
+                    <div id="menuProfile" class="dropdown-content">
+                        <ul class="menu-profile__list">
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" href="#">Профиль</a></li>
+                            <li class="menu-profile__item menu-profile__icon-event"><a class="menu-profile__link"
+                                    href="events.html">Мероприятия</a></li>
+                            <li class="menu-profile__item menu-profile__icon-chats"><a class="menu-profile__link" href="#">Чаты</a></li>
+                            <li class="menu-profile__item menu-profile__icon-advertisement"><a class="menu-profile__link"
+                                    href="launch-ad.html">Реклама</a></li>
+                            <li class="menu-profile__item menu-profile__icon-manager"><a class="menu-profile__link" href="#">Менеджер</a></li>
+                            <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link" href="#">Поддержка</a></li>
+                            <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a class="menu-profile__link"
+                                    href="#">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="admin-content">
+            <div class="container">
+                <div class="breacrumbs">
+                    <a class="breacrumbs__link" href="#">Профиль</a>
+                    <span class="breacrumbs__separator"><img src="~/images/breacrumbs-separator.svg" alt=""></span>
+                    <a class="breacrumbs__link" href="#">Мероприятия</a>
+                    <span class="breacrumbs__separator"><img src="~/images/breacrumbs-separator.svg" alt=""></span>
+                    <a class="breacrumbs__link" href="#">Создание мероприятия</a>
+                </div>
+
+                <h2 class="admin-content__title">Создание мероприятия</h2>
+
+                <form method="post" asp-action="Events" enctype="multipart/form-data">
+                    <div class="profile__inner setting-profile__inner">
+                        <div class="create-events__left profile__left">
+                            <nav class="content__items">
+                                <ul class="content__list">
+                                    <li class="content__item">
+                                        <a class="content__link content__link--active" href="#">Основная информация</a>
+                                    </li>
+                                    <li class="content__item">
+                                        <a class="content__link" href="#">Место и время</a>
+                                    </li>
+                                    <li class="content__item">
+                                        <a class="content__link"  href="#">Описание и детали</a>
+                                    </li>
+                                    <li class="content__item">
+                                        <a class="content__link" href="#">Обложка</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="profile__btn-block">
+                                <button class="profile__btn f-btn">Сохранить изменения</button>
+                                <button class="profile__btn w-btn">Отменить изменения</button>
+                                <button class="product__btn">Удалить рекламу</button>
+                            </div>
+                        </div>
+                        <div class="create-events__right profile__right">
+                            <div class="profile__block-info">
+                                <h3 class="profile__info-text">Категория</h3>
+
+                                <div class="create-events__games">
+                                    <a class="top__nav-link" href="#">
+                                        <div class="games-btn s-btn">Компьютерные игры</div>
+                                    </a>
+                                    <a class="top__nav-link" href="#">
+                                        <div class="games-btn s-btn">Спорт</div>
+                                    </a>
+                                    <a class="top__nav-link" href="#">
+                                        <div class="games-btn s-btn">Настольные игры</div>
+                                    </a>
+                                </div>
+
+                                <input type="hidden" id="typeGame" asp-for="TypeGame" value="">
+                                
+                                @* <script> *@
+                                @* document.addEventListener('DOMContentLoaded', function() { *@
+                                @*     var gameButtons = document.querySelectorAll('.games-btn'); *@
+                                @* *@
+                                @*     gameButtons.forEach(function(button) { *@
+                                @*         button.addEventListener('click', function(event) { *@
+                                @*             event.preventDefault(); *@
+                                @* *@
+                                @*             var hasYBtn = Array.from(gameButtons).some(function(btn) { *@
+                                @*                 return btn.classList.contains('y-btn'); *@
+                                @*             }); *@
+                                @* *@
+                                @*             if (hasYBtn) { *@
+                                @*                 gameButtons.forEach(function(otherButton) { *@
+                                @*                     if (otherButton.classList.contains('y-btn')) { *@
+                                @*                         otherButton.classList.remove('y-btn'); *@
+                                @*                         otherButton.classList.add('s-btn'); *@
+                                @*                     } *@
+                                @*                 }); *@
+                                @*             } *@
+                                @*             this.classList.remove('s-btn'); *@
+                                @*             this.classList.add('y-btn'); *@
+                                @*              *@
+                                @*              var typeGameValue = this.textContent; *@
+                                @*              document.getElementById('typeGame').value = typeGameValue; *@
+                                @*         }); *@
+                                @*     }); *@
+                                @* }); *@
+                                @* </script> *@
+                                
+                                <h3 class="profile__info-text create-events__info">Основная информация</h3>
+                                <div class="profile__block-organization">
+                                    <div class="profile__info">
+                                        <div class="profile__info-inner">
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading">Тип мероприятия</div>
+                                                <div class="profile__description">
+                                                    <select class="profile__organization"
+                                                            id="select-organization" asp-for="TableGame.Type">
+                                                        @* <option value="">Компьютерные игры</option> *@
+                                                        <option value="Игра">Игра</option>
+                                                        <option value="Турнир">Турнир</option>
+                                                        @* <option value="">Настольные игры</option> *@
+                                                        <option value="Игротека">Игротека</option>
+                                                        @* <option value="Игра">Игра</option> *@
+                                                        @* <option value="Турнир">Турнир</option> *@
+                                                        @* <option value="">Спортивные игры</option> *@
+                                                        @* <option value="Игра">Игра</option> *@
+                                                        <option value="Соревнование">Соревнование</option>
+                                                    </select>
+                                                </div>
+                                                
+                                               
+                                            <script>
+                                                    document.addEventListener('DOMContentLoaded', function() {
+                                                        var gameButtons = document.querySelectorAll('.games-btn');
+                                                        var selectElement = document.getElementById('select-organization');
+                                                        
+                                                        gameButtons.forEach(function(button) {
+                                                            button.addEventListener('click', function(event) {
+                                                                event.preventDefault();
+                                                            
+                                                                gameButtons.forEach(function(otherButton) {
+                                                                    otherButton.classList.remove('y-btn');
+                                                                    otherButton.classList.add('s-btn');
+                                                                });
+                                                                this.classList.remove('s-btn');
+                                                                this.classList.add('y-btn');
+                                                                
+                                                                var typeGameValue = this.textContent;
+                                                                document.getElementById('typeGame').value = typeGameValue;
+                                                                
+                                                                updateSelectOptions(typeGameValue);
+                                                            });
+                                                        });
+                                                        
+                                                        function updateSelectOptions(typeGameValue) {
+                                                            selectElement.innerHTML = '';
+                                                            switch (typeGameValue) {
+                                                                case "Компьютерные игры":
+                                                                    selectElement.innerHTML = `
+                                                                        <option value="Игра">Игра</option>
+                                                                        <option value="Турнир">Турнир</option>
+                                                                    `;
+                                                                    break;
+                                                                case "Спорт":
+                                                                    selectElement.innerHTML = `
+                                                                        <option value="Игра">Игра</option>
+                                                                        <option value="Соревнование">Соревнование</option>
+                                                                    `;
+                                                                    break;
+                                                                case "Настольные игры":
+                                                                    selectElement.innerHTML = `
+                                                                        <option value="Игротека">Игротека</option>
+                                                                        <option value="Игра">Игра</option>
+                                                                        <option value="Турнир">Турнир</option>
+                                                                    `;
+                                                                    break;
+                                                            }
+                                                        }
+                                                    });
+                                                    </script>
+
+                                            </div>
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading">Заголовок</div>
+                                                <div class="profile__description">
+                                                    <input asp-for="TableGame.Title" class="profile__input"
+                                                           placeholder="Открытая игротека от HobbyBobby! Нам 5 лет!">
+                                                    <div class="create-events__res-pas">Максимум 50 символов</div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading">Анонс</div>
+                                                <div class="profile__description">
+                                                    <textarea class="profile__input" asp-for="TableGame.Announcement" cols="40" rows="3">
+                                                                      </textarea>
+                                                </div>
+                                            </div>
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading">Максимум участников</div>
+                                                <div class="profile__description">
+                                                    <div class="create-events__block">
+                                                        <button type="button" class="btn-minus">
+                                                            <img src="~/images/minus.svg" id="increaseButtonMinus"
+                                                                 alt=""></button>
+                                                        @* <div class="create-events__number"><input type="number" class="create-events__number" asp-for="TableGame.MaxPeople">52</input></div> *@
+                                                        <input class="create-events__number" value="2" id="maxPeopleInput" asp-for="TableGame.MaxPeople" style="font-size: 15px;"></input>
+                                                        <button type="button" class="btn-plus">
+                                                            <img src="~/images/pluse.svg" id="increaseButton"
+                                                                 alt="" ></button>
+                                                        <div class="create-events__text">Минимум 2 участника</div>
+                                                        
+                                                        <script>
+                                                            document.addEventListener('DOMContentLoaded', function() {
+                                                                // Выберите картинку по идентификатору
+                                                                var increaseButton = document.getElementById('increaseButton');
+                                                                // Выберите поле ввода по идентификатору
+                                                                var maxPeopleInput = document.getElementById('maxPeopleInput');
+                                                            
+                                                                // Добавьте обработчик событий клика к картинке
+                                                                increaseButton.addEventListener('click', function() {
+                                                                    // Получите текущее значение из поля ввода
+                                                                    var currentValue = parseInt(maxPeopleInput.value, 10);
+                                                                    // Увеличьте значение на 1
+                                                                    var newValue = currentValue + 1;
+                                                                    // Установите новое значение в поле ввода
+                                                                    maxPeopleInput.value = newValue;
+                                                                });
+                                                            });
+                                                        </script>
+                                                        
+                                                        <script>
+                                                            document.addEventListener('DOMContentLoaded', function() {
+                                                                // Выберите картинку по идентификатору
+                                                                var increaseButton = document.getElementById('increaseButtonMinus');
+                                                                // Выберите поле ввода по идентификатору
+                                                                var maxPeopleInput = document.getElementById('maxPeopleInput');
+                                                            
+                                                                increaseButton.addEventListener('click', function() {
+                                                                    
+                                                                    var currentValue = parseInt(maxPeopleInput.value, 10);
+                                                                    
+                                                                    var newValue = currentValue - 1;
+                                                                    
+                                                                    maxPeopleInput.value = newValue;
+                                                                });
+                                                            });
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading">Цена</div>
+                                                <div class="profile__description-price">
+                                                    <div class="">
+                                                        <div class="create-events__block">
+                                                            <input class="profile__input-price create-events__input-price"
+                                                                   type="text" asp-for="TableGame.Price" placeholder="550">
+                                                            <div class="block-switch">
+                                                                <div class="switch">
+                                                                    <label class="switch">
+                                                                        <input type="checkbox" asp-for="TableGame.IsFree">
+                                                                        <span class="slider round"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="profile__input-price-text">Бесплатно</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="profile__info-text dop-info">Место и время</h3>
+                                <div class="profile__block-organization">
+                                    <div class="profile__info">
+                                        <div class="profile__info-inner">
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading create-events__heading">Город</div>
+                                                <div class="profile__description">
+                                                    <div class="create-events__block">
+                                                        <input class="profile__input create-events__input-l" type="text" asp-for="TableGame.City" placeholder="">
+                                                        <div class="block-switch">
+                                                            <div class="switch">
+                                                                <label class="switch">
+                                                                    <input type="checkbox" asp-for="TableGame.IsOnline">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="profile__input-price-text">Онлайн</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading create-events__heading">Место проведения</div>
+                                                <div class="profile__description">
+                                                    <input class="profile__input create-events__input" type="text" placeholder="" asp-for="TableGame.Venue">
+                                                </div>
+                                            </div>
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading">Дата</div>
+                                                <div class="profile__description">
+                                                    <input class="profile__input create-events__data" type="date" asp-for="TableGame.Date">
+                                                </div>
+                                            </div>
+                                            <div class="profile__info-block">
+                                                <div class="profile__heading">Время</div>
+                                                <div class="profile__description">
+                                                    <input class="profile__input create-events__data" type="time" id="appt" min="09:00" max="18:00" required asp-for="TableGame.Time"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="profile__info-text dop-info">Описание и детали</h3>
+                                <textarea class="profile__input create-events__textarea" cols="40" rows="8" asp-for="TableGame.Description">
+                                                  </textarea>
+
+                                <h3 class="profile__info-text dop-info">Обложка</h3>
+                                <div class="create-events__image">
+                                    
+                                    <img class="create-events__img" src="~/images/img7.png"/>
+                                </div>
+                                <div class="create-events__control">
+                                      <input type="file" id="fileInput" asp-for="Image" style="display:none" accept="image/*"/>
+                                      
+                                      <script>
+                                         function chooseFile() {
+                                             document.getElementById('fileInput').click();
+                                         }
+                                    </script>
+                                    <button class="control-btn" type="button" onclick="chooseFile()">Изменить</button>
+                                    @* <button class="control-btn" type="button">Удалить</button> *@
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner-client">
+                    <div class="footer__top-left-client">
+                        <div class="footer__top-title">Начните продвигать свое мероприятие!</div>
+                        <div class="footer__top-btn">
+                            <a class="footer__top-link-btn" href="#">
+                                <div class="footer__btn">Искать игру</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__top-right-client">
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Личный кабинет</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Редактировать</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Мероприятия</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" asp-action="Create_events">Создать
+                                        мероприятие</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">История</a></li>
+                            </ul>
+                            <div class="footer__top-item-title footer__top-item-title-client">Реклама</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Активная реклама</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Запустить рекламу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Помощь</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Связь с менеджером</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Контакты</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Служба поддержки</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                    <a class="footer__bottom-link" href="#">Вконтакте</a>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </section>
+         <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </footer>
+<script>
+        function menuProfile() {
+            document.getElementById('menuProfile').classList.toggle("show");
+        }
+    </script>
+
+<script>
+$(document).ready(function(){
+    
+ $('.content__link').click(function(event) {
+    event.preventDefault(); 
+    var target = $(this.hash);
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 1000); 
+ });
+});
+</script>
+
+</body>
+
+</html>

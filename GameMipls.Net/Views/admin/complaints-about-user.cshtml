@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general-styles.css">
+    <link rel="stylesheet" href="../css/admin-style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-block">
+                    <div class="logo-block__icon"><img class="logo-img" src="../images/logo.png" alt=""></div>
+                    <div class="logo-block__logo">Mipls.ru</div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <input type="checkbox" id="checkbox_toggle" />
+                        <label class="hamburger" for="checkbox_toggle">
+                            <div class="hamburger__block">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-menu">Меню</span>
+                            </div>
+                        </label>
+                        <div class="menu">
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Главная</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Найти компанию</a>
+                            </li>
+                            <li class="menu__list">
+                                <a class="menu__link" href="#">Организациям</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="head-user">
+                    <div class="head-user__icon"><img src="../images/avatar.svg" alt=""></div>
+                    <button class="user__btn user-admin-btn" href="#">Администратор #5</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="admin-content">
+            <div class="container">
+                <div class="breacrumbs">
+                    <a class="breacrumbs__link" href="#">Аккаунт администратора</a>
+                </div>
+                <div class="title-block control__sort-search">
+                    <h2 class="admin-content__title">Жалобы</h2>
+                    <button class="sorting">Сортировка</button>
+                    <div class="form-search">
+                        <form class="search" action="#">
+                            <input class="search-input" type="text" placeholder="Пользователь" name="search">
+                            <button class="search-btn"></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="admin-content__inner">
+
+                    <nav class="content__items">
+                        <ul class="content__list">
+                            <li class="content__item">
+                                <button class="content__link tabs__button content__link--active" data-tab="tab_1">Жалобы на пользователей</button>
+                                <span class="content__item-number-on">15</span>
+                            </li>
+                            <li class="content__item">
+                                <button class="content__link tabs__button" data-tab="tab_2">Жалобы на мероприятия</button>
+                                <span class="content__item-number-on">5</span>
+                                
+                            </li>
+                            <li class="content__item">
+                                <button class="content__link tabs__button" data-tab="tab_3">Новые игры</button>
+                                <span class="content__item-number-on">12</span>
+                            </li>
+                            <li class="content__item">
+                                <button class="content__link tabs__button" data-tab="tab_4">Рассмотренное</button>
+                                <span class="content__item-number-off"></span>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+
+
+
+                    <div class="block-cards tabs__item _active" id="tab_1">
+
+                        <ul class="complaints-about-user__list">
+                            <li class="complaints-about-user__item">
+                                <div class="card">
+                                    <div class="card__left">
+                                        <h3 class="card__title">Игорь Коновалов</h3>
+                                        <div class="card__block-link">
+                                            <a class="card__link" href="#">Страница мероприятия</a>
+                                            <a class="card__link" href="#">Профиль</a>
+                                        </div>
+                                        <div class="card__choice">
+                                            <div class="choice__items">
+                                                <button class="choice__item-data choice__item-data--active">24
+                                                    часа</button>
+                                                <button class="choice__item-data">7 дней</button>
+                                                <button class="choice__item-data">14 дней</button>
+                                                <button class="choice__item-data">28 дней</button>
+                                                <button class="choice__item-data">без ограничений</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__right">
+                                        <div class="item__complaint">Жалобы:</div>
+                                        <ul class="complaint-list">
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Оскорбительное поведение</span>
+                                                <span class="complaint-item__number">3</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Спам</span>
+                                                <span class="complaint-item__number">2</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Мошенничество</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Запрещённые материалы</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="complaints-about-user__item">
+                                <div class="card">
+                                    <div class="card__left">
+                                        <h3 class="card__title">Максим Сопегин</h3>
+                                        <div class="card__block-link">
+                                            <a class="card__link" href="#">Страница мероприятия</a>
+                                            <a class="card__link" href="#">Профиль</a>
+                                        </div>
+                                        <div class="card__choice">
+                                            <div class="choice__items">
+                                                <button class="choice__item-data">24 часа</button>
+                                                <button class="choice__item-data">7 дней</button>
+                                                <button class="choice__item-data choice__item-data--active">14
+                                                    дней</button>
+                                                <button class="choice__item-data">28 дней</button>
+                                                <button class="choice__item-data">без ограничений</button>
+                                                <span class="choice__item-ban">Последний бан: 7 дней</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__right">
+                                        <div class="item__complaint">Жалобы:</div>
+                                        <ul class="complaint-list">
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Оскорбительное поведение</span>
+                                                <span class="complaint-item__number">10</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Спам</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Мошенничество</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Запрещённые материалы</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="block-cards tabs__item" id="tab_2">
+
+                        <ul class="complaints-about-user__list">
+                            <li class="complaints-about-user__item">
+                                <div class="card">
+                                    <div class="card__left">
+                                        <h3 class="card__title">Играем с дураками</h3>
+                                        <div class="card__block-link">
+                                            <a class="card__link" href="#">Страница мероприятия</a>
+                                            <a class="card__link" href="#">Профиль</a>
+                                        </div>
+                                        <div class="card__choice">
+                                            <div class="choice__items">
+                                                <button class="choice__item-data choice__item-data--active">24
+                                                    часа</button>
+                                                <button class="choice__item-data">7 дней</button>
+                                                <button class="choice__item-data">14 дней</button>
+                                                <button class="choice__item-data">28 дней</button>
+                                                <button class="choice__item-data">без ограничений</button>
+                                                <button class="choice__item-data choice__item-data--active">Удалить
+                                                    игру</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__right">
+                                        <div class="item__complaint">Жалобы:</div>
+                                        <ul class="complaint-list">
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Оскорбительное поведение</span>
+                                                <span class="complaint-item__number">3</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Спам</span>
+                                                <span class="complaint-item__number">2</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Мошенничество</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Запрещённые материалы</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="complaints-about-user__item">
+                                <div class="card">
+                                    <div class="card__left">
+                                        <h3 class="card__title">Котики - это плохо</h3>
+                                        <div class="card__block-link">
+                                            <a class="card__link" href="#">Страница мероприятия</a>
+                                            <a class="card__link" href="#">Профиль</a>
+                                        </div>
+                                        <div class="card__choice">
+                                            <div class="choice__items">
+                                                <button class="choice__item-data">24 часа</button>
+                                                <button class="choice__item-data">7 дней</button>
+                                                <button class="choice__item-data choice__item-data--active">14
+                                                    дней</button>
+                                                <button class="choice__item-data">28 дней</button>
+                                                <button class="choice__item-data">без ограничений</button>
+                                                <button class="choice__item-data choice__item-data--active">Удалить
+                                                    игру</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__right">
+                                        <div class="item__complaint">Жалобы:</div>
+                                        <ul class="complaint-list">
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Оскорбительное поведение</span>
+                                                <span class="complaint-item__number">10</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Спам</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Мошенничество</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Запрещённые материалы</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="block-items tabs__item" id="tab_3">
+                        <ul class="games-user__list">
+                            <li class="complaints-about-user__item">
+                                <div class="cards__item">
+                                    <div class="item__user">
+                                        <div class="item__user-logo"><img class="item__user-logo-img"
+                                                src="../images/comment-3.png" alt=""></div>
+                                        <div class="item__user-info">
+                                            <div class="item__user-name">Дмитрий Сандиев</div>
+                                            <div class="item__user-game"><a class="item__user-game-link" href="#">Дорога
+                                                    приключений</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="item__img"><a class="user-game-link-img" href="#">
+                                            <img class="user-game-img" src="../images/img2.png" alt=""></a>
+                                    </div>
+                                    <div class="item__data">22 мая / 11:00 - 23:00</div>
+                                    <div class="item__title">
+                                        <a class="item__title-link" href="#">
+                                            Ищу компанию на открытую игротеку от Hobby Bobby
+                                        </a>
+                                    </div>
+                                    <div class="item__text">В планах сыграть в «Дорогу приключений», но можно во что-то
+                                        другое,
+                                        решим все вместе. Hobby Bobby устраивает бесплатную игротеку, поэтому можем весь
+                                        день во
+                                        что-то играть ;)</div>
+                                    <div class="item__block-gamer">
+                                        <div class="gamer-info">
+                                            <div class="gamer-text">Игроки:</div>
+                                            <div class="gamer-number">2/4</div>
+                                        </div>
+                                        <div class="gamer__img-logo">
+                                            <img class="gamer__user-logo" src="../images/comment-4.png" alt="">
+                                            <img class="gamer__user-logo" src="../images/comment-2.png" alt="">
+
+                                        </div>
+                                    </div>
+                                    <div class="item__location">Место проведения: магазин «Hobby Bobby»</div>
+                                    <div class="item__price-inner">
+                                        <div class="price-info">Цена посещения</div>
+                                        <div class="price">Бесплатно</div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="complaints-about-user__item">
+                                <div class="cards__item">
+                                    <div class="item__user">
+                                        <div class="item__user-logo"><img class="item__user-logo-img"
+                                                src="../images/comment-5.png" alt=""></div>
+                                        <div class="item__user-info">
+                                            <div class="item__user-name">Ксения Белова</div>
+                                            <div class="item__user-game"><a class="item__user-game-link"
+                                                    href="#">Эверделл</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="item__img"><a class="user-game-link-img" href="#">
+                                            <img class="user-game-img" src="../images/img4.png" alt=""></a>
+                                    </div>
+                                    <div class="item__data">17 мая / 19:00</div>
+                                    <div class="item__title">
+                                        <a class="item__title-link" href="#">
+                                            Играем в красивый Эверделл и хорошо проводим время
+                                        </a>
+                                    </div>
+                                    <div class="item__text">Ищу людей в компанию, чтобы сыграть в «Эверделл». Будет
+                                        здорово если ты уже играл в эту игру и знаешь правила, но даже если нет, то ты
+                                        быстро научишься по ходу игры)</div>
+                                    <div class="item__block-gamer">
+                                        <div class="gamer-info">
+                                            <div class="gamer-text">Игроки:</div>
+                                            <div class="gamer-number">4/6</div>
+                                        </div>
+                                        <div class="gamer__img-logo">
+                                            <img class="gamer__user-logo" src="../images/comment-4.png" alt="">
+                                            <img class="gamer__user-logo" src="../images/comment-3.png" alt="">
+                                            <img class="gamer__user-logo" src="../images/comment-2.png" alt="">
+                                            <img class="gamer__user-logo" src="../images/comment-1.png" alt="">
+
+                                        </div>
+                                    </div>
+                                    <div class="item__location item__location--active">Место проведения: магазин «Hobby
+                                        Bobby»</div>
+                                    <div class="item__more">
+                                        <a class="item__more-link" href="#">
+                                            <div class="y-btn">Подробнее</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="block-cards tabs__item" id="tab_4">
+
+                        <ul class="complaints-about-user__list">
+                            <li class="complaints-about-user__item">
+                                <div class="card">
+                                    <div class="card__left">
+                                        <h3 class="card__title">Игорь Коновалов</h3>
+                                        <div class="card__block-link">
+                                            <a class="card__link" href="#">Профиль</a>
+                                        </div>
+                                        <div class="card__info">
+                                            <div class="card__info-blocked">
+                                                <div class="blocked__block">
+                                                    <span class="blocked-text">Блокировка:</span>
+                                                    <span class="blocked-time">24 часа</span>
+                                                </div>
+                                                <span class="blocked-data">18.10.23 - 19.10.23</span>
+                                            </div>
+                                        </div>
+                                        <div class="card__choice">
+                                            <div class="choice__items">
+                                                <button disabled class="btn choice__item-data">Отменить
+                                                    блокировку</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__right">
+                                        <div class="item__complaint">Жалобы:</div>
+                                        <ul class="complaint-list">
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Оскорбительное поведение</span>
+                                                <span class="complaint-item__number">3</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Спам</span>
+                                                <span class="complaint-item__number">2</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Мошенничество</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Запрещённые материалы</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="complaints-about-user__item">
+                                <div class="card">
+                                    <div class="card__left">
+                                        <h3 class="card__title">Максим Сопегин</h3>
+                                        <div class="card__block-link">
+                                            <a class="card__link" href="#">Профиль</a>
+                                        </div>
+                                        <div class="card__info">
+                                            <div class="card__info-blocked">
+                                                <div class="blocked__block">
+                                                    <span class="blocked-text">Блокировка:</span>
+                                                    <span class="blocked-time">24 часа</span>
+                                                </div>
+                                                <span class="blocked-data">18.10.23 - 19.10.23</span>
+                                            </div>
+                                        </div>
+                                        <div class="card__choice">
+                                            <div class="choice__items">
+                                                <button class="choice__item-data choice__item-data--active">Отменить
+                                                    блокировку</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__right">
+                                        <div class="item__complaint">Жалобы:</div>
+                                        <ul class="complaint-list">
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Оскорбительное поведение</span>
+                                                <span class="complaint-item__number">10</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Спам</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Мошенничество</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                            <li class="complaint-item">
+                                                <span class="complaint-item__occasion">Запрещённые материалы</span>
+                                                <span class="complaint-item__number">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="container">
+                <div class="footer__top-inner">
+                    <div class="footer__top-left">
+                        <div class="footer__top-title">Теперь есть с кем играть!</div>
+                        <div class="footer__top-btn">
+                            <a class="footer__top-link-btn" href="#">
+                                <div class="footer__btn">Присоединиться</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__top-right">
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Игры и мероприятия</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Присоединиться</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Создать свою игру</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Организациям</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Размещение
+                                        мероприятия</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Реклама
+                                        товаров/услуг</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__top-items">
+                            <div class="footer__top-item-title">Помощь</div>
+                            <ul class="footer__top-list">
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Безопасность</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Правила сервиса</a>
+                                </li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Контакты</a></li>
+                                <li class="footer__top-item"><a class="footer__top-link" href="#">Служба поддержки</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="copyright">
+            <div class="container">
+                <div class="copyright__text">
+                    Проект выполнен при поддержке гранта Фонда содействия инновациям, предоставленного в рамках
+                    программы
+                    «Студенческий стартап» федерального проекта «Платформа университетскоготехнологического
+                    предпринимательства»
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-inner">
+                    <a class="footer__bottom-link" href="mailto:contacts@mipls.ru">contacts@mipls.ru</a>
+                    <a class="footer__bottom-link" href="#">Вконтакте</a>
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        // получаем все кнопки навигации
+        const tabsButtons = document.querySelectorAll('.tabs__button');
+
+        // Проходимся по всем кнопкам
+        tabsButtons.forEach(btn => {
+            // вешаем на каждую кнопку обработчик события клик
+            btn.addEventListener('click', () => {
+                // Получаем предыдущую активную кнопку
+                const prevActiveItem = document.querySelector('.tabs__item._active');
+                // Получаем предыдущую активную вкладку
+                const prevActiveButton = document.querySelector('.tabs__button.content__link--active');
+
+                // Проверяем есть или нет предыдущая активная кнопка
+                if (prevActiveButton) {
+                    //Удаляем класс _active у предыдущей кнопки если она есть
+                    prevActiveButton.classList.remove('content__link--active');
+                }
+
+                // Проверяем есть или нет предыдущая активная вкладка
+                if (prevActiveItem) {
+                    // Удаляем класс _active у предыдущей вкладки если она есть
+                    prevActiveItem.classList.remove('_active');
+                }
+                // получаем id новой активной вкладки, который мы перем из атрибута data-tab у кнопки
+                const nextActiveItemId = `#${btn.getAttribute('data-tab')}`;
+                // получаем новую активную вкладку по id
+                const nextActiveItem = document.querySelector(nextActiveItemId);
+
+                // добавляем класс _active кнопке на которую нажали
+                btn.classList.add('content__link--active');
+                // добавляем класс _active новой выбранной вкладке
+                nextActiveItem.classList.add('_active');
+            });
+        })
+    </script>
+</body>
+
+</html>

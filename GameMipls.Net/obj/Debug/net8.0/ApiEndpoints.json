@@ -1,0 +1,68 @@
+[
+  {
+    "ContainingType": "GameMipls.Net.Controllers.AuthController",
+    "Method": "YourAction",
+    "RelativePath": "Auth",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GameMipls.Net.Controllers.AuthController",
+    "Method": "Google",
+    "RelativePath": "Auth/google-login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GameMipls.Net.Controllers.AuthController",
+    "Method": "logoutComplete",
+    "RelativePath": "Auth/logout-complete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GameMipls.Net.Controllers.AuthController",
+    "Method": "signout",
+    "RelativePath": "Auth/signout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GameMipls.Net.Controllers.AuthController",
+    "Method": "Singin",
+    "RelativePath": "Auth/singin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
