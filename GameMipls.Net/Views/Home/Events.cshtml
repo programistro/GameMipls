@@ -216,8 +216,8 @@
                                                      }
                                                  </div>
                                              }
-                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
-                                                 class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
+                                             <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Editing_event" 
+                                                asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</a>
                                          </div>
                                      </li>
                                  }
@@ -255,8 +255,8 @@
                                                        }
                                                    </div>
                                                }
-                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
-                                                 class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
+                                             <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Editing_event" 
+                                                asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</a>
                                          </div>
                                      </li>
                                  }
@@ -272,7 +272,15 @@
                                                  <div class="info__games">@card.Type</div>
                                              </div>
                                              <div class="cards__title">@card.Title</div>
-                                             <div class="cards__location item__location item__location--active">@(card.IsOnline == "true" ? "Онлайн" : $"{card.City}")</div>
+                                             @* <div class="cards__location item__location item__location--active">@(card.IsOnline == "true" ? "Онлайн" : $"{card.City}")</div> *@
+                                            @if (card.IsOnline == "true")
+                                             {
+                                                 <div class="cards__location item__location item__location--active">Онлaйн</div>
+                                             }
+                                            else
+                                            {
+                                                <div class="cards__location item__location item__location--active">@card.City</div>
+                                            }
                                              <div class="cards__block-info">
                                                  <div class="block-info__text">Просмотрело:</div>
                                                  <div class="block-info__number">@card.View</div>
@@ -294,8 +302,8 @@
                                                        }
                                                    </div>
                                                }
-                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
-                                                 class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
+                                             <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Editing_event" 
+                                                asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</a>
                                          </div>
                                      </li>
                                  }

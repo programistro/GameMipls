@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameMipls.Net")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de51b24b9204c97850f98c6b4c5685df517bd716")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e314e54df449ab31a6142d533116ee2ae0baccc")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameMipls.Net")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameMipls.Net")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

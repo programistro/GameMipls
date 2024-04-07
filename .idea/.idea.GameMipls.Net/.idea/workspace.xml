@@ -9,27 +9,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d04414a7-7a60-4342-adbd-4d064e3c42ee" name="Changes" comment="поправки в events">
+    <list default="true" id="d04414a7-7a60-4342-adbd-4d064e3c42ee" name="Changes" comment="поправил баг в login и начал edit">
+      <change afterPath="$PROJECT_DIR$/GameMipls.Net/Models/GameVM.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameMipls.Net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameMipls.Net/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/Data/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Data/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Create_events.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Create_events.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Editing_event.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Editing_event.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Games_events.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Games_events.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Setting_profile_user.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Setting_profile_user.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameMipls.Net/Views/client/editing-event.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/Views/Home/Editing_event.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/bin/Debug/net8.0/GameMipls.Net.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/games.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/games.db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/games.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/games.db-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/GameMipls.Net.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/ref/GameMipls.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/ref/GameMipls.Net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/refint/GameMipls.Net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/refint/GameMipls.Net.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameMipls.Net/wwwroot/css/admin-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/wwwroot/css/admin-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets/msbuild.GameMipls.Net.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/Debug/net8.0/staticwebassets/msbuild.GameMipls.Net.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameMipls.Net/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GameMipls.Net/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +48,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/GameMipls.Net/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Create_events.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Editing_event.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Events.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameMipls.Net/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameMipls.Net/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameMipls.Net/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" root0="FORCE_HIGHLIGHTING" />
@@ -162,7 +175,7 @@
       <workItem from="1712426255099" duration="5358000" />
       <workItem from="1712434005548" duration="465000" />
       <workItem from="1712489113887" duration="144000" />
-      <workItem from="1712489377548" duration="8670000" />
+      <workItem from="1712489377548" duration="22657000" />
     </task>
     <task id="LOCAL-00001" summary="auth almost done">
       <option name="closed" value="true" />
@@ -260,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712492961845</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="поправил баг в login и начал edit">
+      <option name="closed" value="true" />
+      <created>1712500098050</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712500098050</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +302,8 @@
     <MESSAGE value="выбор игры" />
     <MESSAGE value="ивенты доделал" />
     <MESSAGE value="поправки в events" />
-    <option name="LAST_COMMIT_MESSAGE" value="поправки в events" />
+    <MESSAGE value="поправил баг в login и начал edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="поправил баг в login и начал edit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -301,7 +323,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml</url>
-          <line>531</line>
+          <line>539</line>
           <properties documentPath="C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\Views\Home\Events.cshtml" initialLine="371" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
@@ -315,7 +337,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml</url>
-          <line>481</line>
+          <line>489</line>
           <properties documentPath="C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\Views\Home\Events.cshtml" initialLine="321" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
@@ -340,46 +362,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/GameMipls.Net/Views/Home/Events.cshtml</url>
-          <line>218</line>
-          <properties documentPath="C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\Views\Home\Events.cshtml" initialLine="218" isMultiMethodBreakpoint="true">
-            <option name="multiMethodBreakpoint" value="true" />
-            <startOffsets>
-              <option value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <option value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/GameMipls.Net/Controllers/HomeController.cs</url>
-          <line>453</line>
-          <properties documentPath="C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\Controllers\HomeController.cs" initialLine="446" containingFunctionPresentation="Method 'Editing_event'">
-            <startOffsets>
-              <option value="15055" />
-            </startOffsets>
-            <endOffsets>
-              <option value="15070" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/GameMipls.Net/Controllers/HomeController.cs</url>
-          <line>126</line>
-          <properties documentPath="C:\Projects\dotnet\GameMipls.Net\GameMipls.Net\Controllers\HomeController.cs" initialLine="126" containingFunctionPresentation="Method 'Login'">
-            <startOffsets>
-              <option value="3738" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3764" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

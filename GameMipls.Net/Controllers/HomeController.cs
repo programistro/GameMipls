@@ -65,19 +65,26 @@ public class HomeController : Controller
         user.About = model.About;
         user.City = model.City;
         user.Email = model.Email;
-        
-        var filename = Path.GetFileName(model.Image.FileName);
-        var path = Path.Combine($"{Directory.GetCurrentDirectory()}/wwwroot/avatar", "", filename);
-        
-        using (var stream = new FileStream(path, FileMode.Create))
+
+        if (model.Image != null)
         {
-            await model.Image.CopyToAsync(stream);
+            var filename = Path.GetFileName(model.Image.FileName);
+            var path = Path.Combine($"{Directory.GetCurrentDirectory()}/wwwroot/avatar", "", filename);
+        
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await model.Image.CopyToAsync(stream);
+            }
+
+            string pathImage = $"{_accountService.CreateHash()}.png";
+            _accountService.CropToCircle(path, 149,148, pathImage);
+
+            user.Image = $"{pathImage}";
         }
-
-        string pathImage = $"{_accountService.CreateHash()}.png";
-        _accountService.CropToCircle(path, 149,148, pathImage);
-
-        user.Image = $"{pathImage}";
+        else
+        {
+            user.Image = "";
+        }
         
         _context.Users.Update(user);
         _context.SaveChanges();
@@ -453,27 +460,182 @@ public class HomeController : Controller
     {
         if (id != null)
         {
-            GameViewModel model = new GameViewModel();
+            GameVM newModel = new GameVM();
+            
             if (typeGame == "Настольные игры")
             {
-                model.TableGame = _gameDbContext.Tables.FirstOrDefault(x => x.Id == id);
+                var model = _gameDbContext.Tables.FirstOrDefault(x => x.Id == id);
                 
-                return RedirectToAction("Editing_event", model);
+                newModel.Announcement = model.Announcement;
+                newModel.Description = model.Description;
+                newModel.Date = model.Date;
+                newModel.Owner = model.Owner;
+                newModel.Price = model.Price;
+                newModel.MaxPeople = model.MaxPeople;
+                newModel.Sort = model.Sort;
+                newModel.IsOnline = model.IsOnline;
+                newModel.Time = model.Time;
+                newModel.IsFree = model.IsFree;
+                newModel.Title = model.Title;
+                newModel.City = model.City;
+                newModel.Type = model.Type;
+                newModel.View = model.View;
+                newModel.Venue = model.Venue;
+                newModel.Id = model.Id;
+                newModel.PaymentDeadline = model.PaymentDeadline;
+                newModel.PathToImage = model.PathToImage;
+                newModel.Registrations = model.Registrations;
+            
+                return View("Editing_event", newModel);
+            }
+            else if (typeGame == "Спорт")
+            {
+                var model = _gameDbContext.Sports.FirstOrDefault(x => x.Id == id);
+                
+                newModel.Announcement = model.Announcement;
+                newModel.Description = model.Description;
+                newModel.Date = model.Date;
+                newModel.Owner = model.Owner;
+                newModel.Price = model.Price;
+                newModel.MaxPeople = model.MaxPeople;
+                newModel.Sort = model.Sort;
+                newModel.IsOnline = model.IsOnline;
+                newModel.Time = model.Time;
+                newModel.IsFree = model.IsFree;
+                newModel.Title = model.Title;
+                newModel.City = model.City;
+                newModel.Type = model.Type;
+                newModel.View = model.View;
+                newModel.Venue = model.Venue;
+                newModel.Id = model.Id;
+                newModel.PaymentDeadline = model.PaymentDeadline;
+                newModel.PathToImage = model.PathToImage;
+                newModel.Registrations = model.Registrations;
+            
+                return View("Editing_event", newModel);
             }
             else if (typeGame == "Компьютерные игры")
             {
-                model.CompGame = _gameDbContext.ComputerGame.FirstOrDefault(x => x.Id == id);
+                var model = _gameDbContext.ComputerGame.FirstOrDefault(x => x.Id == id);
                 
-                return RedirectToAction("Editing_event", model);
-            }
-            else if(typeGame == "Спорт")
-            {
-                model.SportGame = _gameDbContext.Sports.FirstOrDefault(x => x.Id == id);
-                
-                return RedirectToAction("Editing_event", model);
+                newModel.Announcement = model.Announcement;
+                newModel.Description = model.Description;
+                newModel.Date = model.Date;
+                newModel.Owner = model.Owner;
+                newModel.Price = model.Price;
+                newModel.MaxPeople = model.MaxPeople;
+                newModel.Sort = model.Sort;
+                newModel.IsOnline = model.IsOnline;
+                newModel.Time = model.Time;
+                newModel.IsFree = model.IsFree;
+                newModel.Title = model.Title;
+                newModel.City = model.City;
+                newModel.Type = model.Type;
+                newModel.View = model.View;
+                newModel.Venue = model.Venue;
+                newModel.Id = model.Id;
+                newModel.PaymentDeadline = model.PaymentDeadline;
+                newModel.PathToImage = model.PathToImage;
+                newModel.Registrations = model.Registrations;
+            
+                return View("Editing_event", newModel);
             }
         }
-        return RedirectToAction("Error");
+        return View("Error");
+    }
+
+    [Authorize]
+    [HttpPost]
+    public IActionResult Editing_event(GameVM model)
+    {
+        if (model.Type == "Настольные игры")
+        {
+            var item = _gameDbContext.Tables.FirstOrDefault(x => x.Id == model.Id);
+            
+            item.Announcement = model.Announcement != null ? model.Announcement : item.Announcement;
+            item.Description = model.Description != null ? model.Description : item.Description;
+            item.Date = model.Date != null ? model.Date : item.Date;
+            item.Owner = model.Owner != null ? model.Owner : item.Owner;
+            item.Price = model.Price != null ? model.Price : item.Price;
+            item.MaxPeople = model.MaxPeople != null ? model.MaxPeople : item.MaxPeople;
+            item.Sort = model.Sort != null ? model.Sort : item.Sort;
+            item.IsOnline = model.IsOnline != null ? model.IsOnline : item.IsOnline;
+            item.Time = model.Time != null ? model.Time : item.Time;
+            item.IsFree = model.IsFree != null ? model.IsFree : item.IsFree;
+            item.Title = model.Title != null ? model.Title : item.Title;
+            item.City = model.City != null ? model.City : item.City;
+            item.Type = model.Type != null ? model.Type : item.Type;
+            item.View = model.View != null ? model.View : item.View;
+            item.Venue = model.Venue != null ? model.Venue : item.Venue;
+            item.Id = model.Id != null ? model.Id : item.Id;
+            item.PaymentDeadline = model.PaymentDeadline != null ? model.PaymentDeadline : item.PaymentDeadline;
+            item.PathToImage = model.PathToImage != null ? model.PathToImage : item.PathToImage;
+            item.Registrations = model.Registrations != null ? model.Registrations : item.Registrations;
+            
+            _gameDbContext.Tables.Update(item);
+            _gameDbContext.SaveChanges();
+        }
+        else if (model.Type == "Спорт")
+        {
+            var item = _gameDbContext.Sports.FirstOrDefault(x => x.Id == model.Id);
+
+            item.Announcement = model.Announcement != null ? model.Announcement : item.Announcement;
+            item.Description = model.Description != null ? model.Description : item.Description;
+            item.Date = model.Date != null ? model.Date : item.Date;
+            item.Owner = model.Owner != null ? model.Owner : item.Owner;
+            item.Price = model.Price != null ? model.Price : item.Price;
+            item.MaxPeople = model.MaxPeople != null ? model.MaxPeople : item.MaxPeople;
+            item.Sort = model.Sort != null ? model.Sort : item.Sort;
+            item.IsOnline = model.IsOnline != null ? model.IsOnline : item.IsOnline;
+            item.Time = model.Time != null ? model.Time : item.Time;
+            item.IsFree = model.IsFree != null ? model.IsFree : item.IsFree;
+            item.Title = model.Title != null ? model.Title : item.Title;
+            item.City = model.City != null ? model.City : item.City;
+            item.Type = model.Type != null ? model.Type : item.Type;
+            item.View = model.View != null ? model.View : item.View;
+            item.Venue = model.Venue != null ? model.Venue : item.Venue;
+            item.Id = model.Id != null ? model.Id : item.Id;
+            item.PaymentDeadline = model.PaymentDeadline != null ? model.PaymentDeadline : item.PaymentDeadline;
+            item.PathToImage = model.PathToImage != null ? model.PathToImage : item.PathToImage;
+            item.Registrations = model.Registrations != null ? model.Registrations : item.Registrations;
+            
+            _gameDbContext.Sports.Update(item);
+            _gameDbContext.SaveChanges();
+        }
+        else if (model.Type == "Компьютерные игры")
+        {
+            var item = _gameDbContext.ComputerGame.FirstOrDefault(x => x.Id == model.Id);
+
+            item.Announcement = model.Announcement != null ? model.Announcement : item.Announcement;
+            item.Description = model.Description != null ? model.Description : item.Description;
+            item.Date = model.Date != null ? model.Date : item.Date;
+            item.Owner = model.Owner != null ? model.Owner : item.Owner;
+            item.Price = model.Price != null ? model.Price : item.Price;
+            item.MaxPeople = model.MaxPeople != null ? model.MaxPeople : item.MaxPeople;
+            item.Sort = model.Sort != null ? model.Sort : item.Sort;
+            item.IsOnline = model.IsOnline != null ? model.IsOnline : item.IsOnline;
+            item.Time = model.Time != null ? model.Time : item.Time;
+            item.IsFree = model.IsFree != null ? model.IsFree : item.IsFree;
+            item.Title = model.Title != null ? model.Title : item.Title;
+            item.City = model.City != null ? model.City : item.City;
+            item.Type = model.Type != null ? model.Type : item.Type;
+            item.View = model.View != null ? model.View : item.View;
+            item.Venue = model.Venue != null ? model.Venue : item.Venue;
+            item.Id = model.Id != null ? model.Id : item.Id;
+            item.PaymentDeadline = model.PaymentDeadline != null ? model.PaymentDeadline : item.PaymentDeadline;
+            item.PathToImage = model.PathToImage != null ? model.PathToImage : item.PathToImage;
+            item.Registrations = model.Registrations != null ? model.Registrations : item.Registrations;
+
+            _gameDbContext.ComputerGame.Update(item);
+            _gameDbContext.SaveChanges();
+        }
+        
+        GamesViewModel models = new();
+        models.Tables = _gameDbContext.Tables.Where(x => x.Owner == _signInManager.Context.User.Identity.Name).ToList();
+        models.Sports = _gameDbContext.Sports.Where(x => x.Owner == _signInManager.Context.User.Identity.Name).ToList();
+        models.CompGames = _gameDbContext.ComputerGame.Where(x => x.Owner == _signInManager.Context.User.Identity.Name).ToList();
+        models.Users = _gameDbContext.Users.ToList();
+        return RedirectToAction("Events", models);
     }
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

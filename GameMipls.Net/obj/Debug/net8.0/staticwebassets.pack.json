@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\avatar\\630df52163e6458089e998f46100f1e3.png"
     },
     {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\6a8a92dfca864cbb8b91af13019b4cf5.png",
+      "PackagePath": "staticwebassets\\avatar\\6a8a92dfca864cbb8b91af13019b4cf5.png"
+    },
+    {
       "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\7c7f307de24f4620bcae3fd5a9a5daa3.png",
       "PackagePath": "staticwebassets\\avatar\\7c7f307de24f4620bcae3fd5a9a5daa3.png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\7fe2af1e06da45cba3596b6a9bb1d364.png",
+      "PackagePath": "staticwebassets\\avatar\\7fe2af1e06da45cba3596b6a9bb1d364.png"
     },
     {
       "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\957c165d07fe4236bf104e9964bc3aa7.png",
@@ -31,6 +39,10 @@
     {
       "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\chrome_eygIVucILQ (2).png",
       "PackagePath": "staticwebassets\\avatar\\chrome_eygIVucILQ (2).png"
+    },
+    {
+      "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\chrome_lba0CoRkcG.png",
+      "PackagePath": "staticwebassets\\avatar\\chrome_lba0CoRkcG.png"
     },
     {
       "Id": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\e2f1b80009094fc09c9ffc5a548ce027.png",
