@@ -1,5 +1,7 @@
 @using Microsoft.AspNetCore.Identity
 @using System.Globalization
+@using GameMipls.Net.Data
+@inject GameDbContext GameDbContext
 @model GamesViewModel
 @{
     Layout = null;
@@ -201,14 +203,21 @@
                                                  <div class="block-info__text">Срок оплаты истекает:</div>
                                                  <div class="block-info__number">@card.Date.ToString("dd.MM.yy")</div>
                                              </div>
-                                             <div class="block-info__images">
-                                                 <img class="block-info__img" src="~/images/comment-6.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-8.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-9.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-0.png" alt="">
-                    
-                                             </div>
-                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                             @if (card.Registrations > 0)
+                                             {
+                                                 <div class="block-info__images">
+                                                     <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                     @{
+                                                         var users = GameDbContext.Users.Where(x => x.Event == card.Title);
+                                                         foreach (var item in users)
+                                                         {
+                                                             <img class="block-info__img" src="@(item.Image)"/>
+                                                         }
+                                                     }
+                                                 </div>
+                                             }
+                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
+                                                 class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
                                          </div>
                                      </li>
                                  }
@@ -233,14 +242,21 @@
                                                  <div class="block-info__text">Срок оплаты истекает:</div>
                                                 <div class="block-info__number">@card.Date.ToString("dd.MM.yy")</div>
                                              </div>
-                                             <div class="block-info__images">
-                                                 <img class="block-info__img" src="~/images/comment-6.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-8.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-9.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-0.png" alt="">
-                    
-                                             </div>
-                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                               @if (card.Registrations > 0)
+                                               {
+                                                   <div class="block-info__images">
+                                                       <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                       @{
+                                                           var users = GameDbContext.Users.Where(x => x.Event == card.Title);
+                                                           foreach (var item in users)
+                                                           {
+                                                               <img class="block-info__img" src="@(item.Image)"/>
+                                                           }
+                                                       }
+                                                   </div>
+                                               }
+                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
+                                                 class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
                                          </div>
                                      </li>
                                  }
@@ -265,14 +281,21 @@
                                                  <div class="block-info__text">Срок оплаты истекает:</div>
                                                  <div class="block-info__number">@card.Date.ToString("dd.MM.yy")</div>
                                              </div>
-                                             <div class="block-info__images">
-                                                 <img class="block-info__img" src="~/images/comment-6.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-8.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-9.png" alt="">
-                                                 <img class="block-info__img" src="~/images/comment-0.png" alt="">
-                    
-                                             </div>
-                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                               @if (card.Registrations > 0)
+                                               {
+                                                   <div class="block-info__images">
+                                                       <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                       @{
+                                                           var users = GameDbContext.Users.Where(x => x.Event == card.Title);
+                                                           foreach (var item in users)
+                                                           {
+                                                               <img class="block-info__img" src="@(item.Image)"/>
+                                                           }
+                                                       }
+                                                   </div>
+                                               }
+                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
+                                                 class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
                                          </div>
                                      </li>
                                  }

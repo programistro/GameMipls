@@ -115,7 +115,14 @@
                     <div class="profile__block-logo set__block-logo">
                         <div class="profile__img-logo">
                             @* <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt=""> *@
-                            <img class="profile__logo-img" src="@Url.Content($"/avatar/{Model.PathToImage}")" alt="">
+                            @if (Model.PathToImage != "")
+                            {
+                                <img class="profile__logo-img" src="@Url.Content($"/avatar/{Model.PathToImage}")" alt="">
+                            }
+                            else
+                            {
+                                <img class="profile__logo-img" src="~/images/comment-8-logo.png" alt="">
+                            }
                             @* <img class="profile__logo-pensel-img" src="~/images/profile-icon-pensel.png" *@
                             @*      alt=""> *@
                             
@@ -220,8 +227,6 @@
                                 <div class="profile__heading">Увлечения</div>
                                 <div class="profile__description">
                                     <div class="block-cards__enter">
-                                            
-                                            
                                         <ul class="block-cards__enter-list">
                                             <li style="display: flex;"><button class="f-btn block-cards__enter-btn"><img class="block-cards__enter-btn-img" src="~/images/pluse.svg" alt=""></button></li>
                                             <li class="profile__added-address">Настольные игры</li>

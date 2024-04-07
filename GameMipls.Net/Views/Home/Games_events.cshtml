@@ -112,32 +112,6 @@
                     </div>
                     <div class="profile__right tabs__item  _active" id="tab_1">
                         <ul class="events__cards-list">
-                            @* <li class="events__cards-item"> *@
-                            @*     <div class="cards__item events__item"> *@
-                            @*         <div class="cards__info"> *@
-                            @*             <div class="info__data">22 октября *@
-                            @*                 / *@
-                            @*                 19:00</div> *@
-                            @*             <div class="info__games">Настольные игры</div> *@
-                            @*         </div> *@
-                            @*         <div class="cards__title">Dungeons & Dragons</div> *@
-                            @*         <div class="cards__location item__location item__location--active">Анти-кафе «Новое *@
-                            @*             место»</div> *@
-                            @*         <div class="cards__block-info"> *@
-                            @*             <div class="block-info__text">Участники:</div> *@
-                            @*             <div class="block-info__number">4/6</div> *@
-                            @*         </div> *@
-                            @*         <div class="block-info__images"> *@
-                            @*             <img class="block-info__img" src="~/images/comment-1.png" alt=""> *@
-                            @*             <img class="block-info__img" src="~/images/comment-2.png" alt=""> *@
-                            @*             <img class="block-info__img" src="~/images/comment-3.png" alt=""> *@
-                            @*             <img class="block-info__img" src="~/images/comment-4.png" alt=""> *@
-                            @*             <img class="block-info__img" src="~/images/comment-0.png" alt=""> *@
-                            @*             <img class="block-info__img" src="~/images/comment-0.png" alt=""> *@
-                            @*         </div> *@
-                            @*         <button class="f-btn cards__btn">Редактировать</button> *@
-                            @*     </div> *@
-                            @* </li> *@
                               @if (Model.Sports != null && Model.Sports.Any())
                             {
                                 @foreach (var card in Model.Sports)
@@ -154,14 +128,25 @@
                                                 <div class="block-info__text">Участники:</div>
                                                 <div class="block-info__number">@card.Registrations/@card.MaxPeople</div>
                                             </div>
-                                            <div class="block-info__images">
-                                                <img class="block-info__img" src="~/images/comment-6.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-8.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-9.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-0.png" alt="">
-
-                                            </div>
-                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                           @if (card.Registrations > 0)
+                                           {
+                                               <div class="block-info__images">
+                                                   <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                   @{
+                                                       var users = GameDbContext.Users.Where(x => x.Event == card.Title);
+                                                       foreach (var item in users)
+                                                       {
+                                                           <img class="block-info__img" src="@(item.Image)"/>
+                                                       }
+                                                   }
+                                               </div>
+                                           }
+                                           else
+                                           {
+                                               <div class="block-info__text">Никто не зарегистрирован</div>
+                                           }
+                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
+                                                class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
                                         </div>
                                     </li>
                                 }
@@ -182,14 +167,25 @@
                                                 <div class="block-info__text">Участники:</div>
                                                 <div class="block-info__number">@card.Registrations/@card.MaxPeople</div>
                                             </div>
-                                            <div class="block-info__images">
-                                                <img class="block-info__img" src="~/images/comment-6.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-8.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-9.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-0.png" alt="">
-
-                                            </div>
-                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                                 @if (card.Registrations > 0)
+                                                 {
+                                                     <div class="block-info__images">
+                                                         <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                         @{
+                                                             var users = GameDbContext.Users.Where(x => x.Event == card.Title);
+                                                             foreach (var item in users)
+                                                             {
+                                                                 <img class="block-info__img" src="@(item.Image)"/>
+                                                             }
+                                                         }
+                                                     </div>
+                                                 }
+                                                 else
+                                                 {
+                                                     <div class="block-info__text">Никто не зарегистрирован</div>
+                                                 }
+                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
+                                                class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
                                         </div>
                                     </li>
                                 }
@@ -210,14 +206,25 @@
                                                 <div class="block-info__text">Участники:</div>
                                                 <div class="block-info__number">@card.Registrations/@card.MaxPeople</div>
                                             </div>
-                                            <div class="block-info__images">
-                                                <img class="block-info__img" src="~/images/comment-6.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-8.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-9.png" alt="">
-                                                <img class="block-info__img" src="~/images/comment-0.png" alt="">
-
-                                            </div>
-                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                             @if (card.Registrations > 0)
+                                             {
+                                                 <div class="block-info__images">
+                                                     <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                     @{
+                                                         var users = GameDbContext.Users.Where(x => x.Event == card.Title);
+                                                         foreach (var item in users)
+                                                         {
+                                                             <img class="block-info__img" src="@(item.Image)"/>
+                                                         }
+                                                     }
+                                                 </div>
+                                             }
+                                             else
+                                             {
+                                                 <div class="block-info__text">Никто не зарегистрирован</div>
+                                             }
+                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
+                                                class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
                                         </div>
                                     </li>
                                 }

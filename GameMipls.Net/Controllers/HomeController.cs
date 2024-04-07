@@ -122,38 +122,45 @@ public class HomeController : Controller
             
             // var result = await _signInManager.PasswordSignInAsync(model.Name, hash, true, lockoutOnFailure: false);
 
-            var item = _context.Users.FirstOrDefault(x => x.Phone == x.Phone);
+            var item = _context.Users.FirstOrDefault(x => x.Phone == model.Phone);
 
-            var result = _signInManager.SignInAsync(item, true);
-            
-            var claims = new List<Claim>
+            if (item.Password == hash)
             {
-                new Claim(ClaimTypes.Name, item.Name),
-                new Claim(ClaimTypes.MobilePhone, item.Phone),
-                new Claim(ClaimTypes.Role, "user")
-                // Добавьте другие необходимые клеймы
-            };
+                var result = _signInManager.SignInAsync(item, true);
             
-            var identity = new ClaimsIdentity(claims, "Cookie");
-            var principal = new ClaimsPrincipal(identity);
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, item.Name),
+                    new Claim(ClaimTypes.MobilePhone, item.Phone),
+                    new Claim(ClaimTypes.Role, "user")
+                    // Добавьте другие необходимые клеймы
+                };
+            
+                var identity = new ClaimsIdentity(claims, "Cookie");
+                var principal = new ClaimsPrincipal(identity);
 
-            await HttpContext.SignInAsync("Cookie", principal, new AuthenticationProperties
-            {
-                ExpiresUtc = DateTime.UtcNow.AddMinutes(120), // Установка времени истечения куки
-                IsPersistent = true, // Установка постоянности куки
-            });
+                await HttpContext.SignInAsync("Cookie", principal, new AuthenticationProperties
+                {
+                    ExpiresUtc = DateTime.UtcNow.AddMinutes(120), // Установка времени истечения куки
+                    IsPersistent = true, // Установка постоянности куки
+                });
 
-            model.Name = item.Name;
-            model.LastName = item.LastName;
+                model.Name = item.Name;
+                model.LastName = item.LastName;
             
-            if (result.IsCompleted)
-            {
-                // Вход выполнен успешно
-                return RedirectToAction("Index", "Home", model);
+                if (result.IsCompleted)
+                {
+                    // Вход выполнен успешно
+                    return RedirectToAction("Index", "Home", model);
+                }
+                else
+                {
+                    return RedirectToAction("Error", "Home");
+                }
             }
             else
             {
-                return RedirectToAction("Error", "Home");
+                return View("Error");
             }
         }
         else
@@ -440,6 +447,35 @@ public class HomeController : Controller
         return View(model);
     }
 
+    [Authorize]
+    [HttpGet]
+    public IActionResult Editing_event(string id, string typeGame)
+    {
+        if (id != null)
+        {
+            GameViewModel model = new GameViewModel();
+            if (typeGame == "Настольные игры")
+            {
+                model.TableGame = _gameDbContext.Tables.FirstOrDefault(x => x.Id == id);
+                
+                return RedirectToAction("Editing_event", model);
+            }
+            else if (typeGame == "Компьютерные игры")
+            {
+                model.CompGame = _gameDbContext.ComputerGame.FirstOrDefault(x => x.Id == id);
+                
+                return RedirectToAction("Editing_event", model);
+            }
+            else if(typeGame == "Спорт")
+            {
+                model.SportGame = _gameDbContext.Sports.FirstOrDefault(x => x.Id == id);
+                
+                return RedirectToAction("Editing_event", model);
+            }
+        }
+        return RedirectToAction("Error");
+    }
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     [AllowAnonymous]
     public IActionResult Error()

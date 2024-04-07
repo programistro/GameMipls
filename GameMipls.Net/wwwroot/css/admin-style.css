@@ -864,6 +864,27 @@
     padding: 3px 15px;
 }
 
+.profile__added-address:hover{
+    font-size: 18px;
+    opacity: 70%;
+    color: #616687;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    border: 1px solid #9C9EAE;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+
+.profile__Yadded-address{
+    font-size: 18px;
+    opacity: 70%;
+    color: #5233B6;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    border: 1px solid #9C9EAE;
+    padding: 3px 15px;
+}
+
 .profile__heading-p{
     color: #616687;
     opacity: 70%;
