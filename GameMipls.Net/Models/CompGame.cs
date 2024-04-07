@@ -20,7 +20,23 @@ public class CompGame : IGame
     
     public string City { get; set; }
     
-    public string? IsOnline { get; set; }
+    private string? isOnline;
+
+    public string? IsOnline
+    {
+        get
+        {
+            return isOnline;
+        }
+        set
+        {
+            if (isOnline == "true")
+            {
+                City = "online";
+                isOnline = value;
+            }
+        }
+    }
     
     public string Venue { get; set; }
     

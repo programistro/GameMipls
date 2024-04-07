@@ -153,116 +153,132 @@
                     @*     </ul> *@
                     @* </div> *@
                     
-                    <div class="profile__right tabs__item  _active" id="tab_1">
-                        <ul class="events__cards-list">
-                            @if (Model.Tables != null && Model.Tables.Any())
-                            {
-                                @foreach (var card in Model.Tables)
-                                {
+                     <div class="profile__right tabs__item  _active" id="tab_1">
+                         <ul class="events__cards-list">
+                             @* <li class="events__cards-item"> *@
+                             @*     <div class="cards__item events__item"> *@
+                             @*         <div class="cards__info"> *@
+                             @*             <div class="info__data">22 октября *@
+                             @*                 / *@
+                             @*                 19:00</div> *@
+                             @*             <div class="info__games">Настольные игры</div> *@
+                             @*         </div> *@
+                             @*         <div class="cards__title">Dungeons & Dragons</div> *@
+                             @*         <div class="cards__location item__location item__location--active">Анти-кафе «Новое *@
+                             @*             место»</div> *@
+                             @*         <div class="cards__block-info"> *@
+                             @*             <div class="block-info__text">Участники:</div> *@
+                             @*             <div class="block-info__number">4/6</div> *@
+                             @*         </div> *@
+                             @*         <div class="block-info__images"> *@
+                             @*             <img class="block-info__img" src="~/images/comment-1.png" alt=""> *@
+                             @*             <img class="block-info__img" src="~/images/comment-2.png" alt=""> *@
+                             @*             <img class="block-info__img" src="~/images/comment-3.png" alt=""> *@
+                             @*             <img class="block-info__img" src="~/images/comment-4.png" alt=""> *@
+                             @*             <img class="block-info__img" src="~/images/comment-0.png" alt=""> *@
+                             @*             <img class="block-info__img" src="~/images/comment-0.png" alt=""> *@
+                             @*         </div> *@
+                             @*         <button class="f-btn cards__btn">Редактировать</button> *@
+                             @*     </div> *@
+                             @* </li> *@
+                               @if (Model.Sports != null && Model.Sports.Any())
+                             {
+                                 @foreach (var card in Model.Sports)
+                                 {
                                     <li class="events__cards-item">
-                                        <div class="cards__item events__item">
-                                            <div class="cards__info">
-                                                <div class="info__data">@card.Date.ToString("dd MMMM", new CultureInfo("ru-RU")) / @card.Time.ToString("HH:mm")</div>
-                                                <div class="info__games">@card.Type</div>
-                                            </div>
-                                            <div class="cards__title">@card.Title</div>
-                                            <div class="cards__location item__location>@card.City</div>
-                                            @if (card.IsOnline == "true") 
-                                            { 
-                                                <div class="cards__location item__location item__location--active">Онлайн</div>
-                                            }
-                                            else if (card.IsOnline == "false")
-                                            {
-                                                <div class="cards__location item__location item__location--active">@card.Announcement</div>
-                                            }
+                                         <div class="cards__item events__item">
+                                             <div class="cards__info">
+                                                 <div class="info__data">@card.Date.ToString("dd MMMM", new CultureInfo("ru-RU")) / @card.Time.ToString("HH:mm")</div>
+                                                 <div class="info__games">@card.Type</div>
+                                             </div>
+                                             <div class="cards__title">@card.Title</div>
+                                             <div class="cards__location item__location item__location--active">@(card.IsOnline == "true" ? "Онлайн" : $"{card.City}")</div>
                                              <div class="cards__block-info">
                                                  <div class="block-info__text">Просмотрело:</div>
                                                  <div class="block-info__number">@card.View</div>
                                                  <div class="block-info__text">Зарегистрировалось:</div>
                                                  <div class="block-info__number">@card.Registrations</div>
                                                  <div class="block-info__text">Срок оплаты истекает:</div>
-                                                 <div class="block-info__number">@card.PaymentDeadline</div>
+                                                 <div class="block-info__number">@card.Date.ToString("dd.MM.yy")</div>
                                              </div>
-                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn">Редактировать</button>
-                                        </div>
-                                    </li>
-                                }
-                            }
-                        @if (Model.Sports != null && Model.Sports.Any())
-                        {
-                            @foreach (var card in Model.Sports)
-                            {
-                                <li class="events__cards-item">
-                                    <div class="cards__item events__item">
-                                        <div class="cards__info">
-                                            <div class="info__data">@card.Date.ToString("dd MMMM", new CultureInfo("ru-RU")) / @card.Time.ToString("HH:mm")</div>
-                                            <div class="info__games">@card.Type</div>
-                                        </div>
-                                        <div class="cards__title">@card.Title</div>
-                                        <div class="cards__location item__location>@card.City</div>
-                                        <div class="cards__block-info">
-                                            <div class="block-info__text">Просмотрело:</div>
-                                            <div class="block-info__number">@card.View</div>
-                                            <div class="block-info__text">Зарегистрировалось:</div>
-                                            <div class="block-info__number">@card.Registrations</div>
-                                            <div class="block-info__text">Срок оплаты истекает:</div>
-                                            <div class="block-info__number">@card.PaymentDeadline</div>
-                                        </div>
-                                        <div class="block-info__images">
-                                            @if (Model.Users.Any() && Model.Users != null)
-                                            {
-                                                for (int i = 0; i < card.MaxPeople; i++)
-                                                {
-                                                    IEnumerable<User>? user = Model.Users.Where(x => x.Event == card.Title);
-                                                    foreach (var item in user)
-                                                    {
-                                                        <img class="block-info__img" src="@Url.Content($"/images/{item.Image}")"/>
-                                                    }
-                                                }
-                                            }
-                                        </div>
-                                        <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn">Редактировать</button>
-                                    </div>
-                                </li>
-                            }
-                        }
-                        @if (Model.CompGames != null && Model.CompGames.Any())
-                        {
-                            @foreach (var card in Model.CompGames)
-                            {
-                                <li class="events__cards-item">
-                                    <div class="cards__item events__item">
-                                        <div class="cards__info">
-                                            <div class="info__data">@card.Date.ToString("dd MMMM", new CultureInfo("ru-RU")) / @card.Time.ToString("HH:mm")</div>
-                                            <div class="info__games">@card.Type</div>
-                                        </div>
-                                        <div class="cards__title">@card.Title</div>
-                                        <div class="cards__location item__location>@card.City</div>
-                                        <div class="cards__block-info">
-                                            <div class="block-info__text">Просмотрело:</div>
-                                            <div class="block-info__number">@card.View</div>
-                                            <div class="block-info__text">Зарегистрировалось:</div>
-                                            <div class="block-info__number">@card.Registrations</div>
-                                            <div class="block-info__text">Срок оплаты истекает:</div>
-                                            <div class="block-info__number">@card.PaymentDeadline</div>
-                                        </div>
-                                        <div class="block-info__images">
-                                            @for (int i = 0; i < card.MaxPeople; i++)
-                                            {
-                                                IEnumerable<User>? user = Model.Users.Where(x => x.Event == card.Title);
-                                                foreach (var item in user)
-                                                {
-                                                    <img class="block-info__img" src="@Url.Content($"/images/{item.Image}")"/>
-                                                }
-                                            }
-                                        </div>
-                                        <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn">Редактировать</button>
-                                    </div>
-                                </li>
-                            }
-                        }
-                        </ul>
-                    </div>
+                                             <div class="block-info__images">
+                                                 <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-8.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-9.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-0.png" alt="">
+                    
+                                             </div>
+                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                         </div>
+                                     </li>
+                                 }
+                             }
+                             @if (Model.Tables != null && Model.Tables.Any())
+                             {
+                                 @foreach (var card in Model.Tables)
+                                 {
+                                    <li class="events__cards-item">
+                                         <div class="cards__item events__item">
+                                             <div class="cards__info">
+                                                 <div class="info__data">@card.Date.ToString("dd MMMM", new CultureInfo("ru-RU")) / @card.Time.ToString("HH:mm")</div>
+                                                 <div class="info__games">@card.Type</div>
+                                             </div>
+                                             <div class="cards__title">@card.Title</div>
+                                             <div class="cards__location item__location item__location--active">@(card.IsOnline == "true" ? "Онлайн" : $"{card.City}")</div>
+                                             <div class="cards__block-info">
+                                                 <div class="block-info__text">Просмотрело:</div>
+                                                 <div class="block-info__number">@card.View</div>
+                                                 <div class="block-info__text">Зарегистрировалось:</div>
+                                                 <div class="block-info__number">@card.Registrations</div>
+                                                 <div class="block-info__text">Срок оплаты истекает:</div>
+                                                <div class="block-info__number">@card.Date.ToString("dd.MM.yy")</div>
+                                             </div>
+                                             <div class="block-info__images">
+                                                 <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-8.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-9.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-0.png" alt="">
+                    
+                                             </div>
+                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                         </div>
+                                     </li>
+                                 }
+                             }
+                             @if (Model.CompGames != null && Model.CompGames.Any())
+                             {
+                                 @foreach (var card in Model.CompGames)
+                                 {
+                                     <li class="events__cards-item">
+                                         <div class="cards__item events__item">
+                                             <div class="cards__info">
+                                                 <div class="info__data">@card.Date.ToString("dd MMMM", new CultureInfo("ru-RU")) / @card.Time.ToString("HH:mm")</div>
+                                                 <div class="info__games">@card.Type</div>
+                                             </div>
+                                             <div class="cards__title">@card.Title</div>
+                                             <div class="cards__location item__location item__location--active">@(card.IsOnline == "true" ? "Онлайн" : $"{card.City}")</div>
+                                             <div class="cards__block-info">
+                                                 <div class="block-info__text">Просмотрело:</div>
+                                                 <div class="block-info__number">@card.View</div>
+                                                 <div class="block-info__text">Зарегистрировалось:</div>
+                                                 <div class="block-info__number">@card.Registrations</div>
+                                                 <div class="block-info__text">Срок оплаты истекает:</div>
+                                                 <div class="block-info__number">@card.Date.ToString("dd.MM.yy")</div>
+                                             </div>
+                                             <div class="block-info__images">
+                                                 <img class="block-info__img" src="~/images/comment-6.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-8.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-9.png" alt="">
+                                                 <img class="block-info__img" src="~/images/comment-0.png" alt="">
+                    
+                                             </div>
+                                             <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") class="f-btn cards__btn btn">Редактировать</button>
+                                         </div>
+                                     </li>
+                                 }
+                             }
+                         </ul>
+                     </div>
                     
                     <div class="profile__right tabs__item" id="tab_2">
                         <div class="block-cards events__block-cards">
