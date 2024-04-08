@@ -42,7 +42,7 @@
                                 <a class="menu__link" asp-action="Index" asp-controller="Home">Главная</a>
                             </li>
                             <li class="menu__list">
-                                <a class="menu__link" asp-controller="Home" asp-action="Events">Мероприятия</a>
+                                <a class="menu__link" asp-controller="Game" asp-action="Events">Мероприятия</a>
                             </li>
                             <li class="menu__list">
                                 <a class="menu__link" href="#">Реклама</a>
@@ -79,14 +79,14 @@
         <section class="admin-content">
             <div class="container">
                 <div class="breacrumbs">
-                    <a class="breacrumbs__link" asp-action="Setting_profile_user">Профиль</a>
+                    <a class="breacrumbs__link" asp-controller="Home" asp-action="Setting_profile_user">Профиль</a>
                     <span class="breacrumbs__separator"><img src="~/images/breacrumbs-separator.svg" alt=""></span>
                     <a class="breacrumbs__link" asp-action="Events"> Мероприятия</a>
                 </div>
                 
                 <div class="advertisement__inner-title">
                     <h2 class="admin-content__title">Мероприятия</h2>
-                    <a class="create-event advertisement__create-cards-btn f-btn" style="color: #fff2ec" asp-controller="Home" asp-action="Create_events">Создать</a>
+                    <a class="create-event advertisement__create-cards-btn f-btn" style="color: #fff2ec" asp-controller="Game" asp-action="Create_events">Создать</a>
                 </div>
                 
                 <div class="profile__inner profile__events-inner">

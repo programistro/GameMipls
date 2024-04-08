@@ -58,7 +58,7 @@
                     </button>
                     <div id="menuPolsov" class="dropdown-content">
                         <ul class="menu-profile__list">
-                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" asp-action="Setting_profile_user">Профиль</a></li>
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" asp-controller="Home" asp-action="Setting_profile_user">Профиль</a></li>
 
                             <li class="menu-profile__item menu-profile__icon-event menu-profile__item-number"><a class="menu-profile__link" asp-action="Events">Мои игры</a><span class="menu-span-profile__link">@(GameDbContext.Tables.Count() + GameDbContext.Sports.Count() + GameDbContext.ComputerGame.Count())</span></li>
 
@@ -68,7 +68,7 @@
                             
                             <li class="menu-profile__item menu-profile__icon-support"><a class="menu-profile__link" href="#">Поддержка</a></li>
                             <li class="menu-profile__item menu-profile__last menu-profile__icon-exit"><a class="menu-profile__link"
-                                    asp-action="Index" asp-route-value="logout">Выход</a></li>
+                                    asp-controller="Home" asp-action="Index" asp-route-value="logout">Выход</a></li>
                         </ul>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
 
                 <div class="advertisement__inner-title">
                     <h2 class="admin-content__title">Игры и мероприятия</h2>
-                    <a class="create-event advertisement__create-cards-btn f-btn" style="color: #fff2ec" asp-controller="Home" asp-action="Create_events">Создать</a>
+                    <a class="create-event advertisement__create-cards-btn f-btn" style="color: #fff2ec" asp-controller="Game" asp-action="Create_events">Создать</a>
                 </div>
 
                 <div class="profile__inner profile__events-inner">

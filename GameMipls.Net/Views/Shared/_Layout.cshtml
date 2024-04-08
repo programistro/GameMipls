@@ -38,7 +38,7 @@
                             <a class="menu__link" asp-controller="Home" asp-action="Index">Главная</a>
                         </li>
                         <li class="menu__list">
-                            <a class="menu__link" asp-controller="Home" asp-action="Games_events">Найти компанию</a>
+                            <a class="menu__link" asp-controller="Game" asp-action="Games_events">Найти компанию</a>
                         </li>
                         <li class="menu__list">
                             <a class="menu__link">Организациям</a>
@@ -58,7 +58,7 @@
                 else
                 {
                     <div class="head-user__icon"><img src="images/avatar.svg" alt=""></div>
-                    <a class="user__btn" asp-area="" asp-controller="Home" asp-action="Auth">Аккаунт</a>
+                    <a class="user__btn" asp-area="" asp-controller="Auth" asp-action="Auth">Аккаунт</a>
                 }   
             </div>
         </div>
@@ -71,20 +71,20 @@
                 <h1 class="top__title">Mipls.ru - найди себе компанию</h1>
                 <div class="top__text">Здесь ты можешь найти с кем сходить в музей, поиграть в компьютерную игру,
                     отправиться в поход и даже сходить на бизнес-тренинг</div>
-                <a class="top__nav-link" asp-controller="Home" asp-action="Games_events">
+                <a class="top__nav-link" asp-controller="Game" asp-action="Games_events">
                     <div class="f-btn find-company">Найти компанию</div>
                 </a>
                 <div class="top__block-images">
                     <img class="top__images" src="images/figure-main.svg" alt="">
                 </div>
                 <div class="top__nav">
-                    <a class="top__nav-link" asp-area="" asp-controller="Home" asp-action="Games_events" asp-route-filter="table">
+                    <a class="top__nav-link" asp-area="" asp-controller="Game" asp-action="Games_events" asp-route-filter="table">
                         <div class="y-btn table-games">Настольные игры</div>
                     </a>
-                    <a class="top__nav-link" asp-action="Games_events" asp-controller="Home" asp-route-filter="comp">
+                    <a class="top__nav-link" asp-action="Games_events" asp-controller="Game" asp-route-filter="comp">
                         <div class="f-btn computer-games">Компьютерные игры</div>
                     </a>
-                    <a class="top__nav-link" asp-action="Games_events" asp-controller="Home" asp-route-filter="sport">
+                    <a class="top__nav-link" asp-action="Games_events" asp-controller="Game" asp-route-filter="sport">
                         <div class="o-btn sport">Спорт</div>
                     </a>
                 </div>

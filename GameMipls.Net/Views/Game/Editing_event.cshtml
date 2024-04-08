@@ -33,7 +33,7 @@
                         </label>
                         <div class="menu">
                             <li class="menu__list">
-                                <a class="menu__link" asp-action="Index">Главная</a>
+                                <a class="menu__link" asp-controller="Home" asp-action="Index">Главная</a>
                             </li>
                             <li class="menu__list">
                                 <a class="menu__link" asp-action="Games_events">Мероприятия</a>
@@ -53,7 +53,7 @@
                     </button>
                     <div id="menuProfile" class="dropdown-content">
                         <ul class="menu-profile__list">
-                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" asp-action="Setting_profile_user">Профиль</a></li>
+                            <li class="menu-profile__item menu-profile__icon-profile"><a class="menu-profile__link" asp-controller="Home" asp-action="Setting_profile_user">Профиль</a></li>
                             <li class="menu-profile__item menu-profile__icon-event"><a class="menu-profile__link"
                                     asp-action="Events">Мероприятия</a></li>
                             <li class="menu-profile__item menu-profile__icon-chats"><a class="menu-profile__link" href="#">Чаты</a></li>

@@ -1,78 +1,146 @@
 ﻿using System.Security.Claims;
+using GameMipls.Net.Data;
+using GameMipls.Net.Models;
+using GameMipls.Net.Service;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameMipls.Net.Controllers;
 
-[Microsoft.AspNetCore.Mvc.Route("/[controller]")]
-[ApiController]
-public class AuthController : ControllerBase
+[AllowAnonymous]
+public class AuthController : Controller
 {
-    [HttpGet("google-login")]
-    public async Task<ActionResult> Google()
-    {
-        var prop = new AuthenticationProperties
-        {
-            RedirectUri = "/"
-        };
-        return Challenge(prop, GoogleDefaults.AuthenticationScheme);
-    }
+    private readonly ILogger<AuthController> _logger;
+    
+    private readonly AppDbContext _context;
+    
+    private readonly SignInManager<User> _signInManager;
 
-    [Inject]
-    public NavigationManager NavigationManager { get; set; }
+    private readonly AccountService _accountService;
+
+    public AuthController(ILogger<AuthController> logger, AppDbContext context,
+        SignInManager<User> signInManager, AccountService accountService)
+    {
+        _logger = logger;
+        _context = context;
+        _signInManager = signInManager;
+        _accountService = accountService;
+    }
+    
+    [HttpGet]
+    [AllowAnonymous]
+    public IActionResult Auth()
+    {
+        return View();
+    }
 
     [AllowAnonymous]
-    [HttpGet("signout")]
-    public async Task<ActionResult> signout()
+    public async Task<IActionResult> Login(LoginViewModel model)
     {
-        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-
-        var prop = new AuthenticationProperties
+        if (_context.Users.Any(x => x.Phone == model.Phone))
         {
-            RedirectUri = "/logout-complete"
-        };
+            string hash = await _accountService.CreatePasswordHash(model.Password);
+            
+            // var result = await _signInManager.PasswordSignInAsync(model.Name, hash, true, lockoutOnFailure: false);
 
-        return Redirect("/");
+            var item = _context.Users.FirstOrDefault(x => x.Phone == model.Phone);
+
+            if (item.Password == hash)
+            {
+                var result = _signInManager.SignInAsync(item, true);
+            
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, item.Name),
+                    new Claim(ClaimTypes.MobilePhone, item.Phone),
+                    new Claim(ClaimTypes.Role, "user")
+                    // Добавьте другие необходимые клеймы
+                };
+            
+                var identity = new ClaimsIdentity(claims, "Cookie");
+                var principal = new ClaimsPrincipal(identity);
+
+                await HttpContext.SignInAsync("Cookie", principal, new AuthenticationProperties
+                {
+                    ExpiresUtc = DateTime.UtcNow.AddMinutes(120), // Установка времени истечения куки
+                    IsPersistent = true, // Установка постоянности куки
+                });
+
+                model.Name = item.Name;
+                model.LastName = item.LastName;
+            
+                if (result.IsCompleted)
+                {
+                    // Вход выполнен успешно
+                    return RedirectToAction("Index", "Home", model);
+                }
+                else
+                {
+                    return RedirectToAction("Error", "Home");
+                }
+            }
+            else
+            {
+                return View("Error");
+            }
+        }
+        else
+        {
+            return View("Error");
+        }
     }
 
-    [HttpGet("logout-complete")]
+    [HttpPost]
     [AllowAnonymous]
-    public string logoutComplete()
+    public async Task<IActionResult> Auth(LoginViewModel model)
     {
-        return "logout-complete";
-    }
+        User user = new()
+        {
+            Id = _accountService.CreateHash(),
+            PhoneNumber = model.Phone,
+            EmailConfirmed = false,
+            UserName = model.Name,
+            Name = model.Name,
+            LastName = model.LastName,
+            Password = await _accountService.CreatePasswordHash(model.Password),
+            Phone = model.Phone,
+            City = "",
+            About = "",
+            Status = "",
+            Email = "",
+            Image = ""
+        };
+        var item = _context.Users.Any(x => x.Phone == user.Phone);
 
-    public IActionResult YourAction()
-    {
-        // Выполняем навигацию на другую страницу с помощью метода NavigateTo()
-        NavigationManager.NavigateTo("/");
-
-        // Если требуется вернуть результат обратно на страницу,
-        // можно использовать метод Redirect()
-        return Redirect("/");
-    }
-
-    [HttpGet("singin")]
-    public async Task<ActionResult> Singin(string email)
-    {
-        // создаем один claim
+        if (item)
+        {
+            return View("Error");
+        }
+        _context.Users.Add(user);
+        _context.SaveChanges();
+            
         var claims = new List<Claim>
         {
-            new Claim(ClaimsIdentity.DefaultNameClaimType, email)
+            new Claim(ClaimTypes.Name, user.Name),
+            new Claim(ClaimTypes.MobilePhone, user.Phone),
+            new Claim(ClaimTypes.Role, "user")
+            // Добавьте другие необходимые клеймы
         };
-        // создаем объект ClaimsIdentity
-        ClaimsIdentity id = new ClaimsIdentity(claims, "LoginScheme", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
-        // установка аутентификационных куки
-        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
-
-        var prop = new AuthenticationProperties
+        
+        var identity = new ClaimsIdentity(claims, "Cookie");
+        var principal = new ClaimsPrincipal(identity);
+        
+        await HttpContext.SignInAsync("Cookie", principal, new AuthenticationProperties
         {
-            RedirectUri = "/"
-        };
-        return Redirect("/");
+            ExpiresUtc = DateTime.UtcNow.AddMinutes(120), // Установка времени истечения куки
+            IsPersistent = true, // Установка постоянности куки
+        });
+     
+        return RedirectToAction("Index", "Home");
+        //return View("Setting_profile_user", model);
     }
 }
