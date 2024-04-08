@@ -445,8 +445,27 @@ public class HomeController : Controller
     
     [Authorize]
     [HttpGet]
-    public IActionResult Games_events(GamesViewModel model)
+    public IActionResult Games_events(GamesViewModel model, string? filter)
     {
+        if (filter != null)
+        {
+            if (filter == "table")
+            {
+                model.Tables = _gameDbContext.Tables.ToList();
+                return View(model);
+            }
+            else if (filter == "comp")
+            {
+                model.CompGames = _gameDbContext.ComputerGame.ToList();
+                return View(model);
+            }
+            else if (filter == "sport")
+            {
+                model.Sports = _gameDbContext.Sports.ToList();
+                return View(model);
+            }
+        }
+        
         model.Tables = _gameDbContext.Tables.ToList();
         model.Users = _gameDbContext.Users.ToList();
         model.Sports = _gameDbContext.Sports.ToList();
