@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6ZgrN7mV2TMGDPn1N1HajTaLmw1d1SLx0NYXNY29pZk=",
+  "Hash": "x896HgETmhL0CIuMXQlHDfT6nsfM1XJ/fE1KNmlL+LI=",
   "Source": "GameMipls.Net",
   "BasePath": "_content/GameMipls.Net",
   "Mode": "Default",
@@ -262,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\avatar\\chrome_lba0CoRkcG.png"
+    },
+    {
+      "Identity": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\e0368a688e75407e9759e93135f648a1.png",
+      "SourceId": "GameMipls.Net",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\",
+      "BasePath": "_content/GameMipls.Net",
+      "RelativePath": "avatar/e0368a688e75407e9759e93135f648a1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\avatar\\e0368a688e75407e9759e93135f648a1.png"
     },
     {
       "Identity": "C:\\Projects\\dotnet\\GameMipls.Net\\GameMipls.Net\\wwwroot\\avatar\\e2f1b80009094fc09c9ffc5a548ce027.png",

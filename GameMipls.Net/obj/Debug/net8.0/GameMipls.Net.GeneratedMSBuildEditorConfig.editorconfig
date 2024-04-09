@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cbmV3LWdhbWVzMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Auth/Auth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBdXRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/client/advertisement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50XGFkdmVydGlzZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,28 +50,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2xpZW50XHByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Auth.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdXRoLmNzaHRtbA==
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Game/Create_events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxDcmVhdGVfZXZlbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Create_events.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVfZXZlbnRzLmNzaHRtbA==
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Game/Description_event.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxEZXNjcmlwdGlvbl9ldmVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Editing_event.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0aW5nX2V2ZW50LmNzaHRtbA==
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Game/Editing_event.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxFZGl0aW5nX2V2ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Game/Events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxFdmVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Game/Games_events.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxHYW1lc19ldmVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Events.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFdmVudHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Games_events.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW1lc19ldmVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/Home/Index.cshtml]
@@ -112,10 +116,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/description-event-message.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxkZXNjcmlwdGlvbi1ldmVudC1tZXNzYWdlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/description-event.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxkZXNjcmlwdGlvbi1ldmVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/dotnet/GameMipls.Net/GameMipls.Net/Views/user/edit-invitation.cshtml]

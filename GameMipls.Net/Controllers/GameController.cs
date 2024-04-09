@@ -36,42 +36,6 @@ public class GameController : Controller
     {
         return View();
     }
-    
-    [Authorize]
-    [HttpPost]
-    public IActionResult Create_events(GameViewModel model)
-    {
-        TableGame tableGame = new()
-        {
-            Id = _accountService.CreateHash(),
-            Title = "model.TableGame.Title",
-            Type = "model.TableGame.Type",
-            Description = model.TableGame.Description,
-            // MaxPeople = model.TableGame.MaxPeople,
-            MaxPeople = 52,
-            Announcement = model.TableGame.Announcement,
-            Date = model.TableGame.Date,
-            Time = model.TableGame.Time,
-            Venue = model.TableGame.Venue,
-            Price = model.TableGame.Price,
-            City = model.TableGame.City,
-            IsOnline = model.TableGame.IsOnline,
-            // IsFree = model.TableGame.IsFree,
-            IsFree = "true",
-            IsEdit = "true",
-            Owner = model.TableGame.Owner
-        };
-
-        _gameDbContext.Tables.Add(tableGame);
-        _gameDbContext.SaveChanges();
-
-        GamesViewModel newModel = new()
-        {
-            Tables = _gameDbContext.Tables.ToList()
-        };
-        
-        return View("Events", newModel);
-    }
 
     [Authorize]
     [HttpGet]
@@ -247,7 +211,6 @@ public class GameController : Controller
         // return View("Events", games);
     }
     
-    [Authorize]
     [HttpGet]
     public IActionResult Games_events(GamesViewModel model, string? filter)
     {
@@ -459,5 +422,95 @@ public class GameController : Controller
         models.CompGames = _gameDbContext.ComputerGame.Where(x => x.Owner == _signInManager.Context.User.Identity.Name).ToList();
         models.Users = _gameDbContext.Users.ToList();
         return RedirectToAction("Events", models);
+    }
+
+    [Authorize]
+    [HttpGet]
+    public IActionResult Description_event(string id, string typeGame)
+    {
+          if (id != null)
+        {
+            GameVM newModel = new GameVM();
+            
+            if (typeGame == "Настольные игры")
+            {
+                var model = _gameDbContext.Tables.FirstOrDefault(x => x.Id == id);
+                
+                newModel.Announcement = model.Announcement;
+                newModel.Description = model.Description;
+                newModel.Date = model.Date;
+                newModel.Owner = model.Owner;
+                newModel.Price = model.Price;
+                newModel.MaxPeople = model.MaxPeople;
+                newModel.Sort = model.Sort;
+                newModel.IsOnline = model.IsOnline;
+                newModel.Time = model.Time;
+                newModel.IsFree = model.IsFree;
+                newModel.Title = model.Title;
+                newModel.City = model.City;
+                newModel.Type = model.Type;
+                newModel.View = model.View;
+                newModel.Venue = model.Venue;
+                newModel.Id = model.Id;
+                newModel.PaymentDeadline = model.PaymentDeadline;
+                newModel.PathToImage = model.PathToImage;
+                newModel.Registrations = model.Registrations;
+            
+                return View("Editing_event", newModel);
+            }
+            else if (typeGame == "Спорт")
+            {
+                var model = _gameDbContext.Sports.FirstOrDefault(x => x.Id == id);
+                
+                newModel.Announcement = model.Announcement;
+                newModel.Description = model.Description;
+                newModel.Date = model.Date;
+                newModel.Owner = model.Owner;
+                newModel.Price = model.Price;
+                newModel.MaxPeople = model.MaxPeople;
+                newModel.Sort = model.Sort;
+                newModel.IsOnline = model.IsOnline;
+                newModel.Time = model.Time;
+                newModel.IsFree = model.IsFree;
+                newModel.Title = model.Title;
+                newModel.City = model.City;
+                newModel.Type = model.Type;
+                newModel.View = model.View;
+                newModel.Venue = model.Venue;
+                newModel.Id = model.Id;
+                newModel.PaymentDeadline = model.PaymentDeadline;
+                newModel.PathToImage = model.PathToImage;
+                newModel.Registrations = model.Registrations;
+            
+                return View("Editing_event", newModel);
+            }
+            else if (typeGame == "Компьютерные игры")
+            {
+                var model = _gameDbContext.ComputerGame.FirstOrDefault(x => x.Id == id);
+                
+                newModel.Announcement = model.Announcement;
+                newModel.Description = model.Description;
+                newModel.Date = model.Date;
+                newModel.Owner = model.Owner;
+                newModel.Price = model.Price;
+                newModel.MaxPeople = model.MaxPeople;
+                newModel.Sort = model.Sort;
+                newModel.IsOnline = model.IsOnline;
+                newModel.Time = model.Time;
+                newModel.IsFree = model.IsFree;
+                newModel.Title = model.Title;
+                newModel.City = model.City;
+                newModel.Type = model.Type;
+                newModel.View = model.View;
+                newModel.Venue = model.Venue;
+                newModel.Id = model.Id;
+                newModel.PaymentDeadline = model.PaymentDeadline;
+                newModel.PathToImage = model.PathToImage;
+                newModel.Registrations = model.Registrations;
+            
+                return View(newModel);
+            }
+        }
+        return View("Error");
     }
 }

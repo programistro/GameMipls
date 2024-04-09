@@ -145,8 +145,16 @@
                                            {
                                                <div class="block-info__text">Никто не зарегистрирован</div>
                                            }
-                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
-                                                class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
+                                            @if (card.Owner == SingingManager.Context.User.Identity.Name)
+                                            {
+                                                <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Editing_event" 
+                                                   asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</a>
+                                            }
+                                            else
+                                            {
+                                                <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Description_event" 
+                                                   asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Присоединится</a>
+                                            }
                                         </div>
                                     </li>
                                 }
@@ -184,8 +192,16 @@
                                                  {
                                                      <div class="block-info__text">Никто не зарегистрирован</div>
                                                  }
-                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
-                                                class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
+                                            @if (card.Owner == SingingManager.Context.User.Identity.Name)
+                                            {
+                                                <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Editing_event" 
+                                                   asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</a>
+                                            }
+                                            else
+                                            {
+                                                <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Description_event" 
+                                                   asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Присоединится</a>
+                                            }
                                         </div>
                                     </li>
                                 }
@@ -223,36 +239,20 @@
                                              {
                                                  <div class="block-info__text">Никто не зарегистрирован</div>
                                              }
-                                            <button @(card.Owner == SingingManager.Context.User.Identity.Name ? "enabled" : "disabled") 
-                                                class="f-btn cards__btn btn" asp-action="Editing_event" asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</button>
+                                            @if (card.Owner == SingingManager.Context.User.Identity.Name)
+                                            {
+                                                <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Editing_event" 
+                                                   asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Редактировать</a>
+                                            }
+                                            else
+                                            {
+                                                <a class="f-btn cards__btn btn" style="color: white;text-align: center; cursor: pointer" asp-action="Description_event" 
+                                                   asp-route-id="@card.Id" asp-route-typeGame="@card.Type">Присоединится</a>
+                                            }
                                         </div>
                                     </li>
                                 }
                             }
-                            @* <li class="events__cards-item"> *@
-                            @*     <div class="cards__item events__item"> *@
-                            @*         <div class="cards__info"> *@
-                            @*             <div class="info__data">22 октября *@
-                            @*                 / *@
-                            @*                 19:00</div> *@
-                            @*             <div class="info__games">Компьютерные игры</div> *@
-                            @*         </div> *@
-                            @*         <div class="cards__title">Играем в Overwatch 2</div> *@
-                            @*         <div class="cards__location item__location item__location--active">Онлайн</div> *@
-                            @*         <div class="cards__block-info"> *@
-                            @*             <div class="block-info__text">Участники:</div> *@
-                            @*             <div class="block-info__number">3/4</div> *@
-                            @*         </div> *@
-                            @*         <div class="block-info__images"> *@
-                            @*             <img class="block-info__img" src="~/images/comment-6.png" alt=""> *@
-                            @*             <img class="block-info__img" src="~/images/comment-8.png" alt=""> *@
-                            @*             <img class="block-info__img" src="~/images/comment-9.png" alt=""> *@
-                            @*             <img class="block-info__img" src="~/images/comment-0.png" alt=""> *@
-                            @* *@
-                            @*         </div> *@
-                            @*         <button disabled class="f-btn cards__btn btn">Редактировать</button> *@
-                            @*     </div> *@
-                            @* </li> *@
                         </ul>
                     </div>
 
