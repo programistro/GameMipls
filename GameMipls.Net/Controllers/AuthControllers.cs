@@ -139,8 +139,16 @@ public class AuthController : Controller
             ExpiresUtc = DateTime.UtcNow.AddMinutes(120), // Установка времени истечения куки
             IsPersistent = true, // Установка постоянности куки
         });
-     
-        return RedirectToAction("Index", "Home");
-        //return View("Setting_profile_user", model);
+        
+        var result = _signInManager.SignInAsync(user, true);
+
+        if (result.IsCompleted)
+        {
+            return RedirectToAction("Index", "Home", model);
+        }
+        else
+        {
+            return RedirectToAction("Error", "Home");
+        }
     }
 }

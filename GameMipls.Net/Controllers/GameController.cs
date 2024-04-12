@@ -212,6 +212,7 @@ public class GameController : Controller
     }
     
     [HttpGet]
+    [AllowAnonymous]
     public IActionResult Games_events(GamesViewModel model, string? filter)
     {
         if (filter != null)

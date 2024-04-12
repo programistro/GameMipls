@@ -1,23 +1,23 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+﻿# укажем, на основе какого образа будем
+# делать наш контейнер. Для сборки приложения используем dotnet-sdk
+# и назовём этот образ builder
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
+# укажем директорию для нашего приложения внутри контейнера
+WORKDIR /Application
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY ["GameMipls.Net/GameMipls.Net.csproj", "GameMipls.Net/"]
-RUN dotnet restore "GameMipls.Net/GameMipls.Net.csproj"
-COPY . .
-WORKDIR "/src/GameMipls.Net"
-RUN dotnet build "GameMipls.Net.csproj" -c $BUILD_CONFIGURATION -o /app/build
+# Скопируем все файлы из проекта в файловую систему контейнера
+COPY . ./
+# Запустим restore для загрузки зависимостей
+RUN dotnet restore
+# Опубликуем собранный dll в папку "output"
+RUN dotnet publish -c Release -o output
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "GameMipls.Net.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
+# Теперь соберём образ, в котором наше приложение
+# будет запущено. Для запуска приложения достаточно
+# среды выполнения aspnet, без sdk
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /Application
+# Скопируем файлы приложения из предыдущего образа
+COPY --from=builder /Application/output .
+# укажем команду, которая будет запускать приложение
 ENTRYPOINT ["dotnet", "GameMipls.Net.dll"]

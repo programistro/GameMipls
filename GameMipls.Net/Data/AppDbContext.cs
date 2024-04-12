@@ -23,9 +23,3 @@ public class AppDbContext : IdentityDbContext<User>
         base.OnModelCreating(modelBuilder);
     }
 }
-    // public AppDbContext() => Database.EnsureCreated();
- 
-    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    // {
-    //     optionsBuilder.UseSqlite("Data Source=users.db");
-    // }
